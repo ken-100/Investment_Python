@@ -1,6 +1,5 @@
 from xbbg import blp
 
-
 LS = ["ES","NQ","RTY","VG","GX","Z ","PT","XP","TP","HI","XU","IH"]
 
 T=[]
@@ -9,16 +8,11 @@ for i in range(0,len(LS)):
     T += [LS[i]+"A Index"]
     T1 += [LS[i]+"1 Index"]
     
-# LS += ["TY"]
-# T += ["TYA Comdty"]
-# T1 += ["TY1 Comdty"]
-
 BDP = blp.bdp(tickers=T, flds=["name","currency","undl_spot_ticker"])
 BDP = BDP.loc[T,:]
 
 BDP1 = blp.bdp(tickers=T1, flds=["volume_avg_5d","volatility_90d"])
 BDP1 = BDP1.loc[T1,:]
-
 
 undl = BDP.loc[T,["undl_spot_ticker"]].loc[T,:] + " Index"
 
@@ -40,7 +34,6 @@ for i in range(0,len(T)):
     BDP.loc[:,"country"][i] = tmp[i]
 BDP.loc[:,"volume"] = BDP1.loc[:,"volume_avg_5d"].values
 BDP.loc[:,"vola"] = BDP1.loc[:,"volatility_90d"].values
-
 
 print(BDP.shape)
 BDP
