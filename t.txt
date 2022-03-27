@@ -1,7 +1,6 @@
 from xbbg import blp
 
 
-
 LS = ["ES","NQ","RTY","VG","GX","Z ","PT","XP","TP","HI","XU","IH"]
 
 T=[]
