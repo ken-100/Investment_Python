@@ -37,3 +37,6 @@ BDP.loc[:,"vola"] = BDP1.loc[:,"volatility_90d"].values
 
 print(BDP.shape)
 BDP
+
+# https://data.bloomberglp.com/labs/sites/2/2013/12/blpapi-developers-guide-1.38.pdf
+# https://data.bloomberglp.com/professional/sites/10/2017/03/BLPAPI-Core-Developer-Guide.pdf
