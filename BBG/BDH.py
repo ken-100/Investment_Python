@@ -15,7 +15,8 @@ for i in range(0,len(LS)):
 d_from = workdays.workday(datetime.datetime.today(), days=-260).strftime("%Y%m%d")
 d_to = workdays.workday(datetime.datetime.today(), days=-1).strftime("%Y%m%d")
 
-BDH = con.bdh(T, ["px_open","px_last"], d_from, d_to).reset_index()  
+BDH = con.bdh(T, ["px_open","px_last"], d_from, d_to).reset_index()
+#BDH = con.bdh(T, ["px_open","px_last"], d_from, d_to, elms = [("periodicitySelection","MONTHLY")]  ).reset_index()  #Monthly
 BDH.loc[:,["date"]+T].head()
 
 
