@@ -34,6 +34,9 @@ for i in range(0,len(T)):
     BDP.loc[:,"country"][i] = tmp[i]
 BDP.loc[:,"volume"] = BDP1.loc[:,"volume_avg_5d"].values
 BDP.loc[:,"vola"] = BDP1.loc[:,"volatility_90d"].values
+BDP.loc[:,"vola"] = round(BDP.loc[:,"vola"],1)
+BDP.insert(0, "Ticker", LS)
+BDP.index = list(range(0, len(BDP)))
 
 print(BDP.shape)
 BDP
