@@ -54,6 +54,8 @@ d_from = workdays.workday(datetime.datetime.today(), days=-260).strftime("%Y%m%d
 d_to = workdays.workday(datetime.datetime.today(), days=-1).strftime("%Y%m%d")
 
 df = con.bdh(T1, ["px_last"], d_from, d_to).reset_index()
+#df = con.bdh(T1, ["px_last"], d_from, d_to,elms = [("periodicitySelection","WEEKLY")]).reset_index() #Weekly
+
 df = df.loc[:,["date"]+T1]
 df.columns = ["Date"]+LS
 
