@@ -5,7 +5,6 @@ con.start()
 
 LS = ["USD","EUR","GBP","CAD","AUD","NZD","CHF","NOK","SEK","HKD","CNY"]
 
-LS =  LS
 T = []
 T += [i + "JPY BGN Curncy" for i in LS]
 # T += ["CSBS" + i + " TMUQ Curncy" for i in LS]  #Mitsubishi TTM
