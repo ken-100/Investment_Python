@@ -56,3 +56,6 @@ CMPN = con.bdh(T2, "px_last", d_from, d_to,
              elms = [("nonTradingDayFillOption","NON_TRADING_WEEKDAYS"),("nonTradingDayFillMethod","PREVIOUS_VALUE")]).reset_index()
 CMPN = CMPN.loc[:,["date"]+T2]
 CMPN.head()
+
+# https://data.bloomberglp.com/labs/sites/2/2013/12/blpapi-developers-guide-1.38.pdf
+# https://data.bloomberglp.com/professional/sites/10/2017/03/BLPAPI-Core-Developer-Guide.pdf
