@@ -7,6 +7,7 @@ LS_EXJ = ["USD","EUR","GBP","CAD","AUD","NZD","CHF","NOK","SEK","HKD","CNH"]
 
 T = []
 T += [i  + "JPY BGN Curncy" for i in LS_EXJ]
+# T += ["CSBS" + i + " TMUQ Curncy" for i in LS]  #Mitsubishi TTM
 
 tmp = ["px_last","volatility_90d","rsi_30d"]
 BDP = blp.bdp(tickers=T, flds=tmp)
