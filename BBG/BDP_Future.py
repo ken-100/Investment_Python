@@ -2,11 +2,8 @@ from xbbg import blp
 
 LS = ["ES","NQ","RTY","VG","GX","Z ","PT","XP","TP","HI","XU","IH"]
 
-T=[]
-T1=[]
-for i in range(0,len(LS)):
-    T += [LS[i]+"A Index"]
-    T1 += [LS[i]+"1 Index"]
+T = [i + "A Comdty" for i in LS]
+T1 = [i + "1 Comdty" for i in LS]
     
 BDP = blp.bdp(tickers=T, flds=["name","currency","undl_spot_ticker"])
 BDP = BDP.loc[T,:]
