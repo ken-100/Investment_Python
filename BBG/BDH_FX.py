@@ -13,9 +13,8 @@ con.start()
 LS_EXJ = ["USD","EUR"]
 # LS_EXJ = ["USD","EUR","GBP","CAD","AUD","NZD","CHF","NOK","SEK","HKD","CNY"]
 
-T = []
-T += ["CSBS" + i + " TMUQ Curncy" for i in LS_EXJ]  #Mitsubishi TTM
-# T += [i  + "JPY CMPN Curncy" for i in LS_EXJ] #CMPN
+T = ["CSBS" + i + " TMUQ Curncy" for i in LS_EXJ]  #Mitsubishi TTM
+# T = [i  + "JPY CMPN Curncy" for i in LS_EXJ] #CMPN
 
 tmp = ["px_last","volatility_90d","rsi_30d"]
 BDP = blp.bdp(tickers=T, flds=tmp)
