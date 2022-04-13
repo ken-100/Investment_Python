@@ -7,7 +7,6 @@ T1 = [i + "1 Comdty" for i in LS]
 
 BDP = blp.bdp(tickers=T, flds=["name","currency","fut_ctd_isin"]).loc[T,:]
 
-
 isin = BDP.loc[T,["fut_ctd_isin"]].dropna(how='all')
 isin = [i for i in isin.loc[:,"fut_ctd_isin"]]
 
@@ -40,3 +39,6 @@ BDP.index = list(range(0, len(BDP)))
 
 print(BDP.shape)
 BDP
+
+# https://data.bloomberglp.com/labs/sites/2/2013/12/blpapi-developers-guide-1.38.pdf
+# https://data.bloomberglp.com/professional/sites/10/2017/03/BLPAPI-Core-Developer-Guide.pdf
