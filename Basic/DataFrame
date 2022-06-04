@@ -1,0 +1,8 @@
+import pandas as pd
+import numpy as np
+
+tmp = pd.DataFrame(np.zeros([2,2]), index = ["a","b"], columns = ["A","B"])
+for i in range(0,3):
+    exec(f"df{i} = tmp")
+
+df2
