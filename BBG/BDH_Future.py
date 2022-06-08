@@ -2,6 +2,7 @@ from xbbg import blp
 import pdblp
 import workdays
 import datetime
+import pandas as pd
 pd.set_option('display.max_columns', 70)
 
 con = pdblp.BCon(timeout=5000)
