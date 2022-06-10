@@ -29,9 +29,6 @@ BDP.insert(1, "Ticker", T)
 BDP.index = list(range(0, len(BDP)))
 
 
-con = pdblp.BCon(timeout=10000)
-con.start()
-
 d_from = "20050301"
 d_to = "20211027"
 d_to = workdays.workday(datetime.datetime.today(), days=-1).strftime("%Y%m%d")
