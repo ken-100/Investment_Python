@@ -52,7 +52,13 @@ for i in range(0,len(vec)):
 
 
 val /=  sum(val)
-val = pd.DataFrame(val)
+val = pd.DataFrame(val,columns=["val"])
+for i in range(0,len(val)):
+    val.loc[i,"accumulating"] = sum(val.loc[0:i,"val"]) 
+
+for i in range(0,len(val)):
+    val.iloc[i,:] = val.iloc[i,:].apply("{:.2%}".format)
+    
 print(val)
 
 
