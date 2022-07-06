@@ -9,13 +9,13 @@ d_from = "20050301"
 d_to = workdays.workday(datetime.datetime.today(), days=-1).strftime("%Y%m%d")
 
 
-# tmp = con.bdh("ES1 Index", "px_open", d_from, d_to,
+# tmp = con.bdh("ES1 Index", "px_last", d_from, d_to,
 #              elms = [("periodicitySelection", "MONTHLY")]).reset_index()
 
-# tmp = con.bdh("ES1 Index", "px_open", d_from, d_to,
+# tmp = con.bdh("ES1 Index", "px_last", d_from, d_to,
 #              elms = [("periodicitySelection", "WEEKLY")]).reset_index()
 
-tmp = con.bdh("ES1 Index", "px_open", d_from, d_to,
+tmp = con.bdh("ES1 Index", "px_last", d_from, d_to,
              elms = [("periodicitySelection", "QUARTERLY")]).reset_index()
 
 tmp
