@@ -56,6 +56,7 @@ def main():
     
     # 作成したリストをファイルサイズの列に上書きする
     df_s['size'] = my_new_size_list
+    df_s['path'] = df_s['path'].replace(my_path, '', regex=True)
     print(df_s)
     
     # csvファイルに保存する   
