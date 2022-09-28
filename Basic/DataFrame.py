@@ -10,4 +10,19 @@ df = pd.DataFrame(np.zeros([2,2]), index = ["a","b"], columns = ["A","B"])
 for i in range(0,3):
     exec(f"df{i} = df")
 
-df2
+
+
+a =list(range(0,4))
+print(a)
+# [0, 1, 2, 3]
+
+a = list(range(0,8,2))
+print(a)
+# [0, 2, 4, 6]
+
+a = np.reshape(a,(2,2))
+print(a)
+# [[0 2]
+#  [4 6]]
+
+pd.DataFrame(a)
