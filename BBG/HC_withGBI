@@ -68,7 +68,7 @@ for i in range(1,len(HC)):
 HC.loc[len(HC)-1,"ME"] = 3
 
 for i in Currency:
-    HC.loc[1:,i] = GBIL[i].pct_change() - GBIYC[i].pct_change()
+    HC.loc[1:,i] = GBIYC[i].pct_change() - GBIL[i].pct_change() 
   
 for i in Currency:
     HC.loc[:,i+"_Index"] = 100
