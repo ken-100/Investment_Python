@@ -5,6 +5,20 @@ for i in range(0,4):
 # 2
 # 3
 
+for i in range(0,4):
+    if i==2:
+        break
+    print(i)
+# 0
+# 1
+
+for i in range(0,4):
+    if i==2:
+        continue
+    print(i)
+# 0
+# 1
+# 3
 
 for i in range(0,4,2):
     print(i)
