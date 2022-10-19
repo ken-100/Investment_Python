@@ -42,3 +42,9 @@ for i,k in enumerate([10,20]):
     print(i,k)
 # 0 10
 # 1 20
+
+for i in range(65, 91):
+    print(chr(i))
+# A
+# B
+# C
