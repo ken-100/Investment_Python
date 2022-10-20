@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 import scipy.optimize as sco
-# https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.optimize.minimize.html
-
 from numpy import linalg
+# https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.optimize.minimize.html
+# https://quantu.hateblo.jp/entry/2017/12/27/010526
 
 Cov = pd.DataFrame(np.zeros([4,4]))
 Cov.loc[0,:]=[0.0449016,0.0396086,0.0442209,0.0323200]
@@ -45,16 +45,37 @@ opts = sco.minimize(fun=f, x0=w0, method='SLSQP', bounds=B, constraints=C)
 
 
 ww = opts["x"]
-print("Weight:",ww,"Net:",sum(ww))
-
-
 SD = np.dot(np.dot(np.array(ww),Cov),np.array(ww).T)**0.5
-print("SD:",SD)
-RC = ww * (np.dot(np.array(ww),Cov)) / SD
-print("RC:",RC)
+
+tmp = ["Weight","SD","W*SD","RC","RC%"]
+Summary = pd.DataFrame(np.zeros([len(tmp),len(Cov)]),index=tmp)
+Summary.loc["Weight",:] = ww
+Summary.loc["SD",:] = SD0
+Summary.loc["W*SD",:] = ww * SD0
+Summary.loc["RC",:] = RC
+Summary.loc["RC%",:] = RC/SD
+
+for i in range(0,len(Summary)):
+    Summary.loc[Summary.index[i],"Net"] = sum( Summary.loc[Summary.index[i],list(range(0,len(Cov)))] )
+    Summary.iloc[i,:] = Summary.iloc[i,:].apply("{:.1%}".format)
+
+Summary.loc["SD","Net"] = "-"
 
 RC_F = np.dot(A.T,ww) * np.dot(np.dot(pinvA ,Cov),ww) / SD
 RC_Tilde_F = np.dot(B_Tilde,ww) * np.dot(np.dot(B_Tilde ,Cov),ww) / SD
 sum(RC_F,RC_Tilde_F)
 
-print("SD_byFactor:",RC_F,RC_Tilde_F)
+
+print("Port byAsset")
+Summary
+
+
+
+tmp = ["RC"]
+Summary2 = pd.DataFrame(np.zeros([len(tmp),len(Cov)]), index=tmp, columns=list(range(0,len(Cov)-1)) + ["Additional"])
+Summary2.loc["RC",:] = list(RC_F) + [RC_Tilde_F]
+Summary2.loc["RC","Net"] = sum(Summary2.loc["RC",:])
+
+Summary2.iloc[0,:] = Summary2.iloc[0,:].apply("{:.2%}".format)
+print("SD_byFactor:")
+Summary2
