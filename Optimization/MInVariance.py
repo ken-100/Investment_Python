@@ -39,5 +39,5 @@ for i in range(0,len(Summary)):
     Summary.iloc[i,:] = Summary.iloc[i,:].apply("{:.1%}".format)
 
 Summary.loc["SD","Net"] = "-"
-print("MinVola")
+print("MInVariance")
 Summary
