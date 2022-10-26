@@ -6,6 +6,7 @@ import numpy as np
 print(np.__version__)
 # 1.23.4
 
+
 !pip show numpy
 # Name: numpy
 # Version: 1.23.4
