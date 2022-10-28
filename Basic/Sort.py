@@ -27,3 +27,25 @@ print(df)
 #    y  x
 # 0  1  0
 # 1  3  2
+
+
+
+arr = np.arange(6).reshape((3, 2))
+df = pd.DataFrame(arr,columns=["x","y"])
+print(df)
+#    x  y
+# 0  0  1
+# 1  2  3
+# 2  4  5
+
+print(np.argsort(df, axis=0))
+#    x  y
+# 0  0  0
+# 1  1  1
+# 2  2  2
+
+print(np.argsort(df, axis=1))
+#    x  y
+# 0  0  1
+# 1  0  1
+# 2  0  1
