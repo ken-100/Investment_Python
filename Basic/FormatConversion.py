@@ -28,7 +28,6 @@ for i in range(0,len(df)):
     tmp = df.loc[i,0]
     df.loc[i,0] = float(tmp.replace(",","").replace("%",""))/100
 print(df)
-
 #       0      1   2   3
 # 0   0.0   1.00   2   3
 # 1   4.0   5.00   6   7
