@@ -25,10 +25,28 @@ df.columns = c
 # 1  0.0  0.0
 
 
+
+df1 = df
+df2 = df.copy()
+df.iloc[0,:] = 7
+
+print(df1)
+#      A     
+#      x    y
+# 0  7.0  7.0
+# 1  0.0  0.0
+
+print(df2)
+#      A     
+#      x    y
+# 0  0.0  0.0
+# 1  0.0  0.0
+
+
+
+
 for i in range(0,3):
     exec(f"df{i} = df")
-
-
 
 a =list(range(0,4))
 print(a)
