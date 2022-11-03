@@ -62,3 +62,16 @@ print(a)
 #  [4 6]]
 
 df = pd.DataFrame(a)
+# print(df)
+#    0  1
+# 0  0  2
+# 1  4  6
+
+print(df.loc[df[0]==4,:])
+#    0  1
+# 1  4  6
+
+print(df.loc[(df[0]==0)|(df[0]==4),:])
+#    0  1
+# 0  0  2
+# 1  4  6
