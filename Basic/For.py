@@ -48,3 +48,9 @@ for i in range(65, 91):
 # A
 # B
 # C
+
+
+A = ["a","b"]
+B = ["c","d"]
+[x+y for x in A for y in B]
+# ['ac', 'ad', 'bc', 'bd']
