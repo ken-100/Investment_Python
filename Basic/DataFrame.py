@@ -80,3 +80,11 @@ print(df.loc[df[0].isin([0,4]),:])
 #    0  1
 # 0  0  2
 # 1  4  6
+
+print( df.loc[df[0].isin([0]),:] )
+#    0  1
+# 0  0  2
+
+print( df.loc[~(df[0].isin([0])),:] ) #not in
+#    0  1
+# 1  4  6
