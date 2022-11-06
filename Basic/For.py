@@ -38,10 +38,20 @@ for i in [10,20]:
 # 20
 
 
-for i,k in enumerate([10,20]):
-    print(i,k)
+for i,j in enumerate([10,20]):
+    print(i,j)
 # 0 10
 # 1 20
+
+from itertools import product
+for i, j in product([0,1], [0,1,2]):
+    print(i,j)
+# 0 0
+# 0 1
+# 0 2
+# 1 0
+# 1 1
+# 1 2
 
 for i in range(65, 91):
     print(chr(i))
