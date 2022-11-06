@@ -50,6 +50,13 @@ for i in range(65, 91):
 # C
 
 
+for a, b in enumerate(["a","b","c"]):
+    print(a,b)
+# 0 a
+# 1 b
+# 2 c
+
+
 A = ["a","b"]
 B = ["c","d"]
 [x+y for x in A for y in B]
