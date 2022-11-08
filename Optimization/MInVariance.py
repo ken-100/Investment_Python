@@ -14,7 +14,7 @@ def f(w):
     SD = np.dot(np.dot(np.array(w),Cov),np.array(w).T)**0.5
     return SD 
 
-B= [(0.001, 1)] * len(Cov)
+B= [(0.0001, 1)] * len(Cov)
 C = [{"type": "eq", "fun": lambda w: sum(w) - 1}]
 
 SD0 = np.diag(Cov**0.5)
@@ -22,6 +22,48 @@ tmp = 1/SD0
 w0 = tmp/sum(tmp)
 
 opts = sco.minimize(fun=f, x0=w0, method="SLSQP", bounds=B, constraints=C)
+
+ww = opts["x"]
+SD = np.dot(np.dot(np.array(ww),Cov),np.array(ww).T)**0.5
+RC = ww * (np.dot(np.array(ww),Cov)) / SD
+
+tmp = ["Weight","SD","W*SD","RC","RC%"]
+Summary = pd.DataFrame(np.zeros([len(tmp),len(Cov)]),index=tmp)
+Summary.loc["Weight",:] = ww
+Summary.loc["SD",:] = SD0
+Summary.loc["W*SD",:] = ww * SD0
+Summary.loc["RC",:] = RC
+Summary.loc["RC%",:] = RC/SD
+
+for i in range(0,len(Summary)):
+    Summary.loc[Summary.index[i],"Net"] = sum( Summary.loc[Summary.index[i],list(range(0,len(Cov)))] )
+    Summary.iloc[i,:] = Summary.iloc[i,:].apply("{:.1%}".format)
+
+Summary.loc["SD","Net"] = "-"
+print("MInVariance")
+Summary
+
+
+
+# COBYLA
+# slower than SLSQP
+# more stable with respect to obtaining a solution than SLSQP
+# cannot use bounds
+# only inequality can be used as a constraint, not equality
+# https://org-technology.com/posts/scipy-constrained-minimization-of-multivariate-scalar-functions.html#
+# https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.optimize.minimize.html
+
+C = [{"type": "ineq", "fun": lambda w: -sum(w) + 1-0.0001},
+     {"type": "ineq", "fun": lambda w: sum(w) - 1.000},
+     {"type": "ineq", "fun": lambda w:  min(w) - 0.0001 }  #min(w) >= 0.001
+    ]
+
+
+SD0 = np.diag(Cov**0.5)
+tmp = 1/SD0   
+w0 = tmp/sum(tmp)
+
+opts = sco.minimize(fun=f, x0=w0, method="COBYLA", constraints=C)
 
 ww = opts["x"]
 SD = np.dot(np.dot(np.array(ww),Cov),np.array(ww).T)**0.5
