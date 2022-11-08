@@ -24,7 +24,7 @@ pinvB_NS = null_space(pinvB.T)
 pinvB_NS *= np.sign(pinvB_NS[0,0])
 B_Bar = np.c_[pinvB, pinvB_NS]
 
-B_Tilde = np.linalg.inv(B_Bar)[len(B)-1,:]
+B_Tilde = np.linalg.inv(B_Bar)[len(Cov)-1,:]
 
 # x=[0.25,0.25,0.25,0.25]
 # SD = np.dot(np.dot(np.array(x),Cov),np.array(x).T)**0.5
@@ -37,15 +37,16 @@ def f(w):
     RC_Tilde_F = np.dot(B_Tilde,w) * np.dot(np.dot(B_Tilde ,Cov),w) / SD
     return sum( (RC_F / SD - 1/len(RC_F))**2 ) 
 
-B= [(0.001, 1)] * len(Cov)
+B = [(0.001, 1)] * len(Cov)
 C = [{'type': 'eq', 'fun': lambda w: sum(w) - 1}]
 w0 =[1. / len(Cov)] * len(Cov)
 
 opts = sco.minimize(fun=f, x0=w0, method='SLSQP', bounds=B, constraints=C)
 
-
+SD0 = np.diag(Cov**0.5)
 ww = opts["x"]
 SD = np.dot(np.dot(np.array(ww),Cov),np.array(ww).T)**0.5
+RC = ww * (np.dot(np.array(ww),Cov)) / SD
 
 tmp = ["Weight","SD","W*SD","RC","RC%"]
 Summary = pd.DataFrame(np.zeros([len(tmp),len(Cov)]),index=tmp)
@@ -68,7 +69,6 @@ sum(RC_F,RC_Tilde_F)
 
 print("Port byAsset")
 Summary
-
 
 
 tmp = ["RC"]
