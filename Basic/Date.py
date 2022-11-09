@@ -34,6 +34,15 @@ d3 = d3.strftime("%Y-%m-%d")
 print(d3)
 # 2007-03-30
 
+from dateutil.relativedelta import relativedelta
+d3 = d3 + relativedelta(months=3)
+print(d3)
+# 2007-06-30
+
+d3 = d3 + relativedelta(years=3)
+print(d3)
+# 2010-06-30
+
 # Gap
 d =d1 -d2
 print("Gap :",d)
