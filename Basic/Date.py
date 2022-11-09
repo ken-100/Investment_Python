@@ -27,6 +27,13 @@ d2 = workdays.workday(date.today(), days=5)
 print("Workday+"+str(tmp)+" :",d2)
 # Workday+5 : 2022-10-07
 
+#Sat, Sun -> Weekday
+d3 = date(2007, 3, 31)
+d3 = workdays.workday(d3+timedelta(days=1), days=-1)
+d3 = d3.strftime("%Y-%m-%d")
+print(d3)
+# 2007-03-30
+
 # Gap
 d =d1 -d2
 print("Gap :",d)
