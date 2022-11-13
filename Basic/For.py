@@ -25,8 +25,8 @@ for i in range(0,4,2):
 # 0
 # 2
     
-
-  for i in range(4,0,-2):
+    
+for i in range(4,0,-2):
     print(i)
 # 4
 # 2
@@ -36,6 +36,13 @@ for i in [10,20]:
     print(i)
 # 10
 # 20
+
+
+for _ in range(3):
+    print(1) 
+# 1
+# 1
+# 1
 
 
 for i,j in enumerate([10,20]):
