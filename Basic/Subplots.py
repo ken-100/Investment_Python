@@ -12,3 +12,6 @@ ax[0,0].set_title("A")
 ax[0,1].plot(x, y2)
 ax[0,1].set_title("B")
 plt.show()
+
+# Color
+# https://matplotlib.org/stable/gallery/color/named_colors.html
