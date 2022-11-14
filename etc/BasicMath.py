@@ -43,5 +43,5 @@ y = np.log(x)   # Impossible with "math"
 
 fig, ax = plt.subplots(1, 1, squeeze=False,figsize=(8,3),tight_layout=True)
 ax[0,0].plot(x, y)
-ax[0,0].set_title("y=exp(x)")
+ax[0,0].set_title("y=log(x)")
 plt.show()
