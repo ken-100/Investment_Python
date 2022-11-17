@@ -23,13 +23,12 @@ def f(w):
     return SD 
 
 def opts(m,C):
-    B= [(0, 1)] * len(Cov)
-
     SD0 = np.diag(Cov**0.5)
     tmp = 1/SD0   
     w0 = tmp/sum(tmp)
 
     if m == "SLSQP":
+        B= [(0, 1)] * len(Cov)
         opts = sco.minimize(fun=f, x0=w0, method=m, bounds=B, constraints=C)
     else:
         opts = sco.minimize(fun=f, x0=w0, method=m, constraints=C)
