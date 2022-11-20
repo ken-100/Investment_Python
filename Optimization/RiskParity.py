@@ -29,6 +29,7 @@ opts = sco.minimize(fun=f, x0=w0, method="SLSQP", bounds=B, constraints=C)
 
 ww = opts["x"]
 SD = np.dot(np.dot(np.array(ww),Cov),np.array(ww).T)**0.5
+RC = ww * (np.dot(np.array(ww),Cov)) / SD
 
 tmp = ["Weight","SD","W*SD","RC","RC%"]
 Summary = pd.DataFrame(np.zeros([len(tmp),len(Cov)]),index=tmp)
