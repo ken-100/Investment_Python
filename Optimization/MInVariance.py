@@ -62,10 +62,10 @@ Summary
 
 
 m = "COBYLA"  #Method
-C = [{"type": "ineq", "fun": lambda w: -sum(w) + 1-0.0001},
-     {"type": "ineq", "fun": lambda w: sum(w) - 1.000},
-     {"type": "ineq", "fun": lambda w:  min(w) - 0.0001 }  #min(w) >= 0.001
-    ]
+c0 = {"type": "ineq", "fun": lambda w: -sum(w) + 1-0.0001}
+c1 = {"type": "ineq", "fun": lambda w: sum(w) - 1.000}
+c2 = {"type": "ineq", "fun": lambda w:  min(w) - 0.0001 } #min(w) >= 0.001 
+C = [c0, c1, c2 ]
 Summary = opts(m,C)
 
 print("MinVariance")
