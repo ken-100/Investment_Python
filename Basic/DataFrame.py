@@ -89,6 +89,6 @@ print( df.loc[~(df[0].isin([0])),:] ) #not in
 #    0  1
 # 1  4  6
 
-print(df.loc[~(df[0].isin([0])),:].reset_index())
+print(df.loc[~(df[0].isin([0])),:].reset_index(drop=True))
 #    index  0  1
 # 0      1  4  6
