@@ -9,7 +9,7 @@ pd.set_option('display.max_columns', 70)
 con = pdblp.BCon(timeout=10000)
 con.start()
 
-T = ["JPY Curncy"]
+T = ["JPY Curncy","EUR Curncy"]
 tmp = ["px_last"]
 
 
@@ -19,5 +19,6 @@ d_to = workdays.workday(datetime.datetime.today(), days=-1).strftime("%Y%m%d")
 FX = con.bdh(T, "px_last", d_from, d_to,
              elms = [("nonTradingDayFillOption","NON_TRADING_WEEKDAYS"),("nonTradingDayFillMethod","PREVIOUS_VALUE")]).reset_index()
 
-Ret = FX.iloc[:,1].pct_change()
-Index = ( 1 + Ret.loc[1:,] ).cumprod()*100
+Ret = FX.iloc[:,1:].pct_change()
+Index = ( 1 + Ret.loc[1:,:] ).cumprod()*100
+Index
