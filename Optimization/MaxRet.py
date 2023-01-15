@@ -68,7 +68,7 @@ c1 = {"type":"ineq", "fun": lambda w: -np.dot(np.dot(np.array(w),Cov),np.array(w
 C = [c0,c1]
 Summary = opts(m,C)
 
-print("MinVariance")
+print("MaxReturn")
 Summary
 
 
