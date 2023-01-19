@@ -42,7 +42,14 @@ print(df2)
 # 0  0.0  0.0
 # 1  0.0  0.0
 
-
+df3 = pd.concat([df1 ,df2]).reset_index(drop=True)
+print(df3)
+#      A     
+#      x    y
+# 0  7.0  7.0
+# 1  0.0  0.0
+# 2  0.0  0.0
+# 3  0.0  0.0
 
 
 for i in range(0,3):
