@@ -20,5 +20,10 @@ list(range(5,0,-1))
 
 A = ["a","b"]
 B = ["c","d"]
-[x+y for x in A for y in B]
+tmp = [x+y for x in A for y in B]
+print(tmp)
 # ['ac', 'ad', 'bc', 'bd']
+
+tmp.remove("ac")
+print(tmp)
+# ['ad', 'bc', 'bd']
