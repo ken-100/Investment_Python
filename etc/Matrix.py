@@ -28,6 +28,7 @@ Sigma = np.array([[ 0.71, -0.743,  0.43,  0 ],
                  ])
 
 np.dot( np.dot(A,Sigma), A.T)
+np.dot(A,Sigma) @ A.T          #
 
 # array([[ 0.91 , -0.943],
 #        [-0.63 ,  0.66 ]])
