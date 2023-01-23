@@ -15,6 +15,8 @@ ax[0,0].plot(x, y1,"SteelBlue", linewidth=2)
 ax[0,0].plot(x, y2,"LightSteelBlue")
 ax[0,0].set_title("A")
 ax[0,0].legend(["test1","test2"])
+ax[0,0].set_xlabel("x-label")
+ax[0,0].set_ylabel("y-label")
 
 ax[0,1].plot(x, y2)
 ax[0,1].set_title("B")
