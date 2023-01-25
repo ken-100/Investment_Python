@@ -51,6 +51,13 @@ print(df3)
 # 2  0.0  0.0
 # 3  0.0  0.0
 
+df3 = pd.concat([df1 ,df2],axis=1)
+print(df3)
+#      A         A     
+#      x    y    x    y
+# 0  7.0  7.0  0.0  0.0
+# 1  0.0  0.0  0.0  0.0
+
 
 for i in range(0,3):
     exec(f"df{i} = df")
