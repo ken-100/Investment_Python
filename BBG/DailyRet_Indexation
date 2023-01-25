@@ -20,6 +20,10 @@ FX = con.bdh(T, "px_last", d_from, d_to,
              elms = [("nonTradingDayFillOption","NON_TRADING_WEEKDAYS"),("nonTradingDayFillMethod","PREVIOUS_VALUE")]).reset_index()
 
 Ret = FX.iloc[:,1:].pct_change()
-Index = ( 1 + Ret.loc[:,:] ).cumprod()*100
+Index = ( 1 + Ret ).cumprod()*100
 Index.loc[0,:] = 100
 Index
+
+
+Diff = FX.iloc[:,1:].diff()
+Diff
