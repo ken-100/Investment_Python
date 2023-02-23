@@ -22,6 +22,7 @@ ax[0,1].plot(x, y2)
 ax[0,1].set_title("B")
 ax[0,1].legend(["test2"])
 ax[0,1].set_xticks(list(range(-3,8,2)))
+ax[0,1].set_xlim(-3, 10)
 
 fig.autofmt_xdate()
 plt.show()
