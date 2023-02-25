@@ -8,7 +8,7 @@ for var_name in dir():
         
 del A
 
-
+#https://nigimitama.hatenablog.jp/entry/2019/11/05/000000
 
 
 
