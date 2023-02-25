@@ -1,5 +1,6 @@
-import sys
+#https://qiita.com/AnchorBlues/items/883790e43417640140aa
 
+import sys
 print("{}{: >25}{}{: >10}{}".format('|','Variable Name','|','Memory','|'))
 print(" ------------------------------------ ")
 for var_name in dir():
