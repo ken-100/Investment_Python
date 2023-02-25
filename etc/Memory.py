@@ -1,5 +1,4 @@
 #https://qiita.com/AnchorBlues/items/883790e43417640140aa
-
 import sys
 print("{}{: >25}{}{: >10}{}".format('|','Variable Name','|','Memory','|'))
 print(" ------------------------------------ ")
@@ -8,3 +7,18 @@ for var_name in dir():
         print("{}{: >25}{}{: >10}{}".format('|',var_name,'|',sys.getsizeof(eval(var_name)),'|'))
         
 del A
+
+
+
+
+
+# https://www.haya-programming.com/entry/2017/02/09/190512
+L = [1,2]
+
+# Use a lot of memory
+tmp = [ x for x in L]
+
+# Recommended
+tmp = []
+for x in L:
+    tmp += [x]
