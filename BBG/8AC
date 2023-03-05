@@ -1,0 +1,14 @@
+from xbbg import blp
+
+LS = ["M0KO","TPXDDVD","GDUEEGF","NDUEEGF","SREITJWJ","SBWGNJYC","TPXDREIT","SBWGNJYU","BPITTO01"]
+
+T = [i + " Index" for i in LS]
+T += ["USDJPY Curncy","EURJPY Curncy"]
+
+    
+BDP = blp.bdp(tickers=T, flds=["Security_name","Currency","undl_spot_ticker","volatility_260d"]).loc[T,:]
+
+print(BDP.shape)
+BDP.insert(0, "ticker", T)
+BDP = BDP.reset_index(drop=True)
+BDP
