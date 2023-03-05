@@ -1,4 +1,5 @@
 from xbbg import blp
+import pdblp
 
 con = pdblp.BCon(timeout=10000)
 con.start()
