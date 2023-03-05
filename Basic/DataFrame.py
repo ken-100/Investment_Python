@@ -16,6 +16,11 @@ df = pd.DataFrame(np.zeros([2,2]), index = ["a","b"], columns = ["A","B"])
 # a  0.0  0.0
 # b  0.0  0.0
 
+df = df.reindex(index=["b", "a"], columns=["B", "A"])
+#      B    A
+# b  0.0  0.0
+# a  0.0  0.0
+
 df = pd.DataFrame(np.zeros([2,2]))
 c = pd.MultiIndex.from_arrays([["A", ""], ["x","y"]])
 df.columns = c
