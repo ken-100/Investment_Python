@@ -14,6 +14,11 @@ list(range(0,5,2)) * 2
 # [0, 2, 4, 0, 2, 4]
 
 
+tmp = list(range(0,5,2))
+[x for x in tmp for y in range(2)]
+# [0, 0, 2, 2, 4, 4]
+
+
 list(range(5,0,-1))
 # [5, 4, 3, 2, 1]
 
