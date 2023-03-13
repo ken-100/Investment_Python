@@ -36,3 +36,9 @@ print(tmp)
 tmp.remove("ac")
 print(tmp)
 # ['ad', 'bc', 'bd']
+
+
+np.zeros((3,4))
+# array([[0., 0., 0., 0.],
+#        [0., 0., 0., 0.],
+#        [0., 0., 0., 0.]])
