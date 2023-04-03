@@ -1,4 +1,5 @@
 from xbbg import blp
+import pdblp
 import workdays
 import datetime
 from datetime import datetime, timedelta, date
@@ -40,7 +41,7 @@ BDP(L)
 
 
 print("Emerging Markets Stocks")
-L = ["GDUEEGF","NDUEEGF"]
+L = ["GDUEEGF","NDUEEGF","HJ137561"]
 BDP(L)
 
 
