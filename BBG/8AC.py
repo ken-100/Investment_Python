@@ -9,9 +9,10 @@ con.start()
 
 def BDP(L):
     T = [i + " Index" for i in L]   
-    BDP = blp.bdp(tickers=T, flds=["Security_name","Currency","volatility_260d"]).loc[T,:]
+    BDP = blp.bdp(tickers=T, flds=["Security_name","long_comp_name","Currency","volatility_260d"]).loc[T,:]
     BDP.insert(0, "ticker", T)
     BDP = BDP.reset_index(drop=True)
+
 
     
     for i in range(len(BDP)):
@@ -56,3 +57,19 @@ BDP(L)
 print("Developed Country Bond")
 L = ["SBWGNJYC","SBWGNJYU"]
 BDP(L)
+
+print("Emerging Market Bond / USD Bond")
+L = ["JPGCUJCP","JPGCHJCP","JPEIDIVR","JPGCCOMP"]
+# L = ["JPGCUJCP","JPGCHJCP","JPEIDIVR","JPEIPLUS","JPEMCOMP","GBIE1545"]
+tmp = BDP(L)
+tmp
+
+
+print("Emerging Market Bond / Local Currency Bond")
+L = ["JGENDVUJ","JGENDVHJ","JGENGUJG","JGENGHJG","JGENVUJG","JGENVHJG"]
+tmp = BDP(L)
+tmp["Remarks"] = ["GBI EM Div"]*2+["GBI EM Global"]*2+["GBI EM Global Div"]*2
+tmp
+# https://www.jpmorgan.com/insights/research/index-research
+# https://www.jpmorgan.com/content/dam/jpm/cib/complex/content/markets/index-research/Global-Index-Research-Product-Guide-2022.pdf#page=117
+    
