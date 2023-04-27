@@ -8,6 +8,14 @@ PD = pd.DataFrame(NP)
 NP = PD.values
 
 
+print(NP.dtype)
+print(type(NP) == np.ndarray)
+print(type(PD) == np.ndarray)
+# float64
+# True
+# False
+
+
 
 start = time.time()
 for i in range(len(NP)):
