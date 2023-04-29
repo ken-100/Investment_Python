@@ -16,5 +16,11 @@ print("*2 × 2 is random.rand only\n")
 print(np.random.randn(i))
 print(np.random.randn(i,i))
 
+
+# Multidimensional normal distribution
+np.random.multivariate_normal(np.zeros(i),np.identity(i)) #(mean, cov, size, check_valid, tol)
+
+
+
 # https://note.nkmk.me/python-numpy-random/
 
