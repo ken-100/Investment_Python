@@ -1,5 +1,22 @@
 import numpy as np
 
+
+# Max
+A = np.array([[2, 5], [1, 3]])
+print(A)
+[[2 5]
+ [1 3]]
+
+np.max(A)
+# 5
+
+# A = np.where(A > 3, 1, A)
+print(A)
+# [[2 1]
+#  [1 3]]
+
+
+
 # Inverse Matrix
 A = np.array([[2, 5], [1, 3]])
 A_inv = np.linalg.inv(A)
