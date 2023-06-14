@@ -14,7 +14,7 @@ fig = plt.figure(figsize=(10, 5))
 
 
 j = 1
-for i in range(0,2):
+for i in range(2):
     exec(f"ax{i} = fig.add_subplot(1, 2, {j})")
     exec(f"y = df[T[i]]")
     exec(f"ax{i}.plot(x,y, color = 'Blue')")
