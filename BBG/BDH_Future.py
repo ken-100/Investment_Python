@@ -23,9 +23,7 @@ BDH = con.bdh(T, ["px_open","px_last"], d_from, d_to).reset_index()
 #        elms = [("nonTradingDayFillOption","NON_TRADING_WEEKDAYS"),("nonTradingDayFillMethod","PREVIOUS_VALUE")] ).reset_index()
 #Formats the type of data returned for nontrading days.
 
-
-
-BDH.loc[:,["date"]+T].head()
+BDH[["date"]+T].head()
 
 
 # https://data.bloomberglp.com/labs/sites/2/2013/12/blpapi-developers-guide-1.38.pdf
