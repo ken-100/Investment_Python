@@ -16,7 +16,7 @@ Target = df["Target"].unique().tolist()
 tmp = np.reshape(Target, (len(Target),1))
 Count = pd.DataFrame(tmp,columns=["Target"] )
 
-for i in range(0,len(tmp)):
+for i in range(len(tmp)):
     tmp1 = df["Target"].value_counts()[tmp[i]]
     Count.loc[i,"Count"] = tmp1[0]
     Count.loc[i,"%"] = round(tmp1[0] / len(df) ,2)
