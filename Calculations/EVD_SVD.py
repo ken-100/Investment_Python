@@ -25,10 +25,10 @@ print("\nInverse: B\n",B)
 # A^-1 = 1 / (ad-bc) [d, -b]
 #                    [-c, a]
 
-C =np.dot(A, B)
+C = A @ B 
 print("\nAB=E\n",C)
 
-C =np.dot(B, A)
+C = B @ A
 print("\nBA=E\n",C)
 
 values,V = eig(A)
@@ -37,7 +37,7 @@ print("\nEigenvalue\n",values)
 print("\nEigeVector V\n",V)
 print("\nInverse V^-1\n",np.linalg.inv(V))
 
-AA = np.dot(np.dot(V,np.diag(values)), np.linalg.inv(V))
+AA = V @ np.diag(values) @ np.linalg.inv(V)
 print("\n A=V Λ V^-1\n",np.linalg.inv(V))
 
 
@@ -50,10 +50,10 @@ print("Matrix A\n", A)
 
 print("\nTransposed: A^T\n",A.T)
 
-B = np.dot(A,A.T)
+B = A @ A.T 
 print("\nTransposed: B = A A^T\n",B)
 
-C = np.dot(A.T,A)
+C = A.T @ A 
 print("\nTransposed: C = A^T A\n",C)
 
 U_values,U = eig(B)
@@ -62,11 +62,11 @@ print("\n left values \n",U_values)
 print("\n left U\n",U)
 
 V_values,V = eig(C)
-V = np.dot(A.T, U[:,0]) / U_values[0]
+V = (A.T @ U[:,0] ) / U_values[0]
 V = V.reshape(A.shape[1], 1)
 
 for i in range(1,len(A)):
-    tmp = np.dot(A.T, U[:,i]) / U_values[i]
+    tmp = ( A.T @ U[:,i] ) / U_values[i]
     tmp = tmp.reshape(A.shape[1], i)
     V = np.append(V, tmp, axis=1)
 
@@ -76,6 +76,6 @@ print("\n right V\n",V)
 X = np.diag(U_values)   
 print("\n X\n",X)
 
-AA = np.round(np.dot(np.dot(U,X),V.T),2)
+AA = np.round( U @ X @ V.T ,2)
 print("\n A = U X V\n",AA)
 print("\n A\n",A)
