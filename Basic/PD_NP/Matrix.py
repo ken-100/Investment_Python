@@ -49,9 +49,7 @@ Sigma = np.array([[ 0.71, -0.743,  0.43,  0 ],
                   [    0,     0,      0, 0.2 ]
                  ])
 
-np.dot( np.dot(A,Sigma), A.T)
-np.dot(A,Sigma) @ A.T          #
-
+A @ Sigma @ A.T
 # array([[ 0.91 , -0.943],
 #        [-0.63 ,  0.66 ]])
 
@@ -64,5 +62,5 @@ eig, P = np.linalg.eig(A)
 print("Eigenvalues\n",eig)
 print("\nEigenvectors\n",P)
  
-D = np.dot(np.dot(np.linalg.inv(P), A), P)
+D = np.linalg.inv(P) @  A @  P
 print("\nDiagonal matrix\n",D)
