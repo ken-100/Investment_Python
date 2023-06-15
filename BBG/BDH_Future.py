@@ -10,7 +10,7 @@ con.start()
 
 LS = ["ES","NQ","TP"]
 T=[]
-for i in range(0,len(LS)):
+for i in range(len(LS)):
     T += [LS[i]+"1 Index"]
     
 # d_from = "20050301"
