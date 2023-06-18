@@ -123,7 +123,10 @@ NEIXCTA Index        SG CTA Index
 NEIXCTAT Index       SG Trend Index
  
  
-◆BBG関数
+◆マニュアル、Template
+XLTP Excel Template
+DOCS Bloomberg Document
+SMNR Bloomberg Seminars
 BQLX  Help on BQL
 
 ◆バックテスト、ファクター分析
