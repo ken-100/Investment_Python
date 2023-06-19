@@ -1,30 +1,171 @@
-from xbbg import blp
-import pdblp
-import workdays
-import datetime
-import pandas as pd
-pd.set_option('display.max_columns', 70)
-
-con = pdblp.BCon(timeout=5000)
-con.start()
-
-LS = ["ES","NQ","TP"]
-T=[]
-for i in range(len(LS)):
-    T += [LS[i]+"1 Index"]
-    
-# d_from = "20050301"
-d_from = workdays.workday(datetime.datetime.today(), days=-260).strftime("%Y%m%d")
-d_to = workdays.workday(datetime.datetime.today(), days=-1).strftime("%Y%m%d")
-
-BDH = con.bdh(T, ["px_open","px_last"], d_from, d_to).reset_index()
-#BDH = con.bdh(T, ["px_open","px_last"], d_from, d_to, elms = [("periodicitySelection","MONTHLY")]  ).reset_index()  #Monthly
-#BDH = con.bdh(T, ["px_open","px_last"], d_from, d_to, 
-#        elms = [("nonTradingDayFillOption","NON_TRADING_WEEKDAYS"),("nonTradingDayFillMethod","PREVIOUS_VALUE")] ).reset_index()
-#Formats the type of data returned for nontrading days.
-
-BDH[["date"]+T].head()
-
-
-# https://data.bloomberglp.com/labs/sites/2/2013/12/blpapi-developers-guide-1.38.pdf
-# https://data.bloomberglp.com/professional/sites/10/2017/03/BLPAPI-Core-Developer-Guide.pdf
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead tr th {\n",
+       "        text-align: left;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr>\n",
+       "      <th></th>\n",
+       "      <th>index</th>\n",
+       "      <th colspan=\"2\" halign=\"left\">ES1 Index</th>\n",
+       "      <th colspan=\"2\" halign=\"left\">NQ1 Index</th>\n",
+       "      <th colspan=\"2\" halign=\"left\">TP1 Index</th>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th>px_open</th>\n",
+       "      <th>px_last</th>\n",
+       "      <th>px_open</th>\n",
+       "      <th>px_last</th>\n",
+       "      <th>px_open</th>\n",
+       "      <th>px_last</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>2022-06-21</td>\n",
+       "      <td>3802.65</td>\n",
+       "      <td>3889.10</td>\n",
+       "      <td>11782.82</td>\n",
+       "      <td>12037.29</td>\n",
+       "      <td>1772.0</td>\n",
+       "      <td>1804.2</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>2022-06-22</td>\n",
+       "      <td>3887.55</td>\n",
+       "      <td>3883.94</td>\n",
+       "      <td>12039.89</td>\n",
+       "      <td>12025.33</td>\n",
+       "      <td>1807.6</td>\n",
+       "      <td>1801.3</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>2022-06-23</td>\n",
+       "      <td>3882.39</td>\n",
+       "      <td>3922.13</td>\n",
+       "      <td>12001.42</td>\n",
+       "      <td>12203.91</td>\n",
+       "      <td>1793.5</td>\n",
+       "      <td>1800.3</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>2022-06-24</td>\n",
+       "      <td>3907.16</td>\n",
+       "      <td>4042.38</td>\n",
+       "      <td>12152.18</td>\n",
+       "      <td>12622.92</td>\n",
+       "      <td>1794.0</td>\n",
+       "      <td>1815.9</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>2022-06-27</td>\n",
+       "      <td>4041.09</td>\n",
+       "      <td>4029.48</td>\n",
+       "      <td>12619.80</td>\n",
+       "      <td>12518.95</td>\n",
+       "      <td>1812.9</td>\n",
+       "      <td>1830.0</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "       index ES1 Index          NQ1 Index           TP1 Index        \n",
+       "               px_open  px_last   px_open   px_last   px_open px_last\n",
+       "0 2022-06-21   3802.65  3889.10  11782.82  12037.29    1772.0  1804.2\n",
+       "1 2022-06-22   3887.55  3883.94  12039.89  12025.33    1807.6  1801.3\n",
+       "2 2022-06-23   3882.39  3922.13  12001.42  12203.91    1793.5  1800.3\n",
+       "3 2022-06-24   3907.16  4042.38  12152.18  12622.92    1794.0  1815.9\n",
+       "4 2022-06-27   4041.09  4029.48  12619.80  12518.95    1812.9  1830.0"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "from xbbg import blp\n",
+    "import pdblp\n",
+    "import workdays\n",
+    "import datetime\n",
+    "import pandas as pd\n",
+    "pd.set_option('display.max_columns', 70)\n",
+    "\n",
+    "con = pdblp.BCon(timeout=5000)\n",
+    "con.start()\n",
+    "\n",
+    "LS = [\"ES\",\"NQ\",\"TP\"]\n",
+    "T=[]\n",
+    "for i in range(len(LS)):\n",
+    "    T += [LS[i]+\"1 Index\"]\n",
+    "    \n",
+    "# d_from = \"20050301\"\n",
+    "d_from = workdays.workday(datetime.datetime.today(), days=-260).strftime(\"%Y%m%d\")\n",
+    "d_to = workdays.workday(datetime.datetime.today(), days=-1).strftime(\"%Y%m%d\")\n",
+    "\n",
+    "BDH = blp.bdh(T, [\"px_open\",\"px_last\"], d_from, d_to).reset_index()\n",
+    "# BDH = con.bdh(T, [\"px_open\",\"px_last\"], d_from, d_to).reset_index()\n",
+    "#BDH = con.bdh(T, [\"px_open\",\"px_last\"], d_from, d_to, elms = [(\"periodicitySelection\",\"MONTHLY\")]  ).reset_index()  #Monthly\n",
+    "#BDH = con.bdh(T, [\"px_open\",\"px_last\"], d_from, d_to, \n",
+    "#        elms = [(\"nonTradingDayFillOption\",\"NON_TRADING_WEEKDAYS\"),(\"nonTradingDayFillMethod\",\"PREVIOUS_VALUE\")] ).reset_index()\n",
+    "#Formats the type of data returned for nontrading days.\n",
+    "\n",
+    "BDH[[BDH.columns[0][0]]+T].head()\n",
+    "\n",
+    "\n",
+    "# https://data.bloomberglp.com/labs/sites/2/2013/12/blpapi-developers-guide-1.38.pdf\n",
+    "# https://data.bloomberglp.com/professional/sites/10/2017/03/BLPAPI-Core-Developer-Guide.pdf"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
