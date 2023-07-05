@@ -64,14 +64,14 @@ FX["Carry"] = np.where(BDP["is_pct_chg_app_base_crncy"] == "Y", BDP["Carry"], -B
 C = ["Currency","1D","vs"+ME[5:],"vs"+YE[5:],"Carry"]
 FX.columns= C
 
-print("Currency Return as of "+ODA+" (vsUSD)")
+print("Currency Return as of "+ODA+" (vsUSD, BGN)")
 display(FX.style\
         .bar(subset=[C[1]],align='mid',color=["pink","lightblue"])\
         .bar(subset=[C[2]],align='mid',color=["pink","lightblue"])\
         .bar(subset=[C[3]],align='mid',color=["pink","lightblue"])\
         .bar(subset=[C[4]],align='mid',color=["pink","lightblue"])\
-        .format({C[1]: '{:.2%}'})\
-        .format({C[2]: '{:.2%}'})\
-        .format({C[3]: '{:.2%}'})\
-        .format({C[4]: '{:.2%}'})\
+        .format({C[1]: '{:.1%}'})\
+        .format({C[2]: '{:.1%}'})\
+        .format({C[3]: '{:.1%}'})\
+        .format({C[4]: '{:.1%}'})\
        )
