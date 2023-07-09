@@ -1,10 +1,11 @@
 import os
 os.getcwd()
 
-path = ""     #ex) C:/Users/
+path = r"C:\Users"     #ex) C:/Users/
+path = path.replace("\\", "/")
 os.chdir(path)
-os.getcwd()
-
+print(os.getcwd())
+# C:\Users
 
 
 from pathlib import Path
