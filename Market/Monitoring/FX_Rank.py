@@ -91,6 +91,7 @@ plt.savefig("tmp.png")
 with open("tmp.png", "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 html += f'<img src="data:image/png;base64,{encoded_string}">'
+os.remove("tmp.png")
 
 # path = args.path
 path = r"C:\Users\ky090\OneDrive - The University of Texas at Austin\001_Market\100_Output"
