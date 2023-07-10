@@ -86,7 +86,7 @@ def CFTC(s):
     ax1.legend(loc='upper left', bbox_to_anchor=(1.08, 1))
     ax2.legend(loc='upper right', bbox_to_anchor=(1.33, 0.7))
     fig.tight_layout()
-    plt.show()
+    # plt.show()
     
     return fig
     
@@ -121,7 +121,7 @@ def CFTC_Net():
     ax1.legend(loc='upper left', bbox_to_anchor=(1.08, 1))
     ax2.legend(loc='upper right', bbox_to_anchor=(1.33, 0.7))
     fig.tight_layout()
-    plt.show()
+    # plt.show()
     
     return fig
 
