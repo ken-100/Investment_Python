@@ -27,18 +27,31 @@ if TDA.month > 3 or (TDA.month == 3 and TDA.day == 31):
 else:
     YE = date(TDA.year - 1, 3, 31).strftime("%Y%m%d")
     
-L = ["EUR","JPY","GBP","CNY","NZD","NOK","AUD","CAD","CHF","SEK"]
+L = ["JPY","EUR","CNY","GBP","CAD","AUD","NZD","CHF","NOK","SEK"]
 T = [i + "USD BGN Curncy" for i in L] 
 df = blp.bdh(T, "px_last", YE, ODA, Days="W", Fill="P").reset_index()
 df = df[["index"]+T]
 df.columns = ["Date"] + L
 
 
-L2 = ["EURUSD","USDJPY","GBPUSD","USDCNY"]
+T0 = [i + " BGN Curncy" for i in L]
+T1 = [i + "1M BGN Curncy" for i in L]
+T1 = [x.replace("CNY", "CNH") for x in T1]
+
+BDP0 = blp.bdp(tickers=T0, flds=["px_last","fwd_scale","is_pct_chg_app_base_crncy"]).loc[T0,:]
+BDP1 = blp.bdp(tickers=T1, flds=["px_last"]).loc[T1,:]
+BDP = BDP0.reset_index(drop=True)
+BDP.insert(0, "Curncy", L)
+BDP.insert(2, "frd_point", BDP1["px_last"].tolist())
+BDP.insert(3, "Carry", 0)
+BDP["Carry"] = (1 + BDP["frd_point"] / BDP["px_last"] / 10 ** BDP["fwd_scale"] ) ** 12 - 1
+
+L2 = [row['Curncy'] + 'USD' if row['is_pct_chg_app_base_crncy'] == 'N' else 'USD' + row['Curncy'] for _, row in BDP.iterrows()]
 T2 = [i + " BGN Curncy" for i in L2]
 df2 = blp.bdh(T2, "px_last", OYA, ODA, Days="W", Fill="P").reset_index()
 df2 = df2[["index"]+T2]
 df2.columns = ["Date"] + L2
+
 
 T0 = [i + " BGN Curncy" for i in L]
 T1 = [i + "1M BGN Curncy" for i in L]
@@ -82,16 +95,18 @@ html = FX.style\
     .format({c: '{:.1%}' for c in C[1:]})\
     .render()
 
-fig, ax = plt.subplots(2,2,figsize=(10,6),tight_layout=True)
+fig, ax = plt.subplots(5,2,figsize=(10,14),tight_layout=True)
 for i in range(len(L2)):
-    ax[i%2,i//2].plot(df2["Date"], df2[L2[i]])
-    ax[i%2,i//2].set_title(L2[i])
+    ax[i//2,i%2].plot(df2["Date"], df2[L2[i]])
+    ax[i//2,i%2].set_title(L2[i])
 plt.savefig("tmp.png")
 
 with open("tmp.png", "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 html += f'<img src="data:image/png;base64,{encoded_string}">'
-os.remove("tmp.png")
+
+html = "<h3><u>as of " +ODA + "</u></h3>" + html
+
 
 # path = args.path
 path = r"C:\Users\ky090\OneDrive - The University of Texas at Austin\001_Market\100_Output"
