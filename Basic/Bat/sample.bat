@@ -15,3 +15,7 @@ rem Python
 call C:\Users\----\activate.bat
 cd C:\Users\----\020_Bat
 python NQ.py
+
+S:
+cd S:\----\010_CFTC
+python CFTC.py
