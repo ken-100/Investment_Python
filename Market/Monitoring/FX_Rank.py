@@ -47,11 +47,11 @@ BDP.insert(3, "Carry", 0)
 BDP["Carry"] = (1 + BDP["frd_point"] / BDP["px_last"] / 10 ** BDP["fwd_scale"] ) ** 12 - 1
 
 L2 = [row['Curncy'] + 'USD' if row['is_pct_chg_app_base_crncy'] == 'N' else 'USD' + row['Curncy'] for _, row in BDP.iterrows()]
+L2 += [i + "JPY" for i in L[1:]] + ["CHFNOK"]
 T2 = [i + " BGN Curncy" for i in L2]
 df2 = blp.bdh(T2, "px_last", OYA, ODA, Days="W", Fill="P").reset_index()
 df2 = df2[["index"]+T2]
 df2.columns = ["Date"] + L2
-
 
 T0 = [i + " BGN Curncy" for i in L]
 T1 = [i + "1M BGN Curncy" for i in L]
@@ -95,7 +95,8 @@ html = FX.style\
     .format({c: '{:.1%}' for c in C[1:]})\
     .render()
 
-fig, ax = plt.subplots(5,2,figsize=(10,14),tight_layout=True)
+tmp = len(L2) // 2 + len(L2) % 2
+fig, ax = plt.subplots(tmp, 2,figsize=(10,tmp*2),tight_layout=True)
 for i in range(len(L2)):
     ax[i//2,i%2].plot(df2["Date"], df2[L2[i]])
     ax[i//2,i%2].set_title(L2[i])
@@ -110,6 +111,7 @@ html = "<h3><u>as of " +ODA + "</u></h3>" + html
 
 # path = args.path
 path = r"C:\Users\ky090\OneDrive - The University of Texas at Austin\001_Market\100_Output"
+
 path = path.replace("\\", "/")
 os.chdir(path)
 print(os.getcwd())
