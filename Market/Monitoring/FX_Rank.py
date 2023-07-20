@@ -12,6 +12,7 @@ import base64
 import matplotlib.pyplot as plt
 import os
 import argparse
+import webbrowser
 
 # parser = argparse.ArgumentParser()
 # parser.add_argument('path')
@@ -89,8 +90,8 @@ FX = FX.reset_index(drop=True)
 C = ["Currency","1D","vs"+ME[5:],"vs"+YE[5:],"Carry"]
 FX.columns= C
 
-
-html = FX.style\
+html = "<h3><u>FX as of " +ODA + "</u></h3>"
+html += FX.style\
     .bar(subset=C[1:], align='mid', color=["pink", "lightblue"])\
     .format({c: '{:.1%}' for c in C[1:]})\
     .render()
@@ -100,25 +101,25 @@ fig, ax = plt.subplots(tmp, 2,figsize=(10,tmp*2),tight_layout=True)
 for i in range(len(L2)):
     ax[i//2,i%2].plot(df2["Date"], df2[L2[i]])
     ax[i//2,i%2].set_title(L2[i])
+
+    
+# path = args.path
+path = r"C:\Users\ky090\OneDrive - The University of Texas at Austin\001_Market\100_Output"
+path = path.replace("\\", "/")
+os.chdir(path)
 plt.savefig("tmp.png")
 
 with open("tmp.png", "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 html += f'<img src="data:image/png;base64,{encoded_string}">'
 
-html = "<h3><u>as of " +ODA + "</u></h3>" + html
 
-
-# path = args.path
-path = r"C:\Users\ky090\OneDrive - The University of Texas at Austin\001_Market\100_Output"
-
-path = path.replace("\\", "/")
-os.chdir(path)
-print(os.getcwd())
-with open("FX_" + datetime.now().strftime('%Y%m%d') + ".html", "w") as f:
+tmp = "FX_" + datetime.now().strftime('%Y%m%d') + ".html"
+with open(tmp, "w") as f:
     f.write(html)
-    
+webbrowser.open('file://' + os.path.realpath(tmp))
 
+os.remove("tmp.png")
 print("Currency Return as of "+ODA+" (BGN, vsUSD)")
 display(FX.style\
         .bar(subset=C[1:], align='mid', color=["pink", "lightblue"])\
