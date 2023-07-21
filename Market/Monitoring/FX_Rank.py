@@ -120,10 +120,10 @@ with open(tmp, "w") as f:
 webbrowser.open('file://' + os.path.realpath(tmp))
 
 os.remove("tmp.png")
-print("Currency Return as of "+ODA+" (BGN, vsUSD)")
-display(FX.style\
-        .bar(subset=C[1:], align='mid', color=["pink", "lightblue"])\
-        .format({c: '{:.1%}' for c in C[1:]})\
-       )
+# print("Currency Return as of "+ODA+" (BGN, vsUSD)")
+# display(FX.style\
+#         .bar(subset=C[1:], align='mid', color=["pink", "lightblue"])\
+#         .format({c: '{:.1%}' for c in C[1:]})\
+#        )
 
-plt.show()
+# plt.show()
