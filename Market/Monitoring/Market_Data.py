@@ -14,8 +14,7 @@ import os
 import webbrowser
 
 
-# path = r"C:\Users\ky090\OneDrive - The University of Texas at Austin\001_Market\100_Output"
-path = r"S:\【1230】マルチ戦略運用U\30_業務用個人フォルダ\A1800401_山崎健\010_市場分析\000_News\000_Output" 
+path = r"C:\Users\ky090\OneDrive - The University of Texas at Austin\001_Market\100_Output"
 path = path.replace("\\", "/")
 os.chdir(path)
 
