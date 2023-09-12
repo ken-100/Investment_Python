@@ -152,3 +152,9 @@ PR296
 ◆経済指標の公表日
 =@BDS("ADP CHNG Index","ECO_FUTURE_RELEASE_DATE_LIST", "START_DT=20000101", "END_DT=20200101")
 *時間不要の場合は ECO_RELEASE_DT_LIST
+
+
+◆Python pip
+!pip install --index-url=https://bcms.bloomberg.com/pip/simple blpapi
+!pip install pdblp
+!pip install xbbg 
