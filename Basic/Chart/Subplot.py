@@ -2,10 +2,8 @@ import pdblp
 from xbbg import blp
 import matplotlib.pyplot as plt
 
-con = pdblp.BCon(timeout=10000)
-con.start()
 T = ["USDJPY Curncy","EURJPY Curncy"]
-df = con.bdh(T, "px_open", "20200101", "20210101").reset_index()
+df = blp.bdh(T, "px_open", "20200101", "20210101").reset_index()
 df.columns = ["data"] + T
 df["BM"] = 120
 
