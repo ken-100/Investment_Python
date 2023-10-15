@@ -5,6 +5,12 @@ for i in range(0,4):
 # 2
 # 3
 
+for i ,j in zip(range(3),range(1,4)):
+    print(i,j)
+# 0 1
+# 1 2
+# 2 3
+
 for i in range(0,4):
     if i==2:
         break
