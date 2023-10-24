@@ -3,7 +3,7 @@ WEI    株式
 WEIF   株式先物
 WBI    国債
 WBF    国債先物
-WIR     金利先物
+WIR     金利先物 
 SOVR   CDS
 GGR    GenericGovernmentRates   *廃止
 SOVM  Sovereign Debt Monitor
