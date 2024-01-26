@@ -44,7 +44,7 @@ def main():
     # pandasデータフレーム形式にする
     df = pd.DataFrame(dir_size_list, columns = ['size', 'path'])
     # ファイルサイズでソート（並び替え）する
-    df_s = df.sort_values(['size'], ascending=False)
+    df_s = df.sort_values(['size'], ascending=False).reset_index(drop=True)
     # ファイルサイズの列をリスト化する
     my_size_list = df_s['size'].to_list()
     
@@ -64,7 +64,8 @@ def main():
     
     
 if __name__ == '__main__':
-    my_path = "//localhost/C$/blp"
+    my_path = r"//localhost/C$/blp"
+    my_path = my_path.replace('\\', '//')
     
     main()
     print("finished")
