@@ -186,7 +186,8 @@ BPS    Bloomberg Resource Center
 BUB    Bloomberg Hub
 HELP   Bloomberg Help Page
 GRIB   Send Screen Image as IB
-
+TRAI   Training Request
+SMNR  Seminars and Events
  
 ◆BDH関数/祝日取得 *銘柄は任意でok
 =BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE=20220101","CALENDAR_END_DATE=20230101")
