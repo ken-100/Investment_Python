@@ -22,15 +22,19 @@ IFMO   一覧
 MIPR  MarketImpliedPolicyRates
 WIRP   WorldInterestRateProbability
 ALLX MNDE インフレ市場織り込み
+DOTS          FOMC Dot Plot
+DOTS SPEC     Dot + be Fed Spectrometer
 
  
 ◆ニュース
+DS     Documnet Search
 N
 NI       News Topics    *Topic can be specified, such as "NI BOJ"
 TOP
 TOPJ
 TLIV    Top Live Blogs
 MILV   MarketLiveBlog
+LIVE    
 DAYB   DayBreak
 READ   MostReadStrories
 JREAD
@@ -41,8 +45,11 @@ MLIV
 DAYB
 FIRS    First Word
 MEDI  Media (BBG TV, Radio)
+MEDI LIVE
 MREP  MorningReport
 NSUB  NewsSubscriptions
+NT      News Trends Chart
+NSTM  Key News Themes
 JIJI       JIJI Press (時事通信)
  
 ◆経済指標
@@ -72,13 +79,36 @@ CN         Corporate News
 SI           Short Interest
 Rank      Broker Rankings (業者の流動性)
 MDM     板(アクセス権あり)
-ETF         ETF一覧
 MRR      Members Ranked Return
  
+◆ETF
+ETF         ETF一覧
+HLDR      Holder Ownership
+Port
+ 
+◆株式指数分析 (SPX など選択後)
+IMAP     Intraday Market Map
+MEMB   Member Weight
+GRR      Group Ranked Returns
+ 
+◆決算/BI Strategy
+EVTS ER    Events Calendar: Earning Releases
+BI STOXN SPXERNT
+BI STOXN SPXGUID
+BI STOXN SPXGUID |2630-2-Q|Q46||USD
+BI STOXG CHINA
+ 
+BIO Marvin M Chen
+ 
+◆債券
+NIM  New Issue Monitor
+ 
 ◆為替
-CSBSMXN TMUQ Curncy  三菱ttm
+CSBSUSD TMUQ Curncy  三菱ttm
+CSBSUSD STBJ Curncy      住信ttm  
 MSFXJPY Index                  WM/Refinitiv
-PCS  Pricing Sources (FrdのPointo ot Outrightなど選択)
+USDJPYTL Curncy    Total Return Long
+USDJPYCR Curncy    Carry Return
 
 ◆Commodity
 CPFC    Commodity Price Forecasts
@@ -87,11 +117,16 @@ NRGZ   Energy Industry Reports
 BI EXPRE JODIP
 RIG       Rig Count
 WFOR   Weather Forecasts
+COMM  Commodity Product Catalog
+
+◆Monitoring
+GMM  Global Macro Movers
+W       Security Worksheet
 
 ◆その他
 FLDS  Data Field Finder
-W       Security Worksheet
 WSL    Worksheet Sample
+Note   Note
 
 ◆ローンチパッド
 BLP  ローンチパッド起動
@@ -122,24 +157,36 @@ SPPRISME Index     Prism Index
 NEIXCTA Index        SG CTA Index
 NEIXCTAT Index       SG Trend Index
  
+◆バックテスト、ファクター分析
+BTST          Backtesting&Optimization
+FTW           Factor to Watch
+FTW FRR    Bar Chart
+BQIQ          Overview of BQuant
  
+◆オプション
+OMON  OptionMonitor
+MOSO
+MOSO S
+ 
+◆操作
+CLIP 選択した箇所をコピー
+GRIB  画面全体のスクリーンショットをIBにドラッグ＆ドロップで送ることが可能
+GRAB  選択画面全体のスクリーンショットをとり、そのまま添付したメッセージを作成
+SNIP  範囲を選択してスクリーンショットを撮り、FILEへ保存
+Shift + G Command History
+
 ◆マニュアル、Template
 XLTP Excel Template
 DOCS Bloomberg Document
 SMNR Bloomberg Seminars
 BQLX  Help on BQL
+NI BLPBQL
+NI BLPBQL IN JAPANESE
+BPS    Bloomberg Resource Center
+BUB    Bloomberg Hub
+HELP   Bloomberg Help Page
+GRIB   Send Screen Image as IB
 
-◆バックテスト、ファクター分析
-BTST           Backtesting&Optimization
-FTW           Factor to Watch
-FTW FRR   Bar Chart
- 
-◆オプション
-OMON  OptionMonitor
- 
-◆操作
-CLIP 選択した箇所をコピー
-Shift + G Command History
  
 ◆BDH関数/祝日取得 *銘柄は任意でok
 =BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE=20220101","CALENDAR_END_DATE=20230101")
@@ -153,6 +200,32 @@ PR296
 =@BDS("ADP CHNG Index","ECO_FUTURE_RELEASE_DATE_LIST", "START_DT=20000101", "END_DT=20200101")
 *時間不要の場合は ECO_RELEASE_DT_LIST
 
+◆BDHで平日指定
+通常は同じ結果も、銘柄によっては上段だと土日を含む
+  =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"Days=W","Fill=P")
+  =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=5D","Fill=P")
+ 
+各国の祝日も指定可能。ただし、レコード自体が消える
+  =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=JN","Fill=P")
+
+◆時系列データの算出開始日
+=INDEX(BDH("EMM US Equity", "px_last", "-20AY", "","array=t"), 1, 1)
+=INDEX(BDH("EMM US Equity", "px_last", "20000101", "","array=t"), 1, 1)
+=BQL("EMM US Equity","first(dropna(px_last(dates=range(-20y,0d))),1).date+0d")
+=BQL("EMM US Equity","first(dropna(px_last(dates=range(2007-01-01,2023-09-29))),1).date+0d")
+
+◆BBGでTwitter参照の例
+SOCI -> ユーザー名を指定
+@zerohedge
+@zerohedgejpn
+@nicktimiraos
+@Yuto_gahagaha
+ 
+◆VBAでBBG関数更新
+Application.Run "RefreshCurrentSelection"
+Application.Run "RefreshEntireWorksheet"
+Application.Run "RefreshEntireWorkbook"
+Application.Run "RefreshAllWorkbooks"
 
 ◆Python pip
 !pip install --index-url=https://bcms.bloomberg.com/pip/simple blpapi
