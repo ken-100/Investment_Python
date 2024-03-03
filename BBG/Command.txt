@@ -1,23 +1,31 @@
-◆銘柄一覧
-WEI    株式
-WEIF   株式先物
-WBI    国債
-WBF    国債先物
-WIR     金利先物 
-SOVR   CDS
-GGR    GenericGovernmentRates   *廃止
-SOVM  Sovereign Debt Monitor
-IRSB     Interest Rate Swap
+<Overview>
+WEI    World Equity Indices
+WEIF   World Index Futures
+EMEQ   Emerging Market Equity Indices
+WB     World Bond Market
+WBI    World Inflation Bond
+WBF    World Bond Futures
+WIR    World Interest Rate Futures
+FICM   Fixed Income Credit Monitor
+WCDS   World CDS Monitor
+CDX    CDS Index Monitor
+SOVR   Sovereign CDS Monitor
+GGR    GenericGovernmentRates   *Obsolete
+SOVM   Sovereign Debt Monitor
+IRSB   Interest Rate Swap
 USSW   Swap Market (US)
-GLCO   コモディティ
+GLCO   Global Commodity Prices
 CSDR   SovereignRatings
-ETF      ETF
-GMM  グローバルマクロ騰落モニター
-OTC     国別マーケットモニター　*OTC UAH ウクライナ
-TMUQ 三菱為替 (含むttm)
+ETF    ETF
+GMM    Global Macro Movers
+OTC    Market Monitor
+WCR    World Currrency Rates
+BTMM   Treasury & Money Markets
+DMMV   Developed Markets Summary
+EMMV   Emerging Markets Summary
 
 
-◆政策金利、インフレ
+<政策金利、インフレ>
 IFMO   一覧
 MIPR  MarketImpliedPolicyRates
 WIRP   WorldInterestRateProbability
@@ -26,7 +34,7 @@ DOTS          FOMC Dot Plot
 DOTS SPEC     Dot + be Fed Spectrometer
 
  
-◆ニュース
+<News>
 DS     Documnet Search
 N
 NI       News Topics    *Topic can be specified, such as "NI BOJ"
@@ -52,20 +60,20 @@ NT      News Trends Chart
 NSTM  Key News Themes
 JIJI       JIJI Press (時事通信)
  
-◆経済指標
+<経済指標>
 ECO   EconomicCalendars
 ECFC  Forecasts
 ECST  WoldEconomicStatistics
 ECOD EconomicReleaseDetails
 
-◆先物
+<先物>
 OMON  OptionMonitor
 COT   CFTCのティッカー
 PCS   CommodityDefaults
 MDM   MarketDepthMonitor(板)
 EXC   TickerLookup(有料オプション)
  
-◆株式 (ETF)
+<Equities (including ETF)>
 AQR    Top Trade
 QR       Quote Recap
 QM      Quote Montage
@@ -81,17 +89,17 @@ Rank      Broker Rankings (業者の流動性)
 MDM     板(アクセス権あり)
 MRR      Members Ranked Return
  
-◆ETF
-ETF         ETF一覧
+<ETF>
+ETF       ETF一覧
 HLDR      Holder Ownership
 Port
  
-◆株式指数分析 (SPX など選択後)
+<株式指数分析 (SPX など選択後)>
 IMAP     Intraday Market Map
 MEMB   Member Weight
 GRR      Group Ranked Returns
  
-◆決算/BI Strategy
+<決算/BI Strategy>
 EVTS ER    Events Calendar: Earning Releases
 BI STOXN SPXERNT
 BI STOXN SPXGUID
@@ -100,17 +108,17 @@ BI STOXG CHINA
  
 BIO Marvin M Chen
  
-◆債券
+<Bonds>
 NIM  New Issue Monitor
  
-◆為替
+<FX, Currency.
 CSBSUSD TMUQ Curncy  三菱ttm
 CSBSUSD STBJ Curncy      住信ttm  
 MSFXJPY Index                  WM/Refinitiv
 USDJPYTL Curncy    Total Return Long
 USDJPYCR Curncy    Carry Return
 
-◆Commodity
+<Commodity>
 CPFC    Commodity Price Forecasts
 Line      Global Commodity Flows
 NRGZ   Energy Industry Reports
@@ -119,20 +127,20 @@ RIG       Rig Count
 WFOR   Weather Forecasts
 COMM  Commodity Product Catalog
 
-◆Monitoring
+<Monitoring>
 GMM  Global Macro Movers
 W       Security Worksheet
 
-◆その他
+<etc>
 FLDS  Data Field Finder
 WSL    Worksheet Sample
 Note   Note
 
-◆ローンチパッド
+<ローンチパッド>
 BLP  ローンチパッド起動
 LLP  対象のページをローンチパッドとして表示
 
-◆チャート、グラフ、算出
+<チャート、グラフ、算出>
 G           My Graph
 GP         LineChart
 GPC       CandleChart
@@ -149,7 +157,7 @@ TRA       Total Return Analysis
 GR         Ratio Analysis
 HS         Spread Analysis
  
-◆ベンダー
+<ベンダー>
 IN    Bloomberg Index Browser
 FTSE
 MSCI
@@ -157,25 +165,25 @@ SPPRISME Index     Prism Index
 NEIXCTA Index        SG CTA Index
 NEIXCTAT Index       SG Trend Index
  
-◆バックテスト、ファクター分析
+<バックテスト、ファクター分析>
 BTST          Backtesting&Optimization
 FTW           Factor to Watch
 FTW FRR    Bar Chart
 BQIQ          Overview of BQuant
  
-◆オプション
+<Option>
 OMON  OptionMonitor
 MOSO
 MOSO S
  
-◆操作
+<操作>
 CLIP 選択した箇所をコピー
 GRIB  画面全体のスクリーンショットをIBにドラッグ＆ドロップで送ることが可能
 GRAB  選択画面全体のスクリーンショットをとり、そのまま添付したメッセージを作成
 SNIP  範囲を選択してスクリーンショットを撮り、FILEへ保存
 Shift + G Command History
 
-◆マニュアル、Template
+<マニュアル、Template>
 XLTP Excel Template
 DOCS Bloomberg Document
 SMNR Bloomberg Seminars
@@ -189,19 +197,19 @@ GRIB   Send Screen Image as IB
 TRAI   Training Request
 SMNR  Seminars and Events
  
-◆BDH関数/祝日取得 *銘柄は任意でok
+<BDH関数/祝日取得 *銘柄は任意でok>
 =BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE=20220101","CALENDAR_END_DATE=20230101")
 =@BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE="&TEXT(TODAY()-600,"yyyymmdd"),"CALENDAR_END_DATE="&TEXT(TODAY()+100,"yyyymmdd"))
 
-◆経済指標の初期値
+<経済指標の初期値>
 Actual_release
 PR296
  
-◆経済指標の公表日
+<経済指標の公表日>
 =@BDS("ADP CHNG Index","ECO_FUTURE_RELEASE_DATE_LIST", "START_DT=20000101", "END_DT=20200101")
 *時間不要の場合は ECO_RELEASE_DT_LIST
 
-◆BDHで平日指定
+<BDHで平日指定>
 通常は同じ結果も、銘柄によっては上段だと土日を含む
   =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"Days=W","Fill=P")
   =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=5D","Fill=P")
@@ -209,26 +217,26 @@ PR296
 各国の祝日も指定可能。ただし、レコード自体が消える
   =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=JN","Fill=P")
 
-◆時系列データの算出開始日
+<時系列データの算出開始日>
 =INDEX(BDH("EMM US Equity", "px_last", "-20AY", "","array=t"), 1, 1)
 =INDEX(BDH("EMM US Equity", "px_last", "20000101", "","array=t"), 1, 1)
 =BQL("EMM US Equity","first(dropna(px_last(dates=range(-20y,0d))),1).date+0d")
 =BQL("EMM US Equity","first(dropna(px_last(dates=range(2007-01-01,2023-09-29))),1).date+0d")
 
-◆BBGでTwitter参照の例
+<BBGでTwitter参照の例>
 SOCI -> ユーザー名を指定
 @zerohedge
 @zerohedgejpn
 @nicktimiraos
 @Yuto_gahagaha
  
-◆VBAでBBG関数更新
+<VBAでBBG関数更新>
 Application.Run "RefreshCurrentSelection"
 Application.Run "RefreshEntireWorksheet"
 Application.Run "RefreshEntireWorkbook"
 Application.Run "RefreshAllWorkbooks"
 
-◆Python pip
+<Python pip>
 !pip install --index-url=https://bcms.bloomberg.com/pip/simple blpapi
 !pip install pdblp
 !pip install xbbg 
