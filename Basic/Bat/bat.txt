@@ -21,3 +21,17 @@ cd S:\----\010_CFTC
 python CFTC.py
 
 jupyter nbconvert --to notebook --execute Citi_WeightInsert.ipynb
+
+
+
+ex) VBA -> bat  ("Windows Script Host Object Model" is required)
+    
+sub bat()
+    Dim obj As WshShell
+    Dim Path as string
+    
+    Path = C:\test\test.bat
+    
+    Set obj = New WshShell
+    Call obj.Run(Path, WaitOnReturn:=True)
+end sub
