@@ -25,7 +25,7 @@ DMMV   Developed Markets Summary
 EMMV   Emerging Markets Summary
 
 
-<政策金利、インフレ>
+<PolicyRate, Inflation>
 IFMO   一覧
 MIPR  MarketImpliedPolicyRates
 WIRP   WorldInterestRateProbability
@@ -107,7 +107,12 @@ BI STOXN SPXGUID |2630-2-Q|Q46||USD
 BI STOXG CHINA
  
 BIO Marvin M Chen
- 
+
+EEO  Consensus Overview
+FA   Financial Analysys
+BE008 - BEst EPS (BEST_EPS)
+E051 - BEst P/E Ratio (BEST_PE_RATIO)
+
 <Bonds>
 NIM  New Issue Monitor
  
