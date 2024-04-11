@@ -29,6 +29,7 @@ EMMV   Emerging Markets Summary
 IFMO   一覧
 MIPR  MarketImpliedPolicyRates
 WIRP   WorldInterestRateProbability
+BECO   Bloomberg Economics
 ALLX MNDE インフレ市場織り込み
 DOTS          FOMC Dot Plot
 DOTS SPEC     Dot + be Fed Spectrometer
