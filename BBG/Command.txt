@@ -34,6 +34,11 @@ ALLX MNDE インフレ市場織り込み
 DOTS          FOMC Dot Plot
 DOTS SPEC     Dot + be Fed Spectrometer
 
+.3M6MHD Index
+.6M12MHD Index
+BENLPFED Index
+MSRAUS Index
+
  
 <News>
 DS     Documnet Search
