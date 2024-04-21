@@ -142,6 +142,9 @@ COMM  Commodity Product Catalog
 GMM  Global Macro Movers
 W       Security Worksheet
 
+<AI>
+AIBB  Overview of Bloomberg AI
+
 <etc>
 FLDS  Data Field Finder
 WSL    Worksheet Sample
