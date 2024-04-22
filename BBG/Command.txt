@@ -150,6 +150,10 @@ FLDS  Data Field Finder
 WSL    Worksheet Sample
 Note   Note
 
+<Profile>
+IAM     User / Terminal ID Number
+MYOR    My Profile
+
 <ローンチパッド>
 BLP  ローンチパッド起動
 LLP  対象のページをローンチパッドとして表示
