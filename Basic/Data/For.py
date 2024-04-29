@@ -84,3 +84,12 @@ A = ["a","b"]
 B = ["c","d"]
 [x+y for x in A for y in B]
 # ['ac', 'ad', 'bc', 'bd']
+
+
+from itertools import combinations
+L = [1, 2, 3]
+for combo in combinations(L, 2):
+    print('('+str(combo[0]), str(combo[1])+')')
+# (1 2)
+# (1 3)
+# (2 3)
