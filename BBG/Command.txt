@@ -26,11 +26,10 @@ EMMV   Emerging Markets Summary
 
 
 <PolicyRate, Inflation>
-IFMO   一覧
+IFMO  Inflation Monitor
 MIPR  MarketImpliedPolicyRates
 WIRP   WorldInterestRateProbability
 BECO   Bloomberg Economics
-ALLX MNDE インフレ市場織り込み
 DOTS          FOMC Dot Plot
 DOTS SPEC     Dot + be Fed Spectrometer
 
@@ -64,20 +63,26 @@ MREP  MorningReport
 NSUB  NewsSubscriptions
 NT      News Trends Chart
 NSTM  Key News Themes
-JIJI       JIJI Press (時事通信)
+JIJI       JIJI Press
  
-<経済指標>
+<Economic>
 ECO   EconomicCalendars
 ECFC  Forecasts
 ECST  WoldEconomicStatistics
-ECOD EconomicReleaseDetails
+ECOD  EconomicReleaseDetails
+ECWB  Economic Workbench
+ECAN  World Economic Analyzer
+FCON  Financial Conditions
+ESCU  Economic Surprises
+TAYL  Taylor Rule Model
+
 
 <先物>
 OMON  OptionMonitor
-COT   CFTCのティッカー
+COT   CFTC Ticker
 PCS   CommodityDefaults
-MDM   MarketDepthMonitor(板)
-EXC   TickerLookup(有料オプション)
+MDM   MarketDepthMonitor
+EXC   Exchange Privileges (subscribed or not)
  
 <Equities (including ETF)>
 AQR    Top Trade
@@ -85,27 +90,28 @@ QR       Quote Recap
 QM      Quote Montage
 MBTRR Monitoring Block Trade Recap
 VBAR    Volume Dimension Bars
-HP        価格
-HCP      価格+変化額+変化率
-OMON  Option Monitor
-CACS     Corporate Action
-CN         Corporate News
-SI           Short Interest
-Rank      Broker Rankings (業者の流動性)
-MDM     板(アクセス権あり)
-MRR      Members Ranked Return
+HP      Historical Price Table
+HCP     HP with % Chg
+HCPI    Historical OHLC with % Chg
+OMON    Option Monitor
+CACS    Corporate Action
+CN      Corporate News
+SI      Short Interest
+Rank    Broker Rankings
+MDM     Market Depth Monitor
+MRR     Members Ranked Return
  
 <ETF>
-ETF       ETF一覧
+ETF       
 HLDR      Holder Ownership
 Port
  
-<株式指数分析 (SPX など選択後)>
+<株式指数分析 (after choosing ticker, such as SPX)>
 IMAP     Intraday Market Map
 MEMB   Member Weight
 GRR      Group Ranked Returns
  
-<決算/BI Strategy>
+<BI Strategy>
 EVTS ER    Events Calendar: Earning Releases
 BI STOXN SPXERNT
 BI STOXN SPXGUID
@@ -123,20 +129,20 @@ E051 - BEst P/E Ratio (BEST_PE_RATIO)
 NIM  New Issue Monitor
  
 <FX, Currency.
-CSBSUSD TMUQ Curncy  三菱ttm
-CSBSUSD STBJ Curncy      住信ttm  
-MSFXJPY Index                  WM/Refinitiv
-USDJPYTL Curncy    Total Return Long
-USDJPYCR Curncy    Carry Return
+CSBSUSD TMUQ Curncy  Mitsubishi ttm
+CSBSUSD STBJ Curncy  SumiTrust ttm  
+MSFXJPY Index        WM/Refinitiv
+USDJPYTL Curncy      Total Return Long
+USDJPYCR Curncy      Carry Return
 
 <Commodity>
 CPFC    Commodity Price Forecasts
 Line      Global Commodity Flows
 NRGZ   Energy Industry Reports
-BI EXPRE JODIP
-RIG       Rig Count
-WFOR   Weather Forecasts
-COMM  Commodity Product Catalog
+BI     EXPRE JODIP
+RIG     Rig Count
+WFOR    Weather Forecasts
+COMM    Commodity Product Catalog
 
 <Monitoring>
 GMM  Global Macro Movers
@@ -160,18 +166,18 @@ LLP  対象のページをローンチパッドとして表示
 
 <チャート、グラフ、算出>
 G           My Graph
-GP         LineChart
-GPC       CandleChart
-GIP        IntradayPriceChart
-GY         YieldChart (Only for bonds)
-GIY        IntradayYieldChart (Only for bonds)
-RRG       RelativeRotationGraph
-CORR    CorrelationMatrix
+GP          LineChart
+GPC         CandleChart
+GIP         IntradayPriceChart
+GY          YieldChart (Only for bonds)
+GIY         IntradayYieldChart (Only for bonds)
+RRG         RelativeRotationGraph
+CORR        CorrelationMatrix
 CIX        CustomeIndex       * "HS -> Save as Index"  can creat CIX ticker 
-SEAG     季節性チャート
-GIP PRE 時間外取引
-COMP    Comparative Returns
-TRA       Total Return Analysis
+SEAG       Seasonality Chart
+GIP PRE    時間外取引
+COMP       Comparative Returns
+TRA        Total Return Analysis
 GR         Ratio Analysis
 HS         Spread Analysis
  
@@ -183,11 +189,11 @@ SPPRISME Index     Prism Index
 NEIXCTA Index        SG CTA Index
 NEIXCTAT Index       SG Trend Index
  
-<バックテスト、ファクター分析>
-BTST          Backtesting&Optimization
-FTW           Factor to Watch
-FTW FRR    Bar Chart
-BQIQ          Overview of BQuant
+<BackTest, Factor Analysis>
+BTST        Backtesting&Optimization
+FTW         Factor to Watch
+FTW FRR   　Bar Chart
+BQIQ        Overview of BQuant
  
 <Option>
 OMON  OptionMonitor
@@ -201,7 +207,7 @@ GRAB  選択画面全体のスクリーンショットをとり、そのまま�
 SNIP  範囲を選択してスクリーンショットを撮り、FILEへ保存
 Shift + G Command History
 
-<マニュアル、Template>
+<Template, Documents>
 XLTP Excel Template
 DOCS Bloomberg Document
 SMNR Bloomberg Seminars
@@ -215,7 +221,7 @@ GRIB   Send Screen Image as IB
 TRAI   Training Request
 SMNR  Seminars and Events
  
-<BDH関数/祝日取得 *銘柄は任意でok>
+<BDH/Getting holiday *any Ticker is available>
 =BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE=20220101","CALENDAR_END_DATE=20230101")
 =@BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE="&TEXT(TODAY()-600,"yyyymmdd"),"CALENDAR_END_DATE="&TEXT(TODAY()+100,"yyyymmdd"))
 
@@ -227,7 +233,7 @@ PR296
 =@BDS("ADP CHNG Index","ECO_FUTURE_RELEASE_DATE_LIST", "START_DT=20000101", "END_DT=20200101")
 *時間不要の場合は ECO_RELEASE_DT_LIST
 
-<BDHで平日指定>
+<BDH, weekday>
 通常は同じ結果も、銘柄によっては上段だと土日を含む
   =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"Days=W","Fill=P")
   =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=5D","Fill=P")
@@ -241,14 +247,14 @@ PR296
 =BQL("EMM US Equity","first(dropna(px_last(dates=range(-20y,0d))),1).date+0d")
 =BQL("EMM US Equity","first(dropna(px_last(dates=range(2007-01-01,2023-09-29))),1).date+0d")
 
-<BBGでTwitter参照の例>
+<Twitter>
 SOCI -> ユーザー名を指定
 @zerohedge
 @zerohedgejpn
 @nicktimiraos
 @Yuto_gahagaha
  
-<VBAでBBG関数更新>
+<update BBG function via VBA>
 Application.Run "RefreshCurrentSelection"
 Application.Run "RefreshEntireWorksheet"
 Application.Run "RefreshEntireWorkbook"
