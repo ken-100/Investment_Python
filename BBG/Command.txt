@@ -49,13 +49,13 @@ TLIV    Top Live Blogs
 MILV   MarketLiveBlog
 LIVE    
 DAYB   DayBreak
+BTDY   Bloomberg Today
 READ   MostReadStrories
 JREAD
 CVID   Covid
 ALRT   AlertsManager
 FRNT
 MLIV
-DAYB
 FIRS    First Word
 MEDI  Media (BBG TV, Radio)
 MEDI LIVE
