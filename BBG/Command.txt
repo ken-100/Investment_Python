@@ -85,10 +85,11 @@ MDM   MarketDepthMonitor
 EXC   Exchange Privileges (subscribed or not)
  
 <Equities (including ETF)>
-AQR    Top Trade
-QR       Quote Recap
+AQR     Top Trade
+QR      Quote Recap
 QM      Quote Montage
-MBTRR Monitoring Block Trade Recap
+TSM     Trade Summary Matruix
+MBTRR   Monitoring Block Trade Recap
 VBAR    Volume Dimension Bars
 HP      Historical Price Table
 HCP     HP with % Chg
