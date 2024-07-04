@@ -101,6 +101,7 @@ SI      Short Interest
 Rank    Broker Rankings
 MDM     Market Depth Monitor
 MRR     Members Ranked Return
+DPDF    Corporate Action Setting
  
 <ETF>
 ETF       
