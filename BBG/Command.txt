@@ -64,6 +64,7 @@ NSUB  NewsSubscriptions
 NT      News Trends Chart
 NSTM  Key News Themes
 JIJI       JIJI Press
+AID   Autmated Intelligence on Demand
  
 <Economic>
 ECO   EconomicCalendars
