@@ -141,10 +141,10 @@ USDJPYTL Curncy      Total Return Long
 USDJPYCR Curncy      Carry Return
 
 <Commodity>
-CPFC    Commodity Price Forecasts
-Line      Global Commodity Flows
-NRGZ   Energy Industry Reports
-BI     EXPRE JODIP
+CPFC    Commodity Price Forecasts    <- Future Price, Forcasts from Broker
+Line    Global Commodity Flows
+NRGZ    Energy Industry Reports
+BI      EXPRE JODIP
 RIG     Rig Count
 WFOR    Weather Forecasts
 COMM    Commodity Product Catalog
