@@ -123,6 +123,8 @@ BI STOXG CHINA
 
 BIO Marvin M Chen
 BIO Estelle Ou
+BIO Eric Zhu
+BIO David Qu
 
 EEO  Consensus Overview
 FA   Financial Analysys
