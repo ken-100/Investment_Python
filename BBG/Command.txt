@@ -120,8 +120,9 @@ BI STOXN SPXERNT
 BI STOXN SPXGUID
 BI STOXN SPXGUID |2630-2-Q|Q46||USD
 BI STOXG CHINA
- 
+
 BIO Marvin M Chen
+BIO Estelle Ou
 
 EEO  Consensus Overview
 FA   Financial Analysys
