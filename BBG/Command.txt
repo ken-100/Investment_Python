@@ -167,8 +167,9 @@ AIBB  Overview of Bloomberg AI
 
 <etc>
 FLDS  Data Field Finder
-WSL    Worksheet Sample
 Note   Note
+WSL    Worksheet Sample
+WSL ELECMAP US Election Map
 
 <Profile>
 IAM     User / Terminal ID Number
