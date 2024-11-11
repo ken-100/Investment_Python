@@ -108,6 +108,7 @@ DPDF    Corporate Action Setting (Adjust historical pricing to reflect dividends
 ETF       
 HLDR      Holder Ownership
 Port
+
  
 <株式指数分析 (after choosing ticker, such as SPX)>
 IMAP     Intraday Market Map
@@ -157,6 +158,9 @@ BI      EXPRE JODIP
 RIG     Rig Count
 WFOR    Weather Forecasts
 COMM    Commodity Product Catalog
+
+*Active Commodity ETF
+COM US Equity
 
 <Monitoring>
 GMM  Global Macro Movers
