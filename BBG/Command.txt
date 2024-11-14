@@ -88,7 +88,7 @@ EXC   Exchange Privileges (subscribed or not)
 <Equities (including ETF)>
 AQR     Top Trade
 QR      Quote Recap
-QM      Quote Montage
+QM      Quote Montage (Market Share for each exchange)
 TSM     Trade Summary Matruix
 MBTRR   Monitoring Block Trade Recap
 VBAR    Volume Dimension Bars
