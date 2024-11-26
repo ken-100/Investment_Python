@@ -266,6 +266,10 @@ PR296
 =BQL("EMM US Equity","first(dropna(px_last(dates=range(-20y,0d))),1).date+0d")
 =BQL("EMM US Equity","first(dropna(px_last(dates=range(2007-01-01,2023-09-29))),1).date+0d")
 
+
+<Tick data>
+=BDH("TP1 Index","close,volume","2024/11/25  7:00:00","2024/11/26  7:00:00","BarTp=Trade","BarSz=30","TZ=Tokyo")
+
 <Twitter>
 SOCI -> ユーザー名を指定
 @zerohedge
