@@ -103,6 +103,7 @@ Rank    Broker Rankings
 MDM     Market Depth Monitor
 MRR     Members Ranked Return
 DPDF    Corporate Action Setting (Adjust historical pricing to reflect dividends, etc.)
+KI      Insight
  
 <ETF>
 ETF       
