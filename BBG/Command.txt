@@ -111,7 +111,7 @@ HLDR      Holder Ownership
 Port
 
  
-<株式指数分析 (after choosing ticker, such as SPX)>
+<Stock Index Analysis (after choosing ticker, such as SPX)>
 IMAP     Intraday Market Map
 MEMB   Member Weight
 GRR      Group Ranked Returns
@@ -139,12 +139,14 @@ E051 - BEst P/E Ratio (BEST_PE_RATIO)
 3) click "Financials & Property (APAC)"
 
 
-<Bonds>
+<Bonds, Swap>
 NIM  New Issue Monitor
 CRV  Custme Curve Builder
 CRVF Curve Filter
- 
-<FX, Currency.
+FWCM Forward curve Matrix
+FWCV Forward Curve Analysis
+
+<FX, Currency>
 CSBSUSD TMUQ Curncy  Mitsubishi ttm
 CSBSUSD STBJ Curncy  SumiTrust ttm  
 MSFXJPY Index        WM/Refinitiv
@@ -184,7 +186,7 @@ MYOR    My Profile
 BLP  ローンチパッド起動
 LLP  対象のページをローンチパッドとして表示
 
-<チャート、グラフ、算出>
+<Charts, graphs, calculations>
 G           My Graph
 GP          LineChart
 GPC         CandleChart
@@ -201,7 +203,7 @@ TRA        Total Return Analysis
 GR         Ratio Analysis
 HS         Spread Analysis
  
-<ベンダー>
+<Vendor>
 IN    Bloomberg Index Browser
 FTSE
 MSCI
@@ -220,7 +222,7 @@ OMON  OptionMonitor
 MOSO
 MOSO S
  
-<操作>
+<Operation>
 CLIP 選択した箇所をコピー
 GRIB  画面全体のスクリーンショットをIBにドラッグ＆ドロップで送ることが可能
 GRAB  選択画面全体のスクリーンショットをとり、そのまま添付したメッセージを作成
@@ -246,7 +248,7 @@ SMNR  Seminars and Events
 =BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN US","CALENDAR_START_DATE=20220101","CALENDAR_END_DATE=20230101")
 =@BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE="&TEXT(TODAY()-600,"yyyymmdd"),"CALENDAR_END_DATE="&TEXT(TODAY()+100,"yyyymmdd"))
 
-<経済指標の初期値>
+<Initial value of economic indicator>
 Actual_release
 PR296
  
