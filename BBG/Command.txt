@@ -250,13 +250,17 @@ SMNR  Seminars and Events
 =BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN US","CALENDAR_START_DATE=20220101","CALENDAR_END_DATE=20230101")
 =@BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE="&TEXT(TODAY()-600,"yyyymmdd"),"CALENDAR_END_DATE="&TEXT(TODAY()+100,"yyyymmdd"))
 
-<Initial value of economic indicator>
+<FlDS/Initial value of economic indicator>
 Actual_release
 PR296
 
-<FLDS>
-**FLDS**
- 
+<FLDS/Dividend>
+FD094 - Funds Average Dividend Yield (FUND_AVG_DVD_YLD)
+DV013 - Dividend Indicated Yld - Gross (EQY_DVD_YLD_IND)
+SP111 - YAS Bond Yield (YAS_BOND_YLD)
+DV014 - Dividend 12 Month Yld - Gross (EQY_DVD_YLD_12M)
+
+
 <Date of release of economic indicators>
 =@BDS("ADP CHNG Index","ECO_FUTURE_RELEASE_DATE_LIST", "START_DT=20000101", "END_DT=20200101")
 *時間不要の場合は ECO_RELEASE_DT_LIST
