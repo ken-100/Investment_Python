@@ -184,8 +184,8 @@ WSL ELECMAP US Election Map
 IAM     User / Terminal ID Number
 MYOR    My Profile
 
-<ローンチパッド>
-BLP  ローンチパッド起動
+<Launchpad>
+BLP  Open LaunchPad
 LLP  対象のページをローンチパッドとして表示
 
 <Charts, graphs, calculations>
@@ -253,8 +253,11 @@ SMNR  Seminars and Events
 <Initial value of economic indicator>
 Actual_release
 PR296
+
+<FLDS>
+**FLDS**
  
-<経済指標の公表日>
+<Date of release of economic indicators>
 =@BDS("ADP CHNG Index","ECO_FUTURE_RELEASE_DATE_LIST", "START_DT=20000101", "END_DT=20200101")
 *時間不要の場合は ECO_RELEASE_DT_LIST
 
@@ -266,7 +269,7 @@ PR296
 各国の祝日も指定可能。ただし、レコード自体が消える
   =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=JN","Fill=P")
 
-<時系列データの算出開始日>
+<Start date of time series data calculation>
 =INDEX(BDH("EMM US Equity", "px_last", "-20AY", "","array=t"), 1, 1)
 =INDEX(BDH("EMM US Equity", "px_last", "20000101", "","array=t"), 1, 1)
 =BQL("EMM US Equity","first(dropna(px_last(dates=range(-20y,0d))),1).date+0d")
@@ -277,7 +280,7 @@ PR296
 =BDH("TP1 Index","close,volume","2024/11/25  7:00:00","2024/11/26  7:00:00","BarTp=Trade","BarSz=30","TZ=Tokyo")
 
 <Twitter>
-SOCI -> ユーザー名を指定
+SOCI -> Input user name
 @zerohedge
 @zerohedgejpn
 @nicktimiraos
