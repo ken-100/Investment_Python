@@ -76,7 +76,7 @@ ECAN  World Economic Analyzer
 FCON  Financial Conditions
 ESCU  Economic Surprises
 TAYL  Taylor Rule Model
-
+BECO  Bloomberg Economics (-> 'Model' shows Charts with good visuals)
 
 <先物>
 OMON  OptionMonitor
