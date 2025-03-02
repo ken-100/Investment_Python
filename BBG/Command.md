@@ -67,6 +67,7 @@
 | NSTM         | Key News Themes                      |
 | JIJI         | JIJI Press                           |
 | AID          | Automated Intelligence on Demand     |
+| BNEW         | What's New                           |
 
 ### Economic
 | Abbreviation | Description                          |
