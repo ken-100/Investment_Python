@@ -336,7 +336,7 @@ can also specify national holidays.
 =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=JN","Fill=P")
 ```
 
-## Start date of time series data calculation
+### Start date of time series data calculation
 ```excel
 =INDEX(BDH("EMM US Equity", "px_last", "-20AY", "","array=t"), 1, 1)
 =INDEX(BDH("EMM US Equity", "px_last", "20000101", "","array=t"), 1, 1)
@@ -344,20 +344,20 @@ can also specify national holidays.
 =BQL("EMM US Equity","first(dropna(px_last(dates=range(2007-01-01,2023-09-29))),1).date+0d")
 ```
 
-## Tick data
+### Tick data
 ```excel
 =BDH("TP1 Index","close,volume","2024/11/25  7:00:00","2024/11/26  7:00:00","BarTp=Trade","BarSz=30","TZ=Tokyo")
 ```
 
 
-## Twitter
+### Twitter
 `SOCI` → Input user name
 - @zerohedge  
 - @zerohedgejpn  
 - @nicktimiraos  
 - @Yuto_gahagaha  
 
-## Update BBG function via VBA
+### Update BBG function via VBA
 ```vba
 Application.Run "RefreshCurrentSelection"
 Application.Run "RefreshEntireWorksheet"
@@ -365,7 +365,7 @@ Application.Run "RefreshEntireWorkbook"
 Application.Run "RefreshAllWorkbooks"
 ```
 
-## Python pip
+### Python pip
 ```bash
 !pip install --index-url=https://bcms.bloomberg.com/pip/simple blpapi
 !pip install pdblp
