@@ -37,7 +37,7 @@
 | BECO         | Bloomberg Economics                  |
 | DOTS         | FOMC Dot Plot                        |
 | DOTS SPEC    | Dot + Fed Spectrometer               |
-| .3M6MHD      | Index                                |
+| .3M6MHD  Index      |                               |
 | .6M12MHD     | Index                                |
 | BENLPFED     | Index                                |
 | MSRAUS       | Index                                |
