@@ -130,12 +130,12 @@
 ### BI Strategy
 | Code                          | Description                            |
 |-------------------------------|----------------------------------------|
-| **EVTS ER**                   | Events Calendar: Earnings Releases     |
-| **BI STOXN SPXERNT**          |                                        |
-| **BI STOXN SPXGUID**          |                                        |
-| **BI STOXN SPXGUID \|2630-2-Q\|Q46\|\|USD** |                          |
-| **BI STOXG CHINA**            |                                        |
-| **SPX Index EA**              |                                        |
+| EVTS ER                   | Events Calendar: Earnings Releases     |
+| BI STOXN SPXERNT          |                                        |
+| BI STOXN SPXGUID          |                                        |
+| BI STOXN SPXGUID \|2630-2-Q\|Q46\|\|USD |                          |
+| BI STOXG CHINA            |                                        |
+| SPX Index EA              |                                        |
 
 ### Bloomberg Intelligence Analysts
 | Code               | Analyst Name     |
@@ -146,13 +146,16 @@
 | BIO David Qu      | David Qu      |
 
 ### Financial Metrics & Consensus
+| Code   | Description                             | 
+|--------|-----------------------------------------|
+| EEO| Consensus Overview                      |
+| FA | Financial Analysis                      |
+
+
 | Code   | Description                             | Bloomberg Code       |
 |--------|-----------------------------------------|----------------------|
-| EEO| Consensus Overview                      |                      |
-| FA | Financial Analysis                      |                      |
 | BE008 | BEst EPS                              | `BEST_EPS`           |
 | E051 | BEst P/E Ratio                         | `BEST_PE_RATIO`      |
-
 
 1) Go to BI <GO> on your Bloomberg Terminal  
 2) click "Chatrooms"  
