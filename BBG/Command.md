@@ -168,3 +168,34 @@
 ### Profile & Launchpad
 - IAM, MYOR, BLP, LLP
 
+Here's the content converted into Markdown format:
+
+## Bonds, Swap
+| Code  | Description                |
+|-------|----------------------------|
+| NIM   | New Issue Monitor          |
+| CRV   | Custme Curve Builder       |
+| CRVF  | Curve Filter               |
+| FWCM  | Forward Curve Matrix       |
+| FWCV  | Forward Curve Analysis     |
+
+## FX, Currency
+| Code              | Description                   |
+|-------------------|-------------------------------|
+| CSBSUSD TMUQ Curncy | Mitsubishi ttm              |
+| CSBSUSD STBJ Curncy | SumiTrust ttm               |
+| MSFXJPY Index       | WM/Refinitiv                |
+| USDJPYTL Curncy     | Total Return Long           |
+| USDJPYCR Curncy     | Carry Return                |
+
+## Commodity
+| Code | Description                        | Notes                                  |
+|------|------------------------------------|----------------------------------------|
+| CPFC | Commodity Price Forecasts          | Future Price, Forecasts from Broker    |
+| Line | Global Commodity Flows             |                                        |
+| NRGZ | Energy Industry Reports            |                                        |
+| BI   | EXPRE JODIP                        |                                        |
+| RIG  | Rig Count                          |                                        |
+| WFOR | Weather Forecasts                  |                                        |
+| COMM | Commodity Product Catalog          |                                        |
+
