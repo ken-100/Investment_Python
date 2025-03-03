@@ -154,6 +154,10 @@
 | E051 | BEst P/E Ratio                         | `BEST_PE_RATIO`      |
 
 
+1) Go to BI <GO> on your Bloomberg Terminal  
+2) click "Chatrooms"  
+3) click "Financials & Property (APAC)"  
+
 ### Bonds, Swap
 | Code | Description            |
 |------|------------------------|
