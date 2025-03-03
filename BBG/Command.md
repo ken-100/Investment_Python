@@ -200,7 +200,7 @@ Here's the content converted into Markdown format:
 | COMM | Commodity Product Catalog          |                                        |
 
 
-Here's the content converted into Markdown format:
+
 
 ## Charts, graphs, calculations
 | Code     | Description                                    | Notes                                     |
@@ -245,3 +245,106 @@ Here's the content converted into Markdown format:
 | OMON      | OptionMonitor      |
 | MOSO      |                    |
 | MOSO S    |                    |
+
+
+Here's your content converted clearly into Markdown format:
+
+## Operation
+| Code / Command        | Description                                                              |
+|-----------------------|--------------------------------------------------------------------------|
+| **CLIP**              | 選択した箇所をコピー                                                     |
+| **GRIB**              | 画面全体のスクリーンショットをIBにドラッグ＆ドロップで送ることが可能      |
+| **GRAB**              | 選択画面全体のスクリーンショットをとり、そのまま添付したメッセージを作成 |
+| **SNIP**              | 範囲を選択してスクリーンショットを撮り、FILEへ保存                      |
+| **Shift + G**         | Command History                                                          |
+
+## Template, Documents
+| Code                | Description                          |
+|---------------------|--------------------------------------|
+| **XLTP**            | Excel Template                       |
+| **DOCS**            | Bloomberg Document                   |
+| **SMNR**            | Bloomberg Seminars                   |
+| **BQLX**            | Help on BQL                          |
+| **NI BLPBQL**       |                                      |
+| **NI BLPBQL IN JAPANESE** |                                |
+| **BPS**             | Bloomberg Resource Center            |
+| **BUB**             | Bloomberg Hub                        |
+| **HELP**            | Bloomberg Help Page                  |
+| **GRIB**            | Send Screen Image as IB              |
+| **TRAI**            | Training Request                     |
+| **SMNR**            | Seminars and Events                  |
+
+## BDH/Getting holiday *(any Ticker is available)*
+```excel
+=BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE=20220101","CALENDAR_END_DATE=20230101")
+
+=BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN US","CALENDAR_START_DATE=20220101","CALENDAR_END_DATE=20230101")
+
+=@BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE="&TEXT(TODAY()-600,"yyyymmdd"),"CALENDAR_END_DATE="&TEXT(TODAY()+100,"yyyymmdd"))
+```
+
+## FLDS/Initial value of economic indicator
+| Field Code          | Description            |
+|---------------------|------------------------|
+| **Actual_release**  |                        |
+| **PR296**           |                        |
+
+## FLDS/Dividend
+| Field Code | Description                                  | Bloomberg Code                |
+|------------|----------------------------------------------|--------------------------------|
+| **FD094**  | Funds Average Dividend Yield                 | `FUND_AVG_DVD_YLD`             |
+| **DV013**  | Dividend Indicated Yld - Gross               | `EQY_DVD_YLD_IND`              |
+| **SP111**  | YAS Bond Yield                               | `YAS_BOND_YLD`                 |
+| **DV014**  | Dividend 12 Month Yld - Gross                | `EQY_DVD_YLD_12M`              |
+
+## Date of release of economic indicators
+```excel
+=@BDS("ADP CHNG Index","ECO_FUTURE_RELEASE_DATE_LIST", "START_DT=20000101", "END_DT=20200101")
+```
+- 時間不要の場合は `ECO_RELEASE_DT_LIST`
+
+## BDH, weekday
+通常は同じ結果も、銘柄によっては上段だと土日を含む
+```excel
+=@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"Days=W","Fill=P")
+=@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=5D","Fill=P")
+```
+各国の祝日も指定可能。ただし、レコード自体が消える
+```excel
+=@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=JN","Fill=P")
+```
+
+## Start date of time series data calculation
+```excel
+=INDEX(BDH("EMM US Equity", "px_last", "-20AY", "","array=t"), 1, 1)
+=INDEX(BDH("EMM US Equity", "px_last", "20000101", "","array=t"), 1, 1)
+=BQL("EMM US Equity","first(dropna(px_last(dates=range(-20y,0d))),1).date+0d")
+=BQL("EMM US Equity","first(dropna(px_last(dates=range(2007-01-01,2023-09-29))),1).date+0d")
+```
+
+## Tick data
+```excel
+=BDH("TP1 Index","close,volume","2024/11/25  7:00:00","2024/11/26  7:00:00","BarTp=Trade","BarSz=30","TZ=Tokyo")
+```
+
+## Twitter
+`SOCI` → Input user name
+- @zerohedge  
+- @zerohedgejpn  
+- @nicktimiraos  
+- @Yuto_gahagaha  
+
+## Update BBG function via VBA
+```vba
+Application.Run "RefreshCurrentSelection"
+Application.Run "RefreshEntireWorksheet"
+Application.Run "RefreshEntireWorkbook"
+Application.Run "RefreshAllWorkbooks"
+```
+
+## Python pip
+```bash
+!pip install --index-url=https://bcms.bloomberg.com/pip/simple blpapi
+!pip install pdblp
+!pip install xbbg
+```
