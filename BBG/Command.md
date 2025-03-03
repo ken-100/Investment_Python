@@ -187,6 +187,10 @@
 | WFOR | Weather Forecasts           |                                     |
 | COMM | Commodity Product Catalog   |                                     |
 
+### Active Commodity ETF
+| Ticker                  | Description              |
+|-----------------------|--------------------------|
+|COM US Equity   |           |
 
 
 ### Monitoring
@@ -219,21 +223,6 @@
 |------|-----------------------------------------------|
 | BLP | Open LaunchPad                              |
 | LLP | Display current page as a LaunchPad        |
-
-
-
-### Python
-- Bloomberg pip packages (`blpapi`, `pdblp`, `xbbg`)
-
-### Twitter
-- SOCI (usernames: @zerohedge, @nicktimiraos, etc.)
-
-### Profile & Launchpad
-- IAM, MYOR, BLP, LLP
-
-Here's the content converted into Markdown format:
-
-
 
 
 ### Charts, graphs, calculations
@@ -359,6 +348,7 @@ can also specify national holidays.
 ```excel
 =BDH("TP1 Index","close,volume","2024/11/25  7:00:00","2024/11/26  7:00:00","BarTp=Trade","BarSz=30","TZ=Tokyo")
 ```
+
 
 ## Twitter
 `SOCI` → Input user name
