@@ -140,101 +140,86 @@
 ## Bloomberg Intelligence Analysts
 | Code               | Analyst Name     |
 |--------------------|------------------|
-| **BIO Marvin M Chen** | Marvin M Chen |
-| **BIO Estelle Ou**    | Estelle Ou    |
-| **BIO Eric Zhu**      | Eric Zhu      |
-| **BIO David Qu**      | David Qu      |
+| BIO Marvin M Chen | Marvin M Chen |
+| BIO Estelle Ou    | Estelle Ou    |
+| BIO Eric Zhu      | Eric Zhu      |
+| BIO David Qu      | David Qu      |
 
 ## Financial Metrics & Consensus
 | Code   | Description                             | Bloomberg Code       |
 |--------|-----------------------------------------|----------------------|
-| **EEO**| Consensus Overview                      |                      |
-| **FA** | Financial Analysis                      |                      |
-| **BE008**| BEst EPS                              | `BEST_EPS`           |
-| **E051**| BEst P/E Ratio                         | `BEST_PE_RATIO`      |
+| EEO| Consensus Overview                      |                      |
+| FA | Financial Analysis                      |                      |
+| BE008 | BEst EPS                              | `BEST_EPS`           |
+| E051 | BEst P/E Ratio                         | `BEST_PE_RATIO`      |
 
 
 ## Bonds, Swap
 | Code | Description            |
 |------|------------------------|
-| **NIM**  | New Issue Monitor      |
-| **CRV**  | Custom Curve Builder   |
-| **CRVF** | Curve Filter           |
-| **FWCM** | Forward Curve Matrix   |
-| **FWCV** | Forward Curve Analysis |
+| NIM   | New Issue Monitor      |
+| CRV   | Custom Curve Builder   |
+| CRVF  | Curve Filter           |
+| FWCM  | Forward Curve Matrix   |
+| FWCV  | Forward Curve Analysis |
 
 ## FX, Currency
 | Code                  | Description              |
 |-----------------------|--------------------------|
-| **CSBSUSD TMUQ Curncy** | Mitsubishi TTM           |
-| **CSBSUSD STBJ Curncy** | SumiTrust TTM            |
-| **MSFXJPY Index**       | WM/Refinitiv             |
-| **USDJPYTL Curncy**     | Total Return Long        |
-| **USDJPYCR Curncy**     | Carry Return             |
+| CSBSUSD TMUQ Curncy   | Mitsubishi TTM           |
+| CSBSUSD STBJ Curncy   | SumiTrust TTM            |
+| MSFXJPY Index         | WM/Refinitiv             |
+| USDJPYTL Curncy       | Total Return Long        |
+| USDJPYCR Curncy       | Carry Return             |
 
 ## Commodity
 | Code   | Description                   | Notes                               |
 |--------|-------------------------------|-------------------------------------|
-| **CPFC** | Commodity Price Forecasts   | Future Price, Forecasts from Broker |
-| **Line** | Global Commodity Flows      |                                     |
-| **NRGZ** | Energy Industry Reports     |                                     |
-| **BI**   | EXPRE JODIP                 |                                     |
-| **RIG**  | Rig Count                   |                                     |
-| **WFOR** | Weather Forecasts           |                                     |
-| **COMM** | Commodity Product Catalog   |                                     |
+| CPFC | Commodity Price Forecasts   | Future Price, Forecasts from Broker |
+| Line | Global Commodity Flows      |                                     |
+| NRGZ | Energy Industry Reports     |                                     |
+| BI   | EXPRE JODIP                 |                                     |
+| RIG  | Rig Count                   |                                     |
+| WFOR | Weather Forecasts           |                                     |
+| COMM | Commodity Product Catalog   |                                     |
 
-Here's the content converted clearly into Markdown format:
+
 
 ## Monitoring
-
 | Code | Description               |
 |------|---------------------------|
-| **GMM** | Global Macro Movers      |
-| **W**   | Security Worksheet       |
+| GMM | Global Macro Movers      |
+| W   | Security Worksheet       |
 
 ## AI
 
 | Code   | Description                  |
 |--------|------------------------------|
-| **AIBB** | Overview of Bloomberg AI     |
+| AIBB | Overview of Bloomberg AI     |
 
 ## Etc.
 
 | Code   | Description                 |
 |--------|-----------------------------|
-| **FLDS** | Data Field Finder          |
-| **Note** | Note                       |
-| **WSL**  | Worksheet Sample           |
-| **WSL ELECMAP** | US Election Map     |
+| FLDS | Data Field Finder          |
+| Note | Note                       |
+| WSL  | Worksheet Sample           |
+| WSL ELECMAP | US Election Map     |
 
 ## Profile
 
 | Code  | Description             |
 |-------|-------------------------|
-| **IAM**  | User / Terminal ID Number |
-| **MYOR** | My Profile               |
+| IAM  | User / Terminal ID Number |
+| MYOR | My Profile               |
 
 ## Launchpad
 | Code | Description                                   |
 |------|-----------------------------------------------|
-| **BLP** | Open LaunchPad                              |
-| **LLP** | Display current page as a LaunchPad        |
+| BLP | Open LaunchPad                              |
+| LLP | Display current page as a LaunchPad        |
 
 
-### Charts, Graphs, Calculations
-- G, GP, GPC, GIP, GY, GIY, RRG, CORR, CIX, SEAG, COMP, TRA, GR, HS
-
-### BackTest & Factor Analysis
-- BTST, FTW, FTW FRR, BQIQ
-
-### Operation
-- CLIP, GRIB, GRAB, SNIP, Shift + G
-
-### Template & Documents
-- XLTP, DOCS, SMNR, BQLX, BPS, HELP, TRAI
-
-### Excel & Bloomberg formulas
-- BDH, BDS, BQL formulas
 
 ### Python
 - Bloomberg pip packages (`blpapi`, `pdblp`, `xbbg`)
@@ -246,35 +231,6 @@ Here's the content converted clearly into Markdown format:
 - IAM, MYOR, BLP, LLP
 
 Here's the content converted into Markdown format:
-
-## Bonds, Swap
-| Code  | Description                |
-|-------|----------------------------|
-| NIM   | New Issue Monitor          |
-| CRV   | Custme Curve Builder       |
-| CRVF  | Curve Filter               |
-| FWCM  | Forward Curve Matrix       |
-| FWCV  | Forward Curve Analysis     |
-
-## FX, Currency
-| Code              | Description                   |
-|-------------------|-------------------------------|
-| CSBSUSD TMUQ Curncy | Mitsubishi ttm              |
-| CSBSUSD STBJ Curncy | SumiTrust ttm               |
-| MSFXJPY Index       | WM/Refinitiv                |
-| USDJPYTL Curncy     | Total Return Long           |
-| USDJPYCR Curncy     | Carry Return                |
-
-## Commodity
-| Code | Description                        | Notes                                  |
-|------|------------------------------------|----------------------------------------|
-| CPFC | Commodity Price Forecasts          | Future Price, Forecasts from Broker    |
-| Line | Global Commodity Flows             |                                        |
-| NRGZ | Energy Industry Reports            |                                        |
-| BI   | EXPRE JODIP                        |                                        |
-| RIG  | Rig Count                          |                                        |
-| WFOR | Weather Forecasts                  |                                        |
-| COMM | Commodity Product Catalog          |                                        |
 
 
 
@@ -361,16 +317,16 @@ Here's the content converted into Markdown format:
 ## FLDS/Initial value of economic indicator
 | Field Code          | Description            |
 |---------------------|------------------------|
-| **Actual_release**  |                        |
-| **PR296**           |                        |
+| Actual_release  |                        |
+| PR296           |                        |
 
 ## FLDS/Dividend
 | Field Code | Description                                  | Bloomberg Code                |
 |------------|----------------------------------------------|--------------------------------|
-| **FD094**  | Funds Average Dividend Yield                 | `FUND_AVG_DVD_YLD`             |
-| **DV013**  | Dividend Indicated Yld - Gross               | `EQY_DVD_YLD_IND`              |
-| **SP111**  | YAS Bond Yield                               | `YAS_BOND_YLD`                 |
-| **DV014**  | Dividend 12 Month Yld - Gross                | `EQY_DVD_YLD_12M`              |
+| FD094  | Funds Average Dividend Yield                 | `FUND_AVG_DVD_YLD`             |
+| DV013  | Dividend Indicated Yld - Gross               | `EQY_DVD_YLD_IND`              |
+| SP111  | YAS Bond Yield                               | `YAS_BOND_YLD`                 |
+| DV014  | Dividend 12 Month Yld - Gross                | `EQY_DVD_YLD_12M`              |
 
 ## Date of release of economic indicators
 ```excel
