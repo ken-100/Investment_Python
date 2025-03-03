@@ -126,17 +126,64 @@
 | MEMB         | Member Weight                        |
 | GRR          | Group Ranked Returns                 |
 
-### BI Strategy
-- EVTS ER, BI STOXN SPXERNT, BI STOXG CHINA, SPX Index EA
+Here's your content converted into Markdown:
 
-### Bonds, Swap
-- NIM, CRV, CRVF, FWCM, FWCV
+## BI Strategy
+| Code                          | Description                            |
+|-------------------------------|----------------------------------------|
+| **EVTS ER**                   | Events Calendar: Earnings Releases     |
+| **BI STOXN SPXERNT**          |                                        |
+| **BI STOXN SPXGUID**          |                                        |
+| **BI STOXN SPXGUID \|2630-2-Q\|Q46\|\|USD** |                          |
+| **BI STOXG CHINA**            |                                        |
+| **SPX Index EA**              |                                        |
 
-### FX, Currency
-- CSBSUSD, MSFXJPY Index, USDJPYTL, USDJPYCR
+## Bloomberg Intelligence Analysts
+| Code               | Analyst Name     |
+|--------------------|------------------|
+| **BIO Marvin M Chen** | Marvin M Chen |
+| **BIO Estelle Ou**    | Estelle Ou    |
+| **BIO Eric Zhu**      | Eric Zhu      |
+| **BIO David Qu**      | David Qu      |
 
-### Commodity
-- CPFC, Line, NRGZ, BI EXPRE JODIP, RIG, WFOR, COMM, COM US Equity
+## Financial Metrics & Consensus
+| Code   | Description                             | Bloomberg Code       |
+|--------|-----------------------------------------|----------------------|
+| **EEO**| Consensus Overview                      |                      |
+| **FA** | Financial Analysis                      |                      |
+| **BE008**| BEst EPS                              | `BEST_EPS`           |
+| **E051**| BEst P/E Ratio                         | `BEST_PE_RATIO`      |
+
+
+## Bonds, Swap
+| Code | Description            |
+|------|------------------------|
+| **NIM**  | New Issue Monitor      |
+| **CRV**  | Custom Curve Builder   |
+| **CRVF** | Curve Filter           |
+| **FWCM** | Forward Curve Matrix   |
+| **FWCV** | Forward Curve Analysis |
+
+## FX, Currency
+| Code                  | Description              |
+|-----------------------|--------------------------|
+| **CSBSUSD TMUQ Curncy** | Mitsubishi TTM           |
+| **CSBSUSD STBJ Curncy** | SumiTrust TTM            |
+| **MSFXJPY Index**       | WM/Refinitiv             |
+| **USDJPYTL Curncy**     | Total Return Long        |
+| **USDJPYCR Curncy**     | Carry Return             |
+
+## Commodity
+| Code   | Description                   | Notes                               |
+|--------|-------------------------------|-------------------------------------|
+| **CPFC** | Commodity Price Forecasts   | Future Price, Forecasts from Broker |
+| **Line** | Global Commodity Flows      |                                     |
+| **NRGZ** | Energy Industry Reports     |                                     |
+| **BI**   | EXPRE JODIP                 |                                     |
+| **RIG**  | Rig Count                   |                                     |
+| **WFOR** | Weather Forecasts           |                                     |
+| **COMM** | Commodity Product Catalog   |                                     |
+
 
 ### Monitoring
 - GMM, W (Security Worksheet)
