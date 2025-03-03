@@ -310,7 +310,7 @@
 | Actual_release  |                        |
 | PR296           |                        |
 
-## FLDS/Dividend
+### FLDS/Dividend
 | Field Code | Description                                  | Bloomberg Code                |
 |------------|----------------------------------------------|--------------------------------|
 | FD094  | Funds Average Dividend Yield                 | `FUND_AVG_DVD_YLD`             |
@@ -318,13 +318,13 @@
 | SP111  | YAS Bond Yield                               | `YAS_BOND_YLD`                 |
 | DV014  | Dividend 12 Month Yld - Gross                | `EQY_DVD_YLD_12M`              |
 
-## Date of release of economic indicators
+### Date of release of economic indicators
 ```excel
 =@BDS("ADP CHNG Index","ECO_FUTURE_RELEASE_DATE_LIST", "START_DT=20000101", "END_DT=20200101")
 ```
 - If you don't need the time `ECO_RELEASE_DT_LIST`
 
-## BDH, weekday
+### BDH, weekday
 Although the results are usually the same, depending on the ticker, the upper row includes Saturdays and Sundays.
 ```excel
 =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"Days=W","Fill=P")
