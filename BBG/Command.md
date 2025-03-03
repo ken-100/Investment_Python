@@ -247,16 +247,14 @@ Here's the content converted into Markdown format:
 | MOSO S    |                    |
 
 
-Here's your content converted clearly into Markdown format:
-
 ## Operation
-| Code / Command        | Description                                                              |
-|-----------------------|--------------------------------------------------------------------------|
-| **CLIP**              | 選択した箇所をコピー                                                     |
-| **GRIB**              | 画面全体のスクリーンショットをIBにドラッグ＆ドロップで送ることが可能      |
-| **GRAB**              | 選択画面全体のスクリーンショットをとり、そのまま添付したメッセージを作成 |
-| **SNIP**              | 範囲を選択してスクリーンショットを撮り、FILEへ保存                      |
-| **Shift + G**         | Command History                                                          |
+| Code / Command | Description                                                  |
+|----------------|--------------------------------------------------------------|
+| **CLIP**       | Copy the selected area                                       |
+| **GRIB**       | Take a screenshot of the entire screen and drag & drop to IB |
+| **GRAB**       | Capture the selected area and automatically attach to a message |
+| **SNIP**       | Select area, take screenshot, and save to file               |
+| **Shift + G**  | Command History                                              |
 
 ## Template, Documents
 | Code                | Description                          |
@@ -301,15 +299,16 @@ Here's your content converted clearly into Markdown format:
 ```excel
 =@BDS("ADP CHNG Index","ECO_FUTURE_RELEASE_DATE_LIST", "START_DT=20000101", "END_DT=20200101")
 ```
-- 時間不要の場合は `ECO_RELEASE_DT_LIST`
+- If you don't need the time `ECO_RELEASE_DT_LIST`
 
 ## BDH, weekday
-通常は同じ結果も、銘柄によっては上段だと土日を含む
+Although the results are usually the same, depending on the ticker, the upper row includes Saturdays and Sundays.
 ```excel
 =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"Days=W","Fill=P")
 =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=5D","Fill=P")
 ```
-各国の祝日も指定可能。ただし、レコード自体が消える
+
+can also specify national holidays.
 ```excel
 =@BDH(C4,"px_last",WORKDAY(B2,-599),B2,"CDR=JN","Fill=P")
 ```
