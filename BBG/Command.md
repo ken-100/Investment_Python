@@ -199,3 +199,49 @@ Here's the content converted into Markdown format:
 | WFOR | Weather Forecasts                  |                                        |
 | COMM | Commodity Product Catalog          |                                        |
 
+
+Here's the content converted into Markdown format:
+
+## Charts, graphs, calculations
+| Code     | Description                                    | Notes                                     |
+|----------|------------------------------------------------|-------------------------------------------|
+| G        | My Graph                                       |                                           |
+| GP       | LineChart                                      |                                           |
+| GPC      | CandleChart                                    |                                           |
+| GIP      | IntradayPriceChart                             |                                           |
+| GY       | YieldChart                                     | Only for bonds                            |
+| GIY      | IntradayYieldChart                             | Only for bonds                            |
+| RRG      | RelativeRotationGraph                          |                                           |
+| CORR     | CorrelationMatrix                              |                                           |
+| CIX      | CustomeIndex                                   | *"HS → Save as Index" can create CIX ticker |
+| SEAG     | Seasonality Chart                              |                                           |
+| GIP PRE  | 時間外取引                                        |                                           |
+| COMP     | Comparative Returns                            |                                           |
+| TRA      | Total Return Analysis                          |                                           |
+| GR       | Ratio Analysis                                 |                                           |
+| HS       | Spread Analysis                                |                                           |
+
+## Vendor
+| Code             | Description                |
+|------------------|----------------------------|
+| IN               | Bloomberg Index Browser    |
+| FTSE             |                            |
+| MSCI             |                            |
+| SPPRISME Index   | Prism Index                |
+| NEIXCTA Index    | SG CTA Index               |
+| NEIXCTAT Index   | SG Trend Index             |
+
+## BackTest, Factor Analysis
+| Code     | Description                  |
+|----------|------------------------------|
+| BTST     | Backtesting & Optimization   |
+| FTW      | Factor to Watch              |
+| FTW FRR  | Bar Chart                    |
+| BQIQ     | Overview of BQuant           |
+
+## Option
+| Code      | Description        |
+|-----------|--------------------|
+| OMON      | OptionMonitor      |
+| MOSO      |                    |
+| MOSO S    |                    |
