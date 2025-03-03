@@ -127,7 +127,7 @@
 | GRR          | Group Ranked Returns                 |
 
 
-## BI Strategy
+### BI Strategy
 | Code                          | Description                            |
 |-------------------------------|----------------------------------------|
 | **EVTS ER**                   | Events Calendar: Earnings Releases     |
@@ -137,7 +137,7 @@
 | **BI STOXG CHINA**            |                                        |
 | **SPX Index EA**              |                                        |
 
-## Bloomberg Intelligence Analysts
+### Bloomberg Intelligence Analysts
 | Code               | Analyst Name     |
 |--------------------|------------------|
 | BIO Marvin M Chen | Marvin M Chen |
@@ -145,7 +145,7 @@
 | BIO Eric Zhu      | Eric Zhu      |
 | BIO David Qu      | David Qu      |
 
-## Financial Metrics & Consensus
+### Financial Metrics & Consensus
 | Code   | Description                             | Bloomberg Code       |
 |--------|-----------------------------------------|----------------------|
 | EEO| Consensus Overview                      |                      |
@@ -154,7 +154,7 @@
 | E051 | BEst P/E Ratio                         | `BEST_PE_RATIO`      |
 
 
-## Bonds, Swap
+### Bonds, Swap
 | Code | Description            |
 |------|------------------------|
 | NIM   | New Issue Monitor      |
@@ -163,7 +163,7 @@
 | FWCM  | Forward Curve Matrix   |
 | FWCV  | Forward Curve Analysis |
 
-## FX, Currency
+### FX, Currency
 | Code                  | Description              |
 |-----------------------|--------------------------|
 | CSBSUSD TMUQ Curncy   | Mitsubishi TTM           |
@@ -172,7 +172,7 @@
 | USDJPYTL Curncy       | Total Return Long        |
 | USDJPYCR Curncy       | Carry Return             |
 
-## Commodity
+### Commodity
 | Code   | Description                   | Notes                               |
 |--------|-------------------------------|-------------------------------------|
 | CPFC | Commodity Price Forecasts   | Future Price, Forecasts from Broker |
@@ -185,20 +185,18 @@
 
 
 
-## Monitoring
+### Monitoring
 | Code | Description               |
 |------|---------------------------|
 | GMM | Global Macro Movers      |
 | W   | Security Worksheet       |
 
-## AI
-
+### AI
 | Code   | Description                  |
 |--------|------------------------------|
 | AIBB | Overview of Bloomberg AI     |
 
-## Etc.
-
+### Etc.
 | Code   | Description                 |
 |--------|-----------------------------|
 | FLDS | Data Field Finder          |
@@ -206,14 +204,13 @@
 | WSL  | Worksheet Sample           |
 | WSL ELECMAP | US Election Map     |
 
-## Profile
-
+### Profile
 | Code  | Description             |
 |-------|-------------------------|
 | IAM  | User / Terminal ID Number |
 | MYOR | My Profile               |
 
-## Launchpad
+### Launchpad
 | Code | Description                                   |
 |------|-----------------------------------------------|
 | BLP | Open LaunchPad                              |
@@ -235,7 +232,7 @@ Here's the content converted into Markdown format:
 
 
 
-## Charts, graphs, calculations
+### Charts, graphs, calculations
 | Code     | Description                                    | Notes                                     |
 |----------|------------------------------------------------|-------------------------------------------|
 | G        | My Graph                                       |                                           |
@@ -254,7 +251,7 @@ Here's the content converted into Markdown format:
 | GR       | Ratio Analysis                                 |                                           |
 | HS       | Spread Analysis                                |                                           |
 
-## Vendor
+### Vendor
 | Code             | Description                |
 |------------------|----------------------------|
 | IN               | Bloomberg Index Browser    |
@@ -264,7 +261,7 @@ Here's the content converted into Markdown format:
 | NEIXCTA Index    | SG CTA Index               |
 | NEIXCTAT Index   | SG Trend Index             |
 
-## BackTest, Factor Analysis
+### BackTest, Factor Analysis
 | Code     | Description                  |
 |----------|------------------------------|
 | BTST     | Backtesting & Optimization   |
@@ -272,7 +269,7 @@ Here's the content converted into Markdown format:
 | FTW FRR  | Bar Chart                    |
 | BQIQ     | Overview of BQuant           |
 
-## Option
+### Option
 | Code      | Description        |
 |-----------|--------------------|
 | OMON      | OptionMonitor      |
@@ -280,32 +277,32 @@ Here's the content converted into Markdown format:
 | MOSO S    |                    |
 
 
-## Operation
+### Operation
 | Code / Command | Description                                                  |
 |----------------|--------------------------------------------------------------|
-| **CLIP**       | Copy the selected area                                       |
-| **GRIB**       | Take a screenshot of the entire screen and drag & drop to IB |
-| **GRAB**       | Capture the selected area and automatically attach to a message |
-| **SNIP**       | Select area, take screenshot, and save to file               |
-| **Shift + G**  | Command History                                              |
+| CLIP       | Copy the selected area                                       |
+| GRIB       | Take a screenshot of the entire screen and drag & drop to IB |
+| GRAB       | Capture the selected area and automatically attach to a message |
+| SNIP       | Select area, take screenshot, and save to file               |
+| Shift + G  | Command History                                              |
 
-## Template, Documents
+### Template, Documents
 | Code                | Description                          |
 |---------------------|--------------------------------------|
-| **XLTP**            | Excel Template                       |
-| **DOCS**            | Bloomberg Document                   |
-| **SMNR**            | Bloomberg Seminars                   |
-| **BQLX**            | Help on BQL                          |
-| **NI BLPBQL**       |                                      |
-| **NI BLPBQL IN JAPANESE** |                                |
-| **BPS**             | Bloomberg Resource Center            |
-| **BUB**             | Bloomberg Hub                        |
-| **HELP**            | Bloomberg Help Page                  |
-| **GRIB**            | Send Screen Image as IB              |
-| **TRAI**            | Training Request                     |
-| **SMNR**            | Seminars and Events                  |
+| XLTP            | Excel Template                       |
+| DOCS            | Bloomberg Document                   |
+| SMNR            | Bloomberg Seminars                   |
+| BQLX            | Help on BQL                          |
+| NI BLPBQL       |                                      |
+| NI BLPBQL IN JAPANESE |                                |
+| BPS             | Bloomberg Resource Center            |
+| BUB             | Bloomberg Hub                        |
+| HELP            | Bloomberg Help Page                  |
+| GRIB            | Send Screen Image as IB              |
+| TRAI            | Training Request                     |
+| SMNR            | Seminars and Events                  |
 
-## BDH/Getting holiday *(any Ticker is available)*
+### BDH/Getting holiday *(any Ticker is available)*
 ```excel
 =BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE=20220101","CALENDAR_END_DATE=20230101")
 
