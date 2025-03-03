@@ -119,7 +119,7 @@
 | Port         |                                      |
 
 
-### Stock Index Analysis
+### Stock Index Analysis (after choosing ticker, such as SPX)
 | Abbreviation | Description                          |
 |--------------|--------------------------------------|
 | IMAP         | Intraday Market Map                  |
