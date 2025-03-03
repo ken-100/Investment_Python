@@ -112,10 +112,19 @@
 | KI           | Insight                              |
 
 ### ETF
-- ETF, HLDR, Port
+| Abbreviation | Description                          |
+|--------------|--------------------------------------|
+| ETF          |                                      |
+| HLDR         | Holder Ownership                     |
+| Port         |                                      |
+
 
 ### Stock Index Analysis
-- IMAP, MEMB, GRR
+| Abbreviation | Description                          |
+|--------------|--------------------------------------|
+| IMAP         | Intraday Market Map                  |
+| MEMB         | Member Weight                        |
+| GRR          | Group Ranked Returns                 |
 
 ### BI Strategy
 - EVTS ER, BI STOXN SPXERNT, BI STOXG CHINA, SPX Index EA
