@@ -126,7 +126,6 @@
 | MEMB         | Member Weight                        |
 | GRR          | Group Ranked Returns                 |
 
-Here's your content converted into Markdown:
 
 ## BI Strategy
 | Code                          | Description                            |
@@ -184,12 +183,43 @@ Here's your content converted into Markdown:
 | **WFOR** | Weather Forecasts           |                                     |
 | **COMM** | Commodity Product Catalog   |                                     |
 
+Here's the content converted clearly into Markdown format:
 
-### Monitoring
-- GMM, W (Security Worksheet)
+## Monitoring
 
-### AI
-- AIBB
+| Code | Description               |
+|------|---------------------------|
+| **GMM** | Global Macro Movers      |
+| **W**   | Security Worksheet       |
+
+## AI
+
+| Code   | Description                  |
+|--------|------------------------------|
+| **AIBB** | Overview of Bloomberg AI     |
+
+## Etc.
+
+| Code   | Description                 |
+|--------|-----------------------------|
+| **FLDS** | Data Field Finder          |
+| **Note** | Note                       |
+| **WSL**  | Worksheet Sample           |
+| **WSL ELECMAP** | US Election Map     |
+
+## Profile
+
+| Code  | Description             |
+|-------|-------------------------|
+| **IAM**  | User / Terminal ID Number |
+| **MYOR** | My Profile               |
+
+## Launchpad
+| Code | Description                                   |
+|------|-----------------------------------------------|
+| **BLP** | Open LaunchPad                              |
+| **LLP** | Display current page as a LaunchPad        |
+
 
 ### Charts, Graphs, Calculations
 - G, GP, GPC, GIP, GY, GIY, RRG, CORR, CIX, SEAG, COMP, TRA, GR, HS
