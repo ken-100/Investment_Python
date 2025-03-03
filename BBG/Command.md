@@ -29,18 +29,18 @@
 | EMMV         | Emerging Markets Summary             |
 
 ### Policy Rate & Inflation
-| Abbreviation | Description                          |
-|--------------|--------------------------------------|
-| IFMO         | Inflation Monitor                    |
-| MIPR         | Market Implied Policy Rates          |
-| WIRP         | World Interest Rate Probability      |
-| BECO         | Bloomberg Economics                  |
-| DOTS         | FOMC Dot Plot                        |
-| DOTS SPEC    | Dot + Fed Spectrometer               |
-| .3M6MHD  Index      |                               |
-| .6M12MHD     | Index                                |
-| BENLPFED     | Index                                |
-| MSRAUS       | Index                                |
+| Abbreviation    | Description                          |
+|-----------------|--------------------------------------|
+| IFMO            | Inflation Monitor                    |
+| MIPR            | Market Implied Policy Rates          |
+| WIRP            | World Interest Rate Probability      |
+| BECO            | Bloomberg Economics                  |
+| DOTS            | FOMC Dot Plot                        |
+| DOTS SPEC       | Dot + Fed Spectrometer               |
+| .3M6MHD  Index  |                                      |
+| .6M12MHD  Index |                                      |
+| BENLPFED  Index |                                      |
+| MSRAUS  Index   |                                      |
 
 ### News
 | Abbreviation | Description                          |
