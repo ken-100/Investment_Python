@@ -92,7 +92,7 @@
 | MDM          | Market Depth Monitor                 |
 | EXC          | Exchange Privileges                  |
 
-### Equities (incl. ETF)
+### Equities (including ETF)
 | Abbreviation | Description                          |
 |--------------|--------------------------------------|
 | AQR          | Top Trade                            |
