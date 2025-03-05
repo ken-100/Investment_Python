@@ -43,13 +43,6 @@ can also specify national holidays.
 ```
 
 
-### Twitter
-`SOCI` → Input user name
-- @zerohedge  
-- @zerohedgejpn  
-- @nicktimiraos  
-- @Yuto_gahagaha  
-
 ### Update BBG function via VBA
 ```vba
 Application.Run "RefreshCurrentSelection"
