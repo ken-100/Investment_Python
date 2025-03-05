@@ -1,4 +1,4 @@
-## Bloomberg Functions Cheat Sheet
+## Cheat Sheet
 
 
 ### BDH/Getting holiday *(any Ticker is available)*
