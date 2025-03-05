@@ -242,7 +242,7 @@
 | CORR     | CorrelationMatrix                              |                                           |
 | CIX      | CustomeIndex                                   | *"HS → Save as Index" can create CIX ticker |
 | SEAG     | Seasonality Chart                              |                                           |
-| GIP PRE  | 時間外取引                                        |                                           |
+| GIP PRE  | After-hours trading                            |                                           |
 | COMP     | Comparative Returns                            |                                           |
 | TRA      | Total Return Analysis                          |                                           |
 | GR       | Ratio Analysis                                 |                                           |
