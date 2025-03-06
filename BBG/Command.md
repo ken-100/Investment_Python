@@ -1,7 +1,7 @@
 ## Bloomberg Functions Cheat Sheet
 
 ### Overview
-|-----------------|--------------------------------------|
+| Abbreviation    | Description                          |
 | WEI          | World Equity Indices                 |
 | WEIF         | World Index Futures                  |
 | EMEQ         | Emerging Market Equity Indices       |
