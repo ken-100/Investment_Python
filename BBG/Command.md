@@ -128,7 +128,7 @@
 
 
 ### BI Strategy
-| Code                          | Description                            |
+| Command                          | Description                            |
 |-------------------------------|----------------------------------------|
 | EVTS ER                   | Events Calendar: Earnings Releases     |
 | BI STOXN SPXERNT          |                                        |
@@ -138,7 +138,7 @@
 | SPX Index EA              |                                        |
 
 ### Bloomberg Intelligence Analysts
-| Code               | Analyst Name     |
+| Command               | Analyst Name     |
 |--------------------|------------------|
 | BIO Marvin M Chen | Marvin M Chen |
 | BIO Estelle Ou    | Estelle Ou    |
@@ -146,13 +146,13 @@
 | BIO David Qu      | David Qu      |
 
 ### Financial Metrics & Consensus
-| Code   | Description                             | 
+| Command   | Description                             | 
 |--------|-----------------------------------------|
 | EEO| Consensus Overview                      |
 | FA | Financial Analysis                      |
 
 
-| Code   | Description                             | Bloomberg Code       |
+| Command   | Description                             | Bloomberg Code       |
 |--------|-----------------------------------------|----------------------|
 | BE008 | BEst EPS                              | `BEST_EPS`           |
 | E051 | BEst P/E Ratio                         | `BEST_PE_RATIO`      |
@@ -163,7 +163,7 @@
 3) click "Financials & Property (APAC)"  
 
 ### Bonds, Swap
-| Code | Description            |
+| Command | Description            |
 |------|------------------------|
 | NIM   | New Issue Monitor      |
 | CRV   | Custom Curve Builder   |
@@ -172,7 +172,7 @@
 | FWCV  | Forward Curve Analysis |
 
 ### FX, Currency
-| Code                  | Description              |
+| Command                  | Description              |
 |-----------------------|--------------------------|
 | CSBSUSD TMUQ Curncy   | Mitsubishi TTM           |
 | CSBSUSD STBJ Curncy   | SumiTrust TTM            |
@@ -181,7 +181,7 @@
 | USDJPYCR Curncy       | Carry Return             |
 
 ### Commodity
-| Code   | Description                   | Notes                               |
+| Command   | Description                   | Notes                               |
 |--------|-------------------------------|-------------------------------------|
 | CPFC | Commodity Price Forecasts   | Future Price, Forecasts from Broker |
 | Line | Global Commodity Flows      |                                     |
@@ -198,18 +198,18 @@
 
 
 ### Monitoring
-| Code | Description               |
+| Command | Description               |
 |------|---------------------------|
 | GMM | Global Macro Movers      |
 | W   | Security Worksheet       |
 
 ### AI
-| Code   | Description                  |
+| Command   | Description                  |
 |--------|------------------------------|
 | AIBB | Overview of Bloomberg AI     |
 
 ### Etc.
-| Code   | Description                 |
+| Command   | Description                 |
 |--------|-----------------------------|
 | FLDS | Data Field Finder          |
 | Note | Note                       |
@@ -217,20 +217,20 @@
 | WSL ELECMAP | US Election Map     |
 
 ### Profile
-| Code  | Description             |
+| Command  | Description             |
 |-------|-------------------------|
 | IAM  | User / Terminal ID Number |
 | MYOR | My Profile               |
 
 ### Launchpad
-| Code | Description                                   |
+| Command | Description                                   |
 |------|-----------------------------------------------|
 | BLP | Open LaunchPad                              |
 | LLP | Display current page as a LaunchPad        |
 
 
 ### Charts, graphs, calculations
-| Code     | Description                                    | Notes                                     |
+| Command     | Description                                    | Notes                                     |
 |----------|------------------------------------------------|-------------------------------------------|
 | G        | My Graph                                       |                                           |
 | GP       | LineChart                                      |                                           |
@@ -249,7 +249,7 @@
 | HS       | Spread Analysis                                |                                           |
 
 ### Vendor
-| Code             | Description                |
+| Command             | Description                |
 |------------------|----------------------------|
 | IN               | Bloomberg Index Browser    |
 | FTSE             |                            |
@@ -259,7 +259,7 @@
 | NEIXCTAT Index   | SG Trend Index             |
 
 ### BackTest, Factor Analysis
-| Code     | Description                  |
+| Command     | Description                  |
 |----------|------------------------------|
 | BTST     | Backtesting & Optimization   |
 | FTW      | Factor to Watch              |
@@ -267,7 +267,7 @@
 | BQIQ     | Overview of BQuant           |
 
 ### Option
-| Code      | Description        |
+| Command      | Description        |
 |-----------|--------------------|
 | OMON      | OptionMonitor      |
 | MOSO      |                    |
@@ -275,7 +275,7 @@
 
 
 ### Operation
-| Code / Command | Description                                                  |
+| Command | Description                                                  |
 |----------------|--------------------------------------------------------------|
 | CLIP       | Copy the selected area                                       |
 | GRIB       | Take a screenshot of the entire screen and drag & drop to IB |
@@ -284,7 +284,7 @@
 | Shift + G  | Command History                                              |
 
 ### Template, Documents
-| Code                | Description                          |
+| Command                | Description                          |
 |---------------------|--------------------------------------|
 | XLTP            | Excel Template                       |
 | DOCS            | Bloomberg Document                   |
@@ -301,13 +301,13 @@
 
 
 ## FLDS/Initial value of economic indicator
-| Field Code          | Description            |
+| Field          | Description            |
 |---------------------|------------------------|
 | Actual_release  |                        |
 | PR296           |                        |
 
 ### FLDS/Dividend
-| Field Code | Description                                  | Bloomberg Code                |
+| Field | Description                                  | Bloomberg Code                |
 |------------|----------------------------------------------|--------------------------------|
 | FD094  | Funds Average Dividend Yield                 | `FUND_AVG_DVD_YLD`             |
 | DV013  | Dividend Indicated Yld - Gross               | `EQY_DVD_YLD_IND`              |
