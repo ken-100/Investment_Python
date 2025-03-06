@@ -1,7 +1,8 @@
 ## Bloomberg Functions Cheat Sheet
 
 ### Overview
-| Abbreviation    | Description                          |
+| Command    | Description                          |
+|-----------------|--------------------------------------|
 | WEI          | World Equity Indices                 |
 | WEIF         | World Index Futures                  |
 | EMEQ         | Emerging Market Equity Indices       |
@@ -28,7 +29,7 @@
 | EMMV         | Emerging Markets Summary             |
 
 ### Policy Rate & Inflation
-| Abbreviation    | Description                          |
+| Command    | Description                          |
 |-----------------|--------------------------------------|
 | IFMO            | Inflation Monitor                    |
 | MIPR            | Market Implied Policy Rates          |
