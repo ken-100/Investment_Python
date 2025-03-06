@@ -43,7 +43,7 @@
 | MSRAUS  Index   |                                      |
 
 ### News
-| Abbreviation | Description                          |
+| Command | Description                          |
 |--------------|--------------------------------------|
 | DS           | Document Search                      |
 | N, NI        | News Topics (*e.g., NI BOJ*)         |
@@ -70,7 +70,7 @@
 | BNEW         | What's New                           |
 
 ### Economic
-| Abbreviation | Description                          |
+| Command | Description                          |
 |--------------|--------------------------------------|
 | ECO          | Economic Calendars                   |
 | ECFC         | Forecasts                            |
@@ -84,7 +84,7 @@
 | BECO         | Bloomberg Economics (Visual Charts)  |
 
 ### Futures
-| Abbreviation | Description                          |
+| Command | Description                          |
 |--------------|--------------------------------------|
 | OMON         | Option Monitor                       |
 | COT          | CFTC Ticker                          |
@@ -93,7 +93,7 @@
 | EXC          | Exchange Privileges                  |
 
 ### Equities (including ETF)
-| Abbreviation | Description                          |
+| Command | Description                          |
 |--------------|--------------------------------------|
 | AQR          | Top Trade                            |
 | QR           | Quote Recap                          |
@@ -112,7 +112,7 @@
 | KI           | Insight                              |
 
 ### ETF
-| Abbreviation | Description                          |
+| Command | Description                          |
 |--------------|--------------------------------------|
 | ETF          |                                      |
 | HLDR         | Holder Ownership                     |
@@ -120,7 +120,7 @@
 
 
 ### Stock Index Analysis (after choosing ticker, such as SPX)
-| Abbreviation | Description                          |
+| Command | Description                          |
 |--------------|--------------------------------------|
 | IMAP         | Intraday Market Map                  |
 | MEMB         | Member Weight                        |
