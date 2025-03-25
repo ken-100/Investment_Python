@@ -170,6 +170,7 @@
 | CRVF  | Curve Filter           |
 | FWCM  | Forward Curve Matrix   |
 | FWCV  | Forward Curve Analysis |
+| GOVY  | Rates Trader |
 
 ### FX, Currency
 | Command                  | Description              |
