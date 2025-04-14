@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime
 
 def get_large_excel_files(folder_path, min_size_mb=10):
-    excel_extensions = ('.xls', '.xlsx', '.xlsm', '.xlsb', '.csv','.ipynb','.pdf'))
+    excel_extensions = ('.xls', '.xlsx', '.xlsm', '.xlsb', '.csv','.ipynb','.pdf')
     data = []
 
     for root, dirs, files in os.walk(folder_path):
@@ -35,6 +35,6 @@ def get_large_excel_files(folder_path, min_size_mb=10):
     return df
 
 if __name__ == "__main__":
-    target_folder = r"C:\Users\ky090\OneDrive - The University of Texas at Austin\102_TAM"
+    target_folder = r"C:\Users\ky090\OneDrive - The University of Texas at Austin"
     df = get_large_excel_files(target_folder, min_size_mb=1)
     display(df)
