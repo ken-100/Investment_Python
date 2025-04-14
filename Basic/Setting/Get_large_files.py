@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime
 
 def get_large_excel_files(folder_path, min_size_mb=10):
-    excel_extensions = ('.xls', '.xlsx', '.xlsm', '.xlsb')
+    excel_extensions = ('.xls', '.xlsx', '.xlsm', '.xlsb', '.csv','.ipynb','.pdf'))
     data = []
 
     for root, dirs, files in os.walk(folder_path):
