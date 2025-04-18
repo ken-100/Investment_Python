@@ -83,6 +83,8 @@
 | TAYL         | Taylor Rule Model                    |
 | BECO         | Bloomberg Economics (Visual Charts)  |
 
+*BECO MODELS TRADE 
+
 ### Futures
 | Command | Description                          |
 |--------------|--------------------------------------|
