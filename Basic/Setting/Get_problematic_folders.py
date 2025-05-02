@@ -5,8 +5,8 @@ from datetime import datetime
 def find_folders_with_problematic_chars(target_folder):
     # List of characters that may cause issues; adjust if needed.
     problematic_chars = [
-        # " ",  # Space
-        # ".",  # Dot
+        " ",  # Space
+        ".",  # Dot
         "(", ")",  # Parentheses
         "[", "]"   # Square brackets
     ]
