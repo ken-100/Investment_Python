@@ -44,7 +44,7 @@ can also specify national holidays.
 
 ### Generic Ticker of futures
 ```excel
-TY1  A:00_0_R COMB Comdty
+TY1 A:00_0_R COMB Comdty
 ```
 
 
