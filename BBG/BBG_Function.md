@@ -42,6 +42,11 @@ can also specify national holidays.
 =BDH("TP1 Index","close,volume","2024/11/25  7:00:00","2024/11/26  7:00:00","BarTp=Trade","BarSz=30","TZ=Tokyo")
 ```
 
+### Generic Ticker of futures
+```excel
+TY1  A:00_0_R COMB Comdty
+```
+
 
 ### Update BBG function via VBA
 ```vba
