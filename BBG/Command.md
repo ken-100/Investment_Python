@@ -27,6 +27,7 @@
 | BTMM         | Treasury & Money Markets             |
 | DMMV         | Developed Markets Summary            |
 | EMMV         | Emerging Markets Summary             |
+| AIBB         | Overvuew of BBG AI                   |
 
 ### Policy Rate & Inflation
 | Command    | Description                          |
