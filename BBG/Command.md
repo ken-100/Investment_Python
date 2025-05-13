@@ -28,6 +28,7 @@
 | DMMV         | Developed Markets Summary            |
 | EMMV         | Emerging Markets Summary             |
 | AIBB         | Overvuew of BBG AI                   |
+| BHUB         | Bloomberg HUB                        |
 
 ### Policy Rate & Inflation
 | Command    | Description                          |
