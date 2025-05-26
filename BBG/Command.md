@@ -177,13 +177,15 @@
 | GOVY  | Rates Trader |
 
 ### FX, Currency
-| Command                  | Description              |
-|-----------------------|--------------------------|
-| CSBSUSD TMUQ Curncy   | Mitsubishi TTM           |
-| CSBSUSD STBJ Curncy   | SumiTrust TTM            |
-| MSFXJPY Index         | WM/Refinitiv             |
-| USDJPYTL Curncy       | Total Return Long        |
-| USDJPYCR Curncy       | Carry Return             |
+| Command               | Description                |
+|-----------------------|----------------------------|
+| CSBSUSD TMUQ Curncy   | Mitsubishi TTM             |
+| CSBSUSD STBJ Curncy   | SumiTrust TTM              |
+| MSFXJPY Index         | WM/Refinitiv               |
+| USDJPYTL Curncy       | Total Return Long          |
+| USDJPYCR Curncy       | Carry Return               |
+| FRD                   | FX Forward                 |
+| FXFA                  | FX-Interest Rate Arbitrage |
 
 ### Commodity
 | Command   | Description                   | Notes                               |
