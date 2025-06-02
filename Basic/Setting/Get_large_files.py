@@ -38,3 +38,9 @@ if __name__ == "__main__":
     target_folder = r"C:\Users\ky090\OneDrive - The University of Texas at Austin"
     df = get_large_excel_files(target_folder, min_size_mb=1)
     display(df)
+
+
+# df1 = df[df['Folder'].astype(str).str.contains('test', na=False)]
+# df1 = df1[~df1['File_Name'].astype(str).str.contains('pdf', case=False, na=False)].reset_index(drop=True)
+# df1 = df1[df1['Size(MB)'] > 3]
+# pd.DataFrame(df1).to_csv('tmp1.csv', encoding='utf_8_sig')
