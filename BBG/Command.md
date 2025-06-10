@@ -113,7 +113,8 @@
 | Rank         | Broker Rankings                      |
 | MRR          | Members Ranked Return                |
 | DPDF         | Corporate Action Settings            |
-| KI           | Insight                              |
+| KI           | Key Insight                          |
+| ANR          | Analyst Recommendations              |
 
 ### ETF
 | Command | Description                          |
