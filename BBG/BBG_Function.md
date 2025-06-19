@@ -47,6 +47,16 @@ can also specify national holidays.
 TY1 A:00_0_R COMB Comdty
 ```
 
+### BQL
+```excel
+=@BQL(C5:C11,"total_return(Calc_interval=range(2025-05-26,2025-05-27))")
+=@BQL(C5:C11,"last(tot_return_index_gross_dvds(dates=range(2025-06-18,2025-06-19),fill=PREV)).value/first(tot_return_index_gross_dvds(dates=range(2025-06-18,2025-06-19),fill=PREV)).value-1")
+```
+
+### Generic Ticker of futures
+```excel
+TY1 A:00_0_R COMB Comdty
+```
 
 ### Update BBG function via VBA
 ```vba
