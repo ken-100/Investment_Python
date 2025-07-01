@@ -115,6 +115,8 @@
 | DPDF         | Corporate Action Settings            |
 | KI           | Key Insight                          |
 | ANR          | Analyst Recommendations              |
+| MODL         | Company Financials                   |
+| GF           | Glaph Fundamentals                   |
 
 ### ETF
 | Command | Description                          |
