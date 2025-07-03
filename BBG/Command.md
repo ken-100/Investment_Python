@@ -305,6 +305,7 @@
 | BPS             | Bloomberg Resource Center            |
 | BUB             | Bloomberg Hub                        |
 | HELP            | Bloomberg Help Page                  |
+| HELP DAPI       | API Help                             |
 | GRIB            | Send Screen Image as IB              |
 | TRAI            | Training Request                     |
 | SMNR            | Seminars and Events                  |
