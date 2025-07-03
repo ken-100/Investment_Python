@@ -58,6 +58,15 @@ TY1 A:00_0_R COMB Comdty
 TY1 A:00_0_R COMB Comdty
 ```
 
+
+### FXFORWARD
+```excel
+=BFXFORWARD("USDJPY","07/15/2025","BidPoints","PricingDate=06/25/2025")
+=BFXFORWARD("USDJPY","07/15/2025","BidOutright","PricingDate=06/25/2025")
+```
+*HELP DAPI <GO> >> Specialized Toolkits >> BFXForward
+
+
 ### Update BBG function via VBA
 ```vba
 Application.Run "RefreshCurrentSelection"
