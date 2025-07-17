@@ -39,3 +39,18 @@ price_cols = [df_list[i]["Price"] for i in range(len(List))]
 df = pd.concat([df_list[0]["Date"]] + price_cols, axis=1)
 df.columns = ["Date"] + List
 df
+
+
+bq = bql.Service()
+
+
+
+# universe = ['AAPL US Equity','CRWD US Equity','SNAP US Equity']
+# data_item = bq.data.price(dates=bq.func.range('-2D', '0D'), fill='PREV', pricing_source='BGN')
+
+# request = bql.Request(universe, data_item)
+# response = bq.execute(request)
+
+# data = response[0].df()
+# data
+
