@@ -189,6 +189,7 @@
 | USDJPYCR Curncy       | Carry Return               |
 | FRD                   | FX Forward                 |
 | FXFA                  | FX-Interest Rate Arbitrage |
+| FXFM                  | FX Rate Forcast Model      |
 
 ### Commodity
 | Command   | Description                   | Notes                               |
