@@ -117,6 +117,7 @@
 | ANR          | Analyst Recommendations              |
 | MODL         | Company Financials                   |
 | GF           | Glaph Fundamentals                   |
+| EQRV         | Equitly Relative Valuation           |
 
 ### ETF
 | Command | Description                          |
