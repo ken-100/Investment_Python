@@ -12,7 +12,6 @@ import bqplot as bqp
 bq = bql.Service()
 
 
-
 # Cell 2
 def get_data(univ, univ_type, d_from, d_to, name):
     
@@ -33,6 +32,8 @@ def get_data(univ, univ_type, d_from, d_to, name):
         'Sector': bq.data.classification_name(),
         'Weight%': bq.data.id()["WEIGHTS"]/100,
         'Ret%': bq.data.total_return(calc_interval=dates),
+        'Volume': bq.data.px_volume(dates=d_to),
+        'Volume_avg': bq.data.volume_avg_12m(),
     }
 
     request = bql.Request(universe, data_items)
@@ -49,28 +50,60 @@ def get_data(univ, univ_type, d_from, d_to, name):
     df.insert(1, 'ID1', df['ID'].str.split().str[1])
     df["ID"] = df["ID"].str.split().str[0]
 
-
+    df["RelativeVolume"] = df["Volume"] / df["Volume_avg"]
+    
     print("Top：" + univ)
     display(arrange(df,False))
     
     print("Worst:" + univ)
     display(arrange(df,True))
+
+    print("HighVolume:" + univ)
+    display(arrange1(df))
     
     fig = build_heatmap(univ, df.head(100),name)
     fig.show()
 
     return df
 
-def arrange(df,ascending=False):
-    df1 = df.sort_values('Ret%', ascending=ascending).drop('ID1', axis=1).reset_index(drop=True).head(5).copy()
-    df1['Weight%'] *= 100
-    df1['Ret%'] *= 100
-    df1['Weight%'] = df1['Weight%'].apply(lambda x: f'{x:.1f}')
-    df1['Ret%'] = df1['Ret%'].apply(lambda x: f'{x:.2f}')
-    return df1
 
+def arrange(df, ascending=False):
+    df1 = df[["ID","Short","Kanji","Sector","Weight%","Ret%"]].copy()
+    df1 = df1.sort_values('Ret%', ascending=ascending).reset_index(drop=True).head(5)
+    
+    C = df1.columns  # Get column names
+    styled_df = df1.style\
+        .bar(subset=[C[c] for c in range(len(C)) if C[c] in ['Weight%', 'Ret%']], 
+             align='mid', 
+             width=60, 
+             color=["#ff8080", "#80ff80"])\
+        .format({
+            'Weight%': '{:.1%}',
+            'Ret%': '{:.1%}'
+        })\
+        .set_properties(subset=['Weight%', 'Ret%'], **{'text-align': 'right'})  # 数値を右寄せ
+    
+    return styled_df
 
-
+# To Be Corrected
+def arrange1(df):
+    df1 = df[["ID","Short","Kanji","Sector","RelativeVolume"]].copy()
+    df1 = df1.sort_values("RelativeVolume", ascending=False).reset_index(drop=True).head(5)
+    
+    C = df1.columns  # Get column names
+    styled_df = df1.style\
+        .bar(subset=[C[c] for c in range(len(C)) if C[c] in ["RelativeVolume"]], 
+             align='mid',
+             width=60,  
+             color=["#ff8080", "#80ff80"])\
+        .format({
+            "RelativeVolume": '{:.0%}'
+        })\
+        .set_properties(subset=["RelativeVolume"], **{'text-align': 'right'})  # 数値を右寄せ
+    
+    return styled_df
+    
+    
 def create_range_colors(df, return_col='Ret%'):
     """
     Creates a tuple of negative and positive integers for color range.
@@ -103,8 +136,7 @@ def build_heatmap(univ, df,name):
     Builds a treemap heatmap from DataFrame with ID, Sector, Weight%, Ret%.
     """
 
-    # print(df[df['Kanji'].isna()])
-    
+     
     tmp = df[df['Sector'].isna()]
     
     if len(tmp) > 0:
@@ -179,7 +211,8 @@ def build_heatmap(univ, df,name):
 
 def ListCreation(requests):
 
-    universe = [request[0] for request in requests]
+    # universe = [request[0] for request in requests]
+    universe = requests["Ticker"].tolist()
     
     data_items = {
         'Name': bq.data.name(),
@@ -199,17 +232,44 @@ def ListCreation(requests):
     
     return List
 
-
 # Cell 3
 requests = [
-    ("SPY US Equity", "Fund",  "-2D",  "-1D", "ID"),
-    ("1348 JP Equity", "Fund", "-1D",  "today", "Kanji"),
-    ("2828 HK Equity", "Fund", "-1D",  "today", "Short"),
+    ("SPY US Equity", "Fund", "-1D", "0D", "ID"),
+    ("IWM US Equity", "Fund", "-1D", "0D", "ID"),
+    ("1348 JP Equity", "Fund", "-1D", "0D", "Kanji"),
+    ("1343 JP Equity", "Fund", "-1D", "0D", "Kanji"),
+    ("2828 HK Equity", "Fund", "-1D", "0D", "Short"),
 ]
 
+columns = ["Ticker", "Type", "from", "to", "Format"]
 
+requests = pd.DataFrame(requests, columns=columns)
+requests
+
+
+# Cell 4
 List = ListCreation(requests)
 
 for i in range(len(requests)):
-    globals()[f"df{i}"] = get_data(requests[i][0], requests[i][1], requests[i][2],requests[i][3], requests[i][4])
+
+    d_from_orig = int(requests.loc[i,"from"].replace('D', ''))
+    d_to_orig = int(requests.loc[i,"to"].replace('D', ''))
+    
+    d_from = ( d_from_orig  - 5) * 2
+    d_from = str(d_from) + "D"
+    
+    data_items = bq.data.px_last(dates=bq.func.range(d_from, '0D'))
+    
+    request = bql.Request(requests.loc[i,"Ticker"], data_items)
+    response = bq.execute(request)
+    
+    tmp = response[0].df()
+    tmp = tmp.reset_index(drop=True)
+    tmp = tmp.sort_values(by='DATE', ascending=False).reset_index(drop=True).dropna()
+    
+    d_to =  str(-tmp.index[d_to_orig] ) + "D"
+    d_from =  str(-tmp.index[-d_from_orig] ) + "D"
+    
+    globals()[f"df{i}"] = get_data(requests.loc[i,"Ticker"], requests.loc[i,"Type"], d_from, d_to, requests.loc[i,"Format"])
+    
     
