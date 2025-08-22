@@ -13,7 +13,7 @@ bq = bql.Service()
 
 
 # Cell 2
-def get_data(univ, univ_type, d_from, d_to, name):
+def get_data(univ, univ_type, d_from, d_to, name, sector):
     
     d = {
         'Index': bq.univ.members(univ),
@@ -30,6 +30,11 @@ def get_data(univ, univ_type, d_from, d_to, name):
         'Short': bq.data.short_name(),
         'Kanji': bq.data.name_kanji_short(),
         'Sector': bq.data.classification_name(),
+        'Sub': bq.data.classification_name(
+            classification_level='4'
+        ),
+        # 'Sub1': bq.data.industry_subgroup(),
+        # 'Sub2': bq.data.gics_industry_name(),
         'Weight%': bq.data.id()["WEIGHTS"]/100,
         'Ret%': bq.data.total_return(calc_interval=dates),
         'Volume': bq.data.px_volume(dates=d_to),
@@ -52,57 +57,66 @@ def get_data(univ, univ_type, d_from, d_to, name):
 
     df["RelativeVolume"] = df["Volume"] / df["Volume_avg"]
     
-    print("Top：" + univ)
-    display(arrange(df,False))
+    print("Top")
+    display(arrange(df,["ID","Short","Kanji","Sector","Sub"],["Weight%","Ret%"],'{:.1%}',5,False))
     
-    print("Worst:" + univ)
-    display(arrange(df,True))
+    print("Worst")
+    display(arrange(df,["ID","Short","Kanji","Sector","Sub"],["Weight%","Ret%"],'{:.1%}' ,5, True))
 
-    print("HighVolume:" + univ)
-    display(arrange1(df))
+    print("HighVolume")
+    display(arrange(df,["ID","Short","Kanji","Sector","Sub"],["RelativeVolume"],'{:.0%}' ,5, False))
+
+
+    Sector = list(set(df[sector].tolist()))
+    df["tmp"] = df["Weight%"] * df["Ret%"]
     
-    fig = build_heatmap(univ, df.head(100),name)
+    df_Sector = pd.DataFrame({
+        sector: Sector,
+        'Weight%': 0, 
+        'Ret%': 0    
+    })
+        
+    for i,j in enumerate(Sector):
+        df_Sector.loc[i,"Weight%"] = df.loc[df[sector]==j,"Weight%"].sum() 
+
+        if df_Sector.loc[i,"Weight%"] ==0:
+            df_Sector.loc[i,"Ret%"] = 0 
+        else:
+            df_Sector.loc[i,"Ret%"] = df.loc[df[sector]==j,"tmp"].sum() / df_Sector.loc[i,"Weight%"]
+
+    df = df.drop('tmp', axis=1)
+    
+    df_Sector = df_Sector.sort_values("Ret%", ascending=False).reset_index(drop=True)
+    
+    print("By Sector")
+    display(arrange(df_Sector ,[sector],["Weight%","Ret%"],'{:.1%}',20, False))
+    
+
+
+    fig = build_heatmap(univ.replace(" Equity", ""), df.head(200),name, sector)
     fig.show()
 
     return df
 
 
-def arrange(df, ascending=False):
-    df1 = df[["ID","Short","Kanji","Sector","Weight%","Ret%"]].copy()
-    df1 = df1.sort_values('Ret%', ascending=ascending).reset_index(drop=True).head(5)
+def arrange(df, Fields0, Fields,format_pct, head, ascending=False):
+    df1 = df[ Fields0 + Fields].copy()
+    df1 = df1.sort_values(Fields[len(Fields)-1], ascending=ascending).reset_index(drop=True).head(head)
     
     C = df1.columns  # Get column names
+
+    format_dict = {col: format_pct for col in Fields}
     styled_df = df1.style\
-        .bar(subset=[C[c] for c in range(len(C)) if C[c] in ['Weight%', 'Ret%']], 
+        .bar(subset=[C[c] for c in range(len(C)) if C[c] in Fields], 
              align='mid', 
              width=60, 
              color=["#ff8080", "#80ff80"])\
-        .format({
-            'Weight%': '{:.1%}',
-            'Ret%': '{:.1%}'
-        })\
-        .set_properties(subset=['Weight%', 'Ret%'], **{'text-align': 'right'})  # 数値を右寄せ
+        .format(format_dict)\
+        .set_properties(subset=Fields, **{'text-align': 'right'})  # 数値を右寄せ
     
     return styled_df
 
-# To Be Corrected
-def arrange1(df):
-    df1 = df[["ID","Short","Kanji","Sector","RelativeVolume"]].copy()
-    df1 = df1.sort_values("RelativeVolume", ascending=False).reset_index(drop=True).head(5)
-    
-    C = df1.columns  # Get column names
-    styled_df = df1.style\
-        .bar(subset=[C[c] for c in range(len(C)) if C[c] in ["RelativeVolume"]], 
-             align='mid',
-             width=60,  
-             color=["#ff8080", "#80ff80"])\
-        .format({
-            "RelativeVolume": '{:.0%}'
-        })\
-        .set_properties(subset=["RelativeVolume"], **{'text-align': 'right'})  # 数値を右寄せ
-    
-    return styled_df
-    
+
     
 def create_range_colors(df, return_col='Ret%'):
     """
@@ -131,21 +145,20 @@ def centered_color_scale(range_colors):
     ]
     return colors
 
-def build_heatmap(univ, df,name):
+def build_heatmap(univ, df,name, sector):
     """
     Builds a treemap heatmap from DataFrame with ID, Sector, Weight%, Ret%.
     """
 
-     
-    tmp = df[df['Sector'].isna()]
+    tmp = df[df[sector].isna()]
     
     if len(tmp) > 0:
         print("Delete")
         display(tmp)
-        df = df[~df['Sector'].isna()].reset_index(drop=False)
+        df = df[~df[sector].isna()].reset_index(drop=False)
         
     # Ensure required columns exist
-    required_cols = ['ID',"Short",'Kanji', 'Sector', 'Weight%', 'Ret%']
+    required_cols = ['ID',"Short",'Kanji', 'Sector', 'Sub', 'Weight%', 'Ret%']
     if not all(col in df.columns for col in required_cols):
         raise ValueError(f"DataFrame must contain columns: {required_cols}")
     
@@ -155,20 +168,19 @@ def build_heatmap(univ, df,name):
     # Build the treemap with custom_data for proper text display
     fig = px.treemap(
         df,
-        # path=['Sector', 'ID'],
-        path=['Sector', name],
+        path=[sector, name],
         values='Weight%',
         color='Ret%',
         color_continuous_scale=centered_color_scale(range_colors),
         range_color=range_colors,
-        custom_data=['ID', 'Short','Ret%'],  # Add Ret% to custom_data
+        custom_data=['ID', 'Short',"Sub",'Ret%'],  # Add Ret% to custom_data
         height=600
     )
     
     # Update text template to use customdata
     fig.data[0].texttemplate = (
         "<b>%{label}</b><br>"
-        "%{customdata[2]:.2%}"  # Use customdata[0] for Ret%
+        "%{customdata[3]:.2%}"  
     )
     
     fig.data[0].textposition = 'middle center'
@@ -179,7 +191,6 @@ def build_heatmap(univ, df,name):
         paper_bgcolor="#212121",
         font=dict(color='white', size=12),
         title={
-            # 'text': 'Sector Heatmap',
             'text': univ,
             'font': {'color': 'white', 'size': 20},
             'x': 0.5,
@@ -195,7 +206,7 @@ def build_heatmap(univ, df,name):
             "%{customdata[0]}<br>"
             "%{customdata[1]}<br>"
             "Weight: %{value:.2%}<br>"
-            "Return: %{customdata[2]:.2%}<br>"  
+            "Ret: %{customdata[3]:.2%}<br>"  
             "<extra></extra>"
         )
     )
@@ -211,13 +222,15 @@ def build_heatmap(univ, df,name):
 
 def ListCreation(requests):
 
-    # universe = [request[0] for request in requests]
+    requests = pd.DataFrame(requests, columns=["Ticker", "Type", "from", "to", "name","sector"])
     universe = requests["Ticker"].tolist()
     
     data_items = {
         'Name': bq.data.name(),
         'Crncy': bq.data.crncy(),
         'ISO': bq.data.country_iso(),
+        "Geo": bq.data.fund_geo_focus(),
+        "MktCap": bq.data.fund_mkt_cap_focus(),
     }
     
     response = bq.execute(bql.Request(universe, data_items))
@@ -232,44 +245,98 @@ def ListCreation(requests):
     
     return List
 
+
+
+def main(requests):
+
+    requests = pd.DataFrame(requests, columns=["Ticker", "Type", "from", "to", "name","sector"])
+    List = ListCreation(requests)
+    for i in range(len(requests)):
+
+        print("\n"+List.loc[i,"ID"].replace(" Equity", "") + ": " + List.loc[i,"Name"])
+        
+        tmp0 = requests.loc[i,"from"]
+        tmp1 = requests.loc[i,"to"]
+        
+        if tmp0[len(tmp0)-1] == "D" and tmp1[len(tmp1)-1] == "D":
+            
+            d_from_orig = int(requests.loc[i,"from"].replace('D', ''))
+            d_to_orig = int(requests.loc[i,"to"].replace('D', ''))
+            
+            d_from1 = ( d_from_orig  - 5) * 2
+            d_from1 = str(d_from1) + "D"
+            
+            data_items = bq.data.px_last(dates=bq.func.range(d_from1, '0D'))
+            response = bq.execute(bql.Request(requests.loc[i,"Ticker"], data_items))
+            
+            tmp = response[0].df()
+            tmp = tmp.reset_index(drop=True)
+            tmp = tmp.sort_values(by='DATE', ascending=False).dropna().reset_index(drop=True)
+    
+            d_from =  tmp["DATE"][-d_from_orig]
+            d_to =  tmp["DATE"][-d_to_orig]
+    
+            print(d_from.strftime("%Y/%-m/%-d")+"-"+d_to.strftime("/%-m/%-d"))
+    
+        
+        elif tmp0[len(tmp0)-1] != "D" and tmp1[len(tmp1)-1] == "D":
+    
+            d_to_orig = int(requests.loc[i,"to"].replace('D', ''))
+    
+            
+            data_items = bq.data.px_last(dates=bq.func.range('-100D', '0D'))
+            response = bq.execute(bql.Request(requests.loc[i,"Ticker"], data_items))
+            
+            tmp = response[0].df()
+            tmp = tmp.reset_index(drop=True)
+            tmp = tmp.sort_values(by='DATE', ascending=False).dropna().reset_index(drop=True)
+    
+            d_from =  requests.loc[i,"from"].replace("/","-")
+            d_to =  tmp["DATE"][-d_to_orig]
+    
+            print(d_from.replace("-","/")+"-"+d_to.strftime("/%-m/%-d"))
+    
+        
+        else:
+            d_from =  requests.loc[i,"from"].replace("/","-")
+            d_to =  requests.loc[i,"to"].replace("/","-")
+    
+            print(d_from.replace("-","/")+"-"+d_to.replace("-","/"))
+    
+        globals()[f"df{i}"] = get_data(requests.loc[i,"Ticker"], requests.loc[i,"Type"], d_from, d_to, requests.loc[i,"name"], requests.loc[i,"sector"])
+
+
 # Cell 3
+# Overseas assets, previous day
 requests = [
-    ("SPY US Equity", "Fund", "-1D", "0D", "ID"),
-    ("IWM US Equity", "Fund", "-1D", "0D", "ID"),
-    ("1348 JP Equity", "Fund", "-1D", "0D", "Kanji"),
-    ("1343 JP Equity", "Fund", "-1D", "0D", "Kanji"),
-    ("2828 HK Equity", "Fund", "-1D", "0D", "Short"),
+    ("SPY US Equity", "Fund", "-1D", "0D", "ID","Sector"),
+    ("IWM US Equity", "Fund", "-1D", "0D", "ID","Sector"),
+    ("VGK US Equity", "Fund", "-1D", "0D", "ID","Sector"),
+    ("EZU US Equity", "Fund", "-1D", "0D", "ID","Sector"),
+    ("INDA US Equity", "Fund", "-1D", "0D", "ID","Sector"),
 ]
 
-columns = ["Ticker", "Type", "from", "to", "Format"]
+main(requests)
 
-requests = pd.DataFrame(requests, columns=columns)
-requests
 
 
 # Cell 4
-List = ListCreation(requests)
+# Asian assets, toiday
+requests = [
+    ("1348 JP Equity", "Fund", "-1D", "0D", "Kanji","Sector"),
+    ("1343 JP Equity", "Fund", "-1D", "0D", "Kanji","Sub"),
+    ("2800 HK Equity", "Fund", "-1D", "0D", "Short","Sector"),
+    ("2839 HK Equity", "Fund", "-1D", "0D", "Short","Sector"),
+]
+main(requests)
 
-for i in range(len(requests)):
 
-    d_from_orig = int(requests.loc[i,"from"].replace('D', ''))
-    d_to_orig = int(requests.loc[i,"to"].replace('D', ''))
-    
-    d_from = ( d_from_orig  - 5) * 2
-    d_from = str(d_from) + "D"
-    
-    data_items = bq.data.px_last(dates=bq.func.range(d_from, '0D'))
-    
-    request = bql.Request(requests.loc[i,"Ticker"], data_items)
-    response = bq.execute(request)
-    
-    tmp = response[0].df()
-    tmp = tmp.reset_index(drop=True)
-    tmp = tmp.sort_values(by='DATE', ascending=False).reset_index(drop=True).dropna()
-    
-    d_to =  str(-tmp.index[d_to_orig] ) + "D"
-    d_from =  str(-tmp.index[-d_from_orig] ) + "D"
-    
-    globals()[f"df{i}"] = get_data(requests.loc[i,"Ticker"], requests.loc[i,"Type"], d_from, d_to, requests.loc[i,"Format"])
-    
+
+# Cell 5
+# Specify the from date
+requests = [
+    ("SPY US Equity", "Fund", "2025/7/31", "0D", "Kanji","Sub"),
+    ("1348 JP Equity", "Fund", "2025/7/31", "0D", "Kanji","Sector"),
+]
+main(requests)
     
