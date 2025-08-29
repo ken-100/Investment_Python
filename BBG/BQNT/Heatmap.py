@@ -12,8 +12,9 @@ import bqplot as bqp
 bq = bql.Service()
 
 
+
 # Cell 2
-def get_data(univ, univ_type, d_from, d_to, name, sector):
+def get_data(univ, univ_type, d_from, d_to, name, sector,num_top):
     
     d = {
         'Index': bq.univ.members(univ),
@@ -58,7 +59,7 @@ def get_data(univ, univ_type, d_from, d_to, name, sector):
     df["RelativeVolume"] = df["Volume"] / df["Volume_avg"]
     
     print("Top")
-    display(arrange(df,["ID","Short","Kanji","Sector","Sub"],["Weight%","Ret%"],'{:.1%}',5,False))
+    display(arrange(df,["ID","Short","Kanji","Sector","Sub"],["Weight%","Ret%"],'{:.1%}',int(num_top),False))
     
     print("Worst")
     display(arrange(df,["ID","Short","Kanji","Sector","Sub"],["Weight%","Ret%"],'{:.1%}' ,5, True))
@@ -173,7 +174,7 @@ def build_heatmap(univ, df,name, sector):
         color='Ret%',
         color_continuous_scale=centered_color_scale(range_colors),
         range_color=range_colors,
-        custom_data=['ID', 'Short',"Sub",'Ret%'],  # Add Ret% to custom_data
+        custom_data=['ID', 'Short',"Sub",'Ret%'], 
         height=600
     )
     
@@ -249,7 +250,7 @@ def ListCreation(requests):
 
 def main(requests):
 
-    requests = pd.DataFrame(requests, columns=["Ticker", "Type", "from", "to", "name","sector"])
+    requests = pd.DataFrame(requests, columns=["Ticker", "Type", "from", "to", "name","sector","num_top"])
     List = ListCreation(requests)
     for i in range(len(requests)):
 
@@ -303,40 +304,45 @@ def main(requests):
     
             print(d_from.replace("-","/")+"-"+d_to.replace("-","/"))
     
-        globals()[f"df{i}"] = get_data(requests.loc[i,"Ticker"], requests.loc[i,"Type"], d_from, d_to, requests.loc[i,"name"], requests.loc[i,"sector"])
+        
+        globals()[f"df{i}"] = get_data(requests.loc[i,"Ticker"], requests.loc[i,"Type"], d_from, d_to, requests.loc[i,"name"], requests.loc[i,"sector"], requests.loc[i,"num_top"])
 
 
 # Cell 3
 # Overseas assets, previous day
 requests = [
-    ("SPY US Equity", "Fund", "-1D", "0D", "ID","Sector"),
-    ("IWM US Equity", "Fund", "-1D", "0D", "ID","Sector"),
-    ("VGK US Equity", "Fund", "-1D", "0D", "ID","Sector"),
-    ("EZU US Equity", "Fund", "-1D", "0D", "ID","Sector"),
-    ("INDA US Equity", "Fund", "-1D", "0D", "ID","Sector"),
+    ("SPY US Equity", "Fund", "-1D", "0D", "ID","Sector",10),
+    ("IWM US Equity", "Fund", "-1D", "0D", "ID","Sector",5),
+    ("DON US Equity", "Fund", "-1D", "0D", "ID","Sector",5),
+    ("DES US Equity", "Fund", "-1D", "0D", "ID","Sector",5),
+    ("REGL US Equity", "Fund", "-1D", "0D", "ID","Sector",5),
+    ("VGK US Equity", "Fund", "-1D", "0D", "ID","Sector",5),
+    ("EZU US Equity", "Fund", "-1D", "0D", "ID","Sector",5),
+    ("SBINIFT IN Equity", "Fund", "-1D", "0D", "ID","Sector",5),
 ]
 
 main(requests)
-
 
 
 # Cell 4
 # Asian assets, toiday
 requests = [
-    ("1348 JP Equity", "Fund", "-1D", "0D", "Kanji","Sector"),
-    ("1343 JP Equity", "Fund", "-1D", "0D", "Kanji","Sub"),
-    ("2800 HK Equity", "Fund", "-1D", "0D", "Short","Sector"),
-    ("2839 HK Equity", "Fund", "-1D", "0D", "Short","Sector"),
+    ("1348 JP Equity", "Fund", "-1D", "0D", "Kanji","Sector",5),
+    ("1343 JP Equity", "Fund", "-1D", "0D", "Kanji","Sub",5),
+    ("2800 HK Equity", "Fund", "-1D", "0D", "Short","Sector",5),
+    ("2839 HK Equity", "Fund", "-1D", "0D", "Short","Sector",5),
+    ("510300 CH Equity", "Fund", "-1D", "0D", "Short","Sector",5),
+    ("0050 TT Equity", "Fund", "-1D", "0D", "Short","Sector",5),
+    ("069500 KS Equity", "Fund", "-1D", "0D", "Short","Sector",5),
 ]
 main(requests)
-
 
 
 # Cell 5
 # Specify the from date
 requests = [
-    ("SPY US Equity", "Fund", "2025/7/31", "0D", "Kanji","Sub"),
-    ("1348 JP Equity", "Fund", "2025/7/31", "0D", "Kanji","Sector"),
+    ("SPY US Equity", "Fund", "2025/7/31", "0D", "ID","Sector",5),
+    ("1343 JP Equity", "Fund", "2025/7/31", "0D", "Kanji","Sub",5),
+    ("1348 JP Equity", "Fund", "2025/7/31", "0D", "Kanji","Sector",5),
 ]
 main(requests)
-    
