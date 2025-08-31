@@ -12,7 +12,6 @@ import bqplot as bqp
 bq = bql.Service()
 
 
-
 # Cell 2
 def get_data(univ, univ_type, d_from, d_to, name, sector,num_top):
     
@@ -40,6 +39,8 @@ def get_data(univ, univ_type, d_from, d_to, name, sector,num_top):
         'Ret%': bq.data.total_return(calc_interval=dates),
         'Volume': bq.data.px_volume(dates=d_to),
         'Volume_avg': bq.data.volume_avg_12m(),
+        'Vola': bq.data.volatility_260d_calc(dates=d_to)/100,
+        "PER": bq.data.pe_ratio(dates=d_to),
     }
 
     request = bql.Request(universe, data_items)
@@ -57,6 +58,26 @@ def get_data(univ, univ_type, d_from, d_to, name, sector,num_top):
     df["ID"] = df["ID"].str.split().str[0]
 
     df["RelativeVolume"] = df["Volume"] / df["Volume_avg"]
+
+
+    df["Ret%"] = df["Ret%"].fillna(0)
+    print("AveRet%:", f"{sum(df['Ret%'] * df['Weight%']):.2%}")
+    
+    df["PER"] = df["PER"].fillna(0)
+    PERvsBM = sum(df["PER"] * df["Weight%"])
+    df["PERvsBM"] = df["PER"] - PERvsBM
+    print("AvePER:", f"{PERvsBM:.1f}")
+    
+    
+
+    tmp = df[df[sector].isna()]
+    if len(tmp) > 0:
+        print("Delete")
+        display(tmp)
+        df = df[~df[sector].isna()].reset_index(drop=True)
+
+
+
     
     print("Top")
     display(arrange(df,["ID","Short","Kanji","Sector","Sub"],["Weight%","Ret%"],'{:.1%}',int(num_top),False))
@@ -66,6 +87,15 @@ def get_data(univ, univ_type, d_from, d_to, name, sector,num_top):
 
     print("HighVolume")
     display(arrange(df,["ID","Short","Kanji","Sector","Sub"],["RelativeVolume"],'{:.0%}' ,5, False))
+
+
+    df_tmp = df.copy()
+    df_tmp["Vola"] = df_tmp["Vola"].map(lambda x: f"{x:.1%}")
+    df_tmp["PER"] = df_tmp["PER"].map(lambda x: f"{x:.1f}")
+    df_tmp["PERvsBM"] = df_tmp["PERvsBM"].map(lambda x: f"{x:.1f}")
+        
+    print("HighWeight")
+    display(arrange(df_tmp,["ID","Short","Kanji","Sector","Sub","Vola","PER","PERvsBM"],["Weight%"],'{:.1%}' ,5, False))
 
 
     Sector = list(set(df[sector].tolist()))
@@ -151,15 +181,8 @@ def build_heatmap(univ, df,name, sector):
     Builds a treemap heatmap from DataFrame with ID, Sector, Weight%, Ret%.
     """
 
-    tmp = df[df[sector].isna()]
-    
-    if len(tmp) > 0:
-        print("Delete")
-        display(tmp)
-        df = df[~df[sector].isna()].reset_index(drop=False)
-        
     # Ensure required columns exist
-    required_cols = ['ID',"Short",'Kanji', 'Sector', 'Sub', 'Weight%', 'Ret%']
+    required_cols = ["ID","Short","Kanji", "Sector", "Sub", "Weight%", "Ret%","Vola","PER","PERvsBM"]
     if not all(col in df.columns for col in required_cols):
         raise ValueError(f"DataFrame must contain columns: {required_cols}")
     
@@ -174,7 +197,7 @@ def build_heatmap(univ, df,name, sector):
         color='Ret%',
         color_continuous_scale=centered_color_scale(range_colors),
         range_color=range_colors,
-        custom_data=['ID', 'Short',"Sub",'Ret%'], 
+        custom_data = ["ID", "Short","Sub","Ret%","Vola","PER","PERvsBM"], 
         height=600
     )
     
@@ -206,8 +229,11 @@ def build_heatmap(univ, df,name, sector):
         hovertemplate=(
             "%{customdata[0]}<br>"
             "%{customdata[1]}<br>"
-            "Weight: %{value:.2%}<br>"
-            "Ret: %{customdata[3]:.2%}<br>"  
+            "Weight: %{value:.1%}<br>"
+            "Ret: %{customdata[3]:.2%}<br>" 
+            "Vola: %{customdata[4]:.1%}<br>"
+            "PER: %{customdata[5]:.1f}<br>"
+            "PERvsBM: %{customdata[6]:.1f}<br>"
             "<extra></extra>"
         )
     )
@@ -277,7 +303,7 @@ def main(requests):
             d_from =  tmp["DATE"][-d_from_orig]
             d_to =  tmp["DATE"][-d_to_orig]
     
-            print(d_from.strftime("%Y/%-m/%-d")+"-"+d_to.strftime("/%-m/%-d"))
+            print(d_from.strftime("%-m/%-d%a")+"-"+d_to.strftime("%-m/%-d%a"))
     
         
         elif tmp0[len(tmp0)-1] != "D" and tmp1[len(tmp1)-1] == "D":
@@ -294,15 +320,16 @@ def main(requests):
     
             d_from =  requests.loc[i,"from"].replace("/","-")
             d_to =  tmp["DATE"][-d_to_orig]
+
     
-            print(d_from.replace("-","/")+"-"+d_to.strftime("/%-m/%-d"))
+            print(datetime.strptime(d_from, "%Y-%m-%d").strftime("%-m/%-d%a")+"-"+d_to.strftime("%-m/%-d%a"))
     
         
         else:
             d_from =  requests.loc[i,"from"].replace("/","-")
             d_to =  requests.loc[i,"to"].replace("/","-")
     
-            print(d_from.replace("-","/")+"-"+d_to.replace("-","/"))
+            print(datetime.strptime(d_from, "%Y-%m-%d").strftime("%-m/%-d%a")+"-"+datetime.strptime(d_to, "%Y-%m-%d").strftime("%-m/%-d%a"))
     
         
         globals()[f"df{i}"] = get_data(requests.loc[i,"Ticker"], requests.loc[i,"Type"], d_from, d_to, requests.loc[i,"name"], requests.loc[i,"sector"], requests.loc[i,"num_top"])
@@ -322,6 +349,7 @@ requests = [
 ]
 
 main(requests)
+
 
 
 # Cell 4
