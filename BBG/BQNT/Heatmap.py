@@ -8,6 +8,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import bql
 import bqplot as bqp
+from datetime import datetime
 
 bq = bql.Service()
 
