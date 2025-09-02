@@ -220,6 +220,15 @@
 |--------|------------------------------|
 | AIBB | Overview of Bloomberg AI     |
 
+### BQuant
+| Command   | Description                  | Notes                             |
+|-----------|------------------------------|-----------------------------------|
+| BQNT      | BQuant                       |                                   |
+| BQNT HELP | Guides and Documentaton      |                                   |
+| BQAP      | BQuant Apps                  |                                   |
+| BQIQ      | Overview of BQuant Desktop   |                                   |
+
+
 ### Etc.
 | Command   | Description                 |
 |--------|-----------------------------|
@@ -227,6 +236,8 @@
 | Note | Note                       |
 | WSL  | Worksheet Sample           |
 | WSL ELECMAP | US Election Map     |
+
+
 
 ### Profile
 | Command  | Description             |
