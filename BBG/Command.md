@@ -229,6 +229,12 @@
 | BQIQ      | Overview of BQuant Desktop   |                                   |
 
 
+### BQuant
+| Command   | Description                  | Notes                             |
+|-----------|------------------------------|-----------------------------------|
+| BQL       | BQL Editor                   | =BQL.QUERY(" Query ")             |
+| BQLX      | Help on BQL                  |                                   |
+
 ### Etc.
 | Command   | Description                 |
 |--------|-----------------------------|
@@ -236,6 +242,7 @@
 | Note | Note                       |
 | WSL  | Worksheet Sample           |
 | WSL ELECMAP | US Election Map     |
+
 
 
 
