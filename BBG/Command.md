@@ -74,6 +74,14 @@
 | AID          | Automated Intelligence on Demand     |
 | BNEW         | What's New                           |
 
+### NI: News Topic
+| Command          | Description                          |
+|------------------|--------------------------------------|
+| NI CRMKTS        | Crude Oil Futures Commentary         |
+| NI BFWOIL        | First Word Oil                       |
+| NI NRGMARKET     | Energy Trading                       |
+| NI INV           | Commodities Inventories              |
+
 ### Economic
 | Command | Description                          |
 |--------------|--------------------------------------|
