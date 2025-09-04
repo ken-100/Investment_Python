@@ -14,6 +14,8 @@
 | WCDS         | World CDS Monitor                    |
 | CDX          | CDS Index Monitor                    |
 | SOVR         | Sovereign CDS Monitor                |
+| BYFC         | Bond Yield Forecastsage              |
+| USTY         | US Treasury Portal Page              |
 | GGR          | Generic Government Rates (*Obsolete*)|
 | SOVM         | Sovereign Debt Monitor               |
 | IRSB         | Interest Rate Swap                   |
@@ -24,6 +26,7 @@
 | GMM          | Global Macro Movers                  |
 | OTC          | Market Monitor                       |
 | WCR          | World Currency Rates                 |
+| FXIP         | FX Information Portal                |
 | BTMM         | Treasury & Money Markets             |
 | DMMV         | Developed Markets Summary            |
 | EMMV         | Emerging Markets Summary             |
