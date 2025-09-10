@@ -74,6 +74,15 @@
 | AID          | Automated Intelligence on Demand     |
 | BNEW         | What's New                           |
 
+
+### New News-Related Features
+| Command | Description                               |
+|--------------|--------------------------------------|
+| DSX          | Document Search and Analysis         |
+| DOCW         |  Document Workspace                  |
+| BECO         | BBG Economics                        |
+| ENTC         |  Research Entitlements               |
+
 ### NI: News Topic
 | Command          | Description                          |
 |------------------|--------------------------------------|
