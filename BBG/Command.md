@@ -249,7 +249,7 @@
 | BQIQ      | Overview of BQuant Desktop   |                                   |
 
 
-### BQuant
+### BQL
 | Command   | Description                  | Notes                             |
 |-----------|------------------------------|-----------------------------------|
 | BQL       | BQL Editor                   | =BQL.QUERY(" Query ")             |
