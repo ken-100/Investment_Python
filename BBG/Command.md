@@ -82,6 +82,7 @@
 | DOCW         |  Document Workspace                  |
 | BECO         | BBG Economics                        |
 | ENTC         |  Research Entitlements               |
+| AIBB         | Overview of Bloomberg AI             |
 
 ### NI: News Topic
 | Command          | Description                          |
@@ -235,10 +236,6 @@
 | GMM | Global Macro Movers      |
 | W   | Security Worksheet       |
 
-### AI
-| Command   | Description                  |
-|--------|------------------------------|
-| AIBB | Overview of Bloomberg AI     |
 
 ### BQuant
 | Command   | Description                  | Notes                             |
