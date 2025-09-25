@@ -33,19 +33,37 @@
 | AIBB         | Overvuew of BBG AI                   |
 | BHUB         | Bloomberg HUB                        |
 
-### Policy Rate & Inflation
+
 | Command    | Description                          |
 |-----------------|--------------------------------------|
 | IFMO            | Inflation Monitor                    |
 | MIPR            | Market Implied Policy Rates          |
 | WIRP            | World Interest Rate Probability      |
-| BECO            | Bloomberg Economics                  |
 | DOTS            | FOMC Dot Plot                        |
 | DOTS SPEC       | Dot + Fed Spectrometer               |
 | .3M6MHD  Index  |                                      |
 | .6M12MHD  Index |                                      |
 | BENLPFED  Index |                                      |
 | MSRAUS  Index   |                                      |
+
+### BECO
+| Mnemonic | Description |
+| --- | --- |
+| BECO | Bloomberg Economics |
+| BECO MODELS FEDSPEAK | Fedspeak |
+| BECO MODELS NOWCASTS | Nowcasts |
+| BECO MODELS SHOK | SHOK |
+| BECO MODELS | Economics Models |
+| BECO MODELS TRADE | Trade |
+| BECO MODELS FORECASTS | Forecasts |
+| BECO MODELS DRIVERS | Drivers |
+| BECO MODELS FISCAL | Fiscal |
+| BECO MODELS DASHBOARDS | Dashboards |
+| BECO MODELS ECBSPEAK | ECBSpeak |
+| BECO MODELS CBSPEAK | CBSpeak |
+| BECO MODELS SURPRISES | Surprises |
+| BECO MODELS BOESPEAK | BOEspeak |
+| BECO MODELS MFIN | Macro-Finance |
 
 ### News
 | Command | Description                          |
