@@ -47,7 +47,7 @@
 | MSRAUS  Index   |                                      |
 
 ### BECO
-| Mnemonic | Description |
+| Command | Description |
 | --- | --- |
 | BECO | Bloomberg Economics |
 | BECO MODELS FEDSPEAK | Fedspeak |
