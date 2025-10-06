@@ -30,7 +30,6 @@
 | BTMM         | Treasury & Money Markets             |
 | DMMV         | Developed Markets Summary            |
 | EMMV         | Emerging Markets Summary             |
-| AIBB         | Overvuew of BBG AI                   |
 | BHUB         | Bloomberg HUB                        |
 
 
@@ -97,9 +96,10 @@
 | Command | Description                               |
 |--------------|--------------------------------------|
 | DSX          | Document Search and Analysis         |
-| DOCW         |  Document Workspace                  |
+| ASKB         | Bloomberg Assistant Analysis         |
+| DOCW         | Document Workspace                   |
 | BECO         | BBG Economics                        |
-| ENTC         |  Research Entitlements               |
+| ENTC         | Research Entitlements                |
 | AIBB         | Overview of Bloomberg AI             |
 
 ### NI: News Topic
@@ -111,7 +111,7 @@
 | NI INV           | Commodities Inventories              |
 
 ### Economic
-| Command | Description                          |
+| Command      | Description                          |
 |--------------|--------------------------------------|
 | ECO          | Economic Calendars                   |
 | ECFC         | Forecasts                            |
