@@ -114,7 +114,6 @@
 | Command      | Description                          |
 |--------------|--------------------------------------|
 | ECO          | Economic Calendars                   |
-| ECFC         | Forecasts                            |
 | ECST         | World Economic Statistics            |
 | ECOD         | Economic Release Details             |
 | ECWB         | Economic Workbench                   |
@@ -125,6 +124,15 @@
 | BECO         | Bloomberg Economics (Visual Charts)  |
 
 *BECO MODELS TRADE 
+
+###  Forecasts
+| Command | Description                          |
+|--------------|--------------------------------------|
+| ECFC         | Economic Forecasts                   |
+| FXFC         | FX       Forecasts                   |
+| FXFM          | FX Rate Forecast Model              |
+| SHOK         | Bloomberg Economics Forecast Model   |
+
 
 ### Futures
 | Command | Description                          |
