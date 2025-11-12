@@ -45,25 +45,6 @@
 | BENLPFED  Index |                                      |
 | MSRAUS  Index   |                                      |
 
-### BECO
-| Command | Description |
-| --- | --- |
-| BECO | Bloomberg Economics |
-| BECO MODELS FEDSPEAK | Fedspeak |
-| BECO MODELS NOWCASTS | Nowcasts |
-| BECO MODELS SHOK | SHOK |
-| BECO MODELS | Economics Models |
-| BECO MODELS TRADE | Trade |
-| BECO MODELS FORECASTS | Forecasts |
-| BECO MODELS DRIVERS | Drivers |
-| BECO MODELS FISCAL | Fiscal |
-| BECO MODELS DASHBOARDS | Dashboards |
-| BECO MODELS ECBSPEAK | ECBSpeak |
-| BECO MODELS CBSPEAK | CBSpeak |
-| BECO MODELS SURPRISES | Surprises |
-| BECO MODELS BOESPEAK | BOEspeak |
-| BECO MODELS MFIN | Macro-Finance |
-
 ### News
 | Command | Description                          |
 |--------------|--------------------------------------|
@@ -91,7 +72,6 @@
 | AID          | Automated Intelligence on Demand     |
 | BNEW         | What's New                           |
 
-
 ### New News-Related Features
 | Command | Description                               |
 |--------------|--------------------------------------|
@@ -101,6 +81,25 @@
 | BECO         | BBG Economics                        |
 | ENTC         | Research Entitlements                |
 | AIBB         | Overview of Bloomberg AI             |
+
+### BECO
+| Command | Description |
+| --- | --- |
+| BECO | Bloomberg Economics |
+| BECO MODELS FEDSPEAK | Fedspeak |
+| BECO MODELS NOWCASTS | Nowcasts |
+| BECO MODELS SHOK | SHOK |
+| BECO MODELS | Economics Models |
+| BECO MODELS TRADE | Trade |
+| BECO MODELS FORECASTS | Forecasts |
+| BECO MODELS DRIVERS | Drivers |
+| BECO MODELS FISCAL | Fiscal |
+| BECO MODELS DASHBOARDS | Dashboards |
+| BECO MODELS ECBSPEAK | ECBSpeak |
+| BECO MODELS CBSPEAK | CBSpeak |
+| BECO MODELS SURPRISES | Surprises |
+| BECO MODELS BOESPEAK | BOEspeak |
+| BECO MODELS MFIN | Macro-Finance |
 
 ### NI: News Topic
 | Command          | Description                          |
@@ -123,7 +122,7 @@
 | TAYL         | Taylor Rule Model                    |
 | BECO         | Bloomberg Economics (Visual Charts)  |
 
-*BECO MODELS TRADE 
+
 
 ###  Forecasts
 | Command | Description                          |
