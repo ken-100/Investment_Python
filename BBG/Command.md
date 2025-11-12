@@ -82,6 +82,32 @@
 | ENTC         | Research Entitlements                |
 | AIBB         | Overview of Bloomberg AI             |
 
+
+### NH Scrolling News
+| Command | Description                               |
+| --- | --- |
+| NH | Scrolling News |
+| NH JBN | News Source: Bloomberg Japanese News (in Japanese) |
+| NH BCA | News Source: Barclays |
+| NH TSL | News Source: Truth Social – Donald Trump |
+| NH AFR | News Source: Australian Financial Review |
+| NH TEL | News Source: Telegraph UK |
+| NH NYT | News Source: New York Times |
+| NH WSJ | News Source: Dow Jones Wall Street Journal |
+| NH BN | News Source: Bloomberg News |
+| NH FLX | News Source: FLX Options Price |
+| NH BFW | News Source: Bloomberg First Word |
+| NH BOB | News Source: Bond Buyer |
+| NH WPT | News Source: Washington Post |
+| NH ECH | News Source: Les Echos |
+| NH SYH | News Source: Sydney Morning Herald |
+| NH TIL | News Source: The Times |
+| NH NYP | News Source: New York Post |
+| NH FIG | News Source: Le Figaro |
+| NH APW | News Source: Associated Press |
+| NH BBO | News Source: Bloomberg Opinion |
+
+
 ### BECO
 | Command | Description |
 | --- | --- |
