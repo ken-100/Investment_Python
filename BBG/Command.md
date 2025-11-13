@@ -198,6 +198,7 @@
 | HLDR         | Holder Ownership                     |
 | Port         |                                      |
 | TLTS         | Tilts                                |
+| BI ETFS      |                                      |
 
 ### Stock Index Analysis (after choosing ticker, such as SPX)
 | Command | Description                          |
