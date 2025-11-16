@@ -11,9 +11,9 @@
 ```
 
 Switzerland <br>
-SZ: Natiolnal holiday
-BS: Basel Ex. (SIX Swiss)
-As for BS, there are some gap between Settlment(default) and Trading information. From BDS, we can get only Settlment information.
+SZ: Natiolnal holiday<br>
+BS: Basel Ex. (SIX Swiss)<br>
+As for BS, there are some gap between Settlment(default) and Trading information. From BDS, we can get only Settlment information.<br>
 
 
 ### Date of release of economic indicators
