@@ -10,7 +10,7 @@
 =@BDS("JPY BGN Curncy","CALENDAR_NON_SETTLEMENT_DATES","SETTLEMENT_CALENDAR_CODE=JN","CALENDAR_START_DATE="&TEXT(TODAY()-600,"yyyymmdd"),"CALENDAR_END_DATE="&TEXT(TODAY()+100,"yyyymmdd"))
 ```
 
-Switzerland \\
+Switzerland <br>
 SZ: Natiolnal holiday
 BS: Basel Ex. (SIX Swiss)
 As for BS, there are some gap between Settlment(default) and Trading information. From BDS, we can get only Settlment information.
