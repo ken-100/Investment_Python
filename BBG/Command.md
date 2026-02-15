@@ -31,8 +31,17 @@
 | DMMV         | Developed Markets Summary            |
 | EMMV         | Emerging Markets Summary             |
 | BHUB         | Bloomberg HUB                        |
+| SECF         |  Security Finder                        |
 
 
+### Portfolio & Risk
+| Command    | Description                          |
+|-----------------|--------------------------------------|
+| PORT            | Portfolio & Risk Analytics                |
+| MARS           | Multi Asset Risk System         |
+
+
+### Financial Policy
 | Command    | Description                          |
 |-----------------|--------------------------------------|
 | IFMO            | Inflation Monitor                    |
@@ -149,7 +158,6 @@
 | BECO         | Bloomberg Economics (Visual Charts)  |
 
 
-
 ###  Forecasts
 | Command | Description                          |
 |--------------|--------------------------------------|
@@ -190,6 +198,8 @@
 | MODL         | Company Financials                   |
 | GF           | Graph Fundamentals                   |
 | EQRV         | Equity Relative Valuation           |
+| DRSK        | Default Risk              |
+| ALLQ      |    All Quotes             |
 
 ### ETF
 | Command | Description                          |
@@ -252,6 +262,7 @@
 | FWCM  | Forward Curve Matrix   |
 | FWCV  | Forward Curve Analysis |
 | GOVY  | Rates Trader |
+| SRCH  | Fixed Income Search |
 
 ### FX, Currency
 | Command               | Description                |
