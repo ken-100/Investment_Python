@@ -285,8 +285,11 @@
 ### Monitoring
 | Command | Description               |
 |------|---------------------------|
-| GMM | Global Macro Movers      |
 | W   | Security Worksheet       |
+| GMM | Global Macro Movers      |
+| FMV | Commodtiy Movers      |
+| MOV | Equity Index Movers      |
+| MOST | Most Active Securities      |
 
 
 ### BQuant
