@@ -365,6 +365,7 @@
 | TRA      | Total Return Analysis                          |                                           |
 | GR       | Ratio Analysis                                 |                                           |
 | HS       | Spread Analysis                                |                                           |
+| GOC      | Ichimoku                                       |                                           |
 
 ### Vendor
 | Command             | Description                |
@@ -385,11 +386,15 @@
 | BQIQ     | Overview of BQuant           |
 
 ### Option
-| Command      | Description        |
-|-----------|--------------------|
-| OMON      | OptionMonitor      |
-| MOSO      |                    |
-| MOSO S    |                    |
+| Command      | Description         |
+|-----------|------------------------|
+| OMON      | OptionMonitor          |
+| MOSO      | Most Active Options    |
+| MOSO S    | Single Security        |
+| MOSO I    | Open Interest          |
+| MOSO V    | Volume                 |
+| OVME      | Option Pricer Equity/IR|
+| OPX       | Option Expiration      |
 
 
 ### Operation
