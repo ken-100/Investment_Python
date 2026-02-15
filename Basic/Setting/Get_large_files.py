@@ -95,7 +95,7 @@ if __name__ == "__main__":
     df = scan_files(target, min_size_mb=0.01, extensions=extensions)
 
     # --- Mode 2: All files ---
-    # dfl = scan_files(target, min_size_mb=1)
+    # df = scan_files(target, min_size_mb=1)
 
     output_path = "Scan.xlsx"
     to_excel(df, output_path)
