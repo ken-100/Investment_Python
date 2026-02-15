@@ -33,6 +33,15 @@
 | BHUB         | Bloomberg HUB                        |
 | SECF         |  Security Finder                        |
 
+### Monitoring
+| Command | Description               |
+|------|---------------------------|
+| W   | Security Worksheet       |
+| GMM | Global Macro Movers      |
+| FMV | Commodity Movers      |
+| MOV | Equity Index Movers      |
+| MOST | Most Active Securities      |
+
 
 ### Portfolio & Risk
 | Command    | Description                          |
@@ -201,6 +210,9 @@
 | DRSK        | Default Risk              |
 | ALLQ      |    All Quotes             |
 
+*AMAT OC Equity: Blue Ocean ATS
+*DS196 - Primary Exchange Code (EQY_PRIM_EXCH_SHRT)
+
 ### ETF
 | Command | Description                          |
 |--------------|--------------------------------------|
@@ -209,6 +221,7 @@
 | Port         |                                      |
 | TLTS         | Tilts                                |
 | BI ETFS      |                                      |
+| FFLO         | ETF Flows                            |
 
 ### Stock Index Analysis (after choosing ticker, such as SPX)
 | Command | Description                          |
@@ -293,14 +306,6 @@
 |COM US Equity   |           |
 
 
-### Monitoring
-| Command | Description               |
-|------|---------------------------|
-| W   | Security Worksheet       |
-| GMM | Global Macro Movers      |
-| FMV | Commodity Movers      |
-| MOV | Equity Index Movers      |
-| MOST | Most Active Securities      |
 
 
 ### BQuant
