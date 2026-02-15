@@ -14,7 +14,7 @@
 | WCDS         | World CDS Monitor                    |
 | CDX          | CDS Index Monitor                    |
 | SOVR         | Sovereign CDS Monitor                |
-| BYFC         | Bond Yield Forecastsage              |
+| BYFC         | Bond Yield Forecast                  |
 | USTY         | US Treasury Portal Page              |
 | GGR          | Generic Government Rates (*Obsolete*)|
 | SOVM         | Sovereign Debt Monitor               |
@@ -188,8 +188,8 @@
 | KI           | Key Insight                          |
 | ANR          | Analyst Recommendations              |
 | MODL         | Company Financials                   |
-| GF           | Glaph Fundamentals                   |
-| EQRV         | Equitly Relative Valuation           |
+| GF           | Graph Fundamentals                   |
+| EQRV         | Equity Relative Valuation           |
 
 ### ETF
 | Command | Description                          |
@@ -263,7 +263,7 @@
 | USDJPYCR Curncy       | Carry Return               |
 | FRD                   | FX Forward                 |
 | FXFA                  | FX-Interest Rate Arbitrage |
-| FXFM                  | FX Rate Forcast Model      |
+| FXFM                  | FX Rate Forecast Model      |
 
 ### Commodity
 | Command   | Description                   | Notes                               |
@@ -287,7 +287,7 @@
 |------|---------------------------|
 | W   | Security Worksheet       |
 | GMM | Global Macro Movers      |
-| FMV | Commodtiy Movers      |
+| FMV | Commodity Movers      |
 | MOV | Equity Index Movers      |
 | MOST | Most Active Securities      |
 
@@ -342,7 +342,7 @@
 | GIY      | IntradayYieldChart                             | Only for bonds                            |
 | RRG      | RelativeRotationGraph                          |                                           |
 | CORR     | CorrelationMatrix                              |                                           |
-| CIX      | CustomeIndex                                   | *"HS → Save as Index" can create CIX ticker |
+| CIX      | Custom Index                                   | *"HS → Save as Index" can create CIX ticker |
 | SEAG     | Seasonality Chart                              |                                           |
 | GIP PRE  | After-hours trading                            |                                           |
 | COMP     | Comparative Returns                            |                                           |
