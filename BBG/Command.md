@@ -214,8 +214,8 @@
 *DS196 - Primary Exchange Code (EQY_PRIM_EXCH_SHRT)
 
 ### ETF
-| Command | Description                          |Remarks|
-|--------------|--------------------------------------| |
+| Command      | Description                          |Remarks|
+|--------------|--------------------------------------|--|
 | ETF          |                                      | |
 | HLDR         | Holder Ownership                     | |
 | Port         |                                      | |
