@@ -222,7 +222,7 @@
 | TLTS         | Tilts                                | |
 | BI ETFS      |                                      | |
 | FFLO         | ETF Flows                            | |
-| DRIV         | ETF Flows                            |Sector analysis|
+| DRIV         | Drivers                            |Sector analysis|
 
 ### Stock Index Analysis (after choosing ticker, such as SPX)
 | Command | Description                          |
