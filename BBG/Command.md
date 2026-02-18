@@ -215,13 +215,13 @@
 
 ### ETF
 | Command | Description                          |Remarks|
-|--------------|--------------------------------------||
-| ETF          |                                      ||
-| HLDR         | Holder Ownership                     ||
-| Port         |                                      ||
-| TLTS         | Tilts                                ||
-| BI ETFS      |                                      ||
-| FFLO         | ETF Flows                            ||
+|--------------|--------------------------------------| |
+| ETF          |                                      | |
+| HLDR         | Holder Ownership                     | |
+| Port         |                                      | |
+| TLTS         | Tilts                                | |
+| BI ETFS      |                                      | |
+| FFLO         | ETF Flows                            | |
 | DRIV         | ETF Flows                            |Sector analysis|
 
 ### Stock Index Analysis (after choosing ticker, such as SPX)
