@@ -23,8 +23,6 @@
 | GLCO         | Global Commodity Prices              |
 | CSDR         | Sovereign Ratings                    |
 | ETF          | ETF                                  |
-| GMM          | Global Macro Movers                  |
-| OTC          | Market Monitor                       |
 | WCR          | World Currency Rates                 |
 | FXIP         | FX Information Portal                |
 | BTMM         | Treasury & Money Markets             |
@@ -41,16 +39,17 @@
 | FMV | Commodity Movers      |
 | MOV | Equity Index Movers      |
 | MOST | Most Active Securities      |
+| OTC          | Market Monitor                       |
 
 
-### Portfolio & Risk
+### Portfolio / Risk
 | Command    | Description                          |
 |-----------------|--------------------------------------|
 | PORT            | Portfolio & Risk Analytics                |
 | MARS           | Multi Asset Risk System         |
 
 
-### Financial Policy
+### Financial Policy / Central Bank
 | Command    | Description                          |
 |-----------------|--------------------------------------|
 | IFMO            | Inflation Monitor                    |
@@ -58,6 +57,15 @@
 | WIRP            | World Interest Rate Probability      |
 | DOTS            | FOMC Dot Plot                        |
 | DOTS SPEC       | Dot + Fed Spectrometer               |
+| CBRT            | Central Bank Rate Analysis           |
+| FED             | Federal Reserve                      |
+| FOMC            | FOMC Activities                      |
+| BOJ             | Bank of Japan                        |
+| ECB             | European Central Bank                |
+| BOE             | Bank of England                      |
+| PBOC            | People's Bank of China               |
+| SNB             | Swiss National Bank                  |
+| RBA             | Reserve Bank of Australia            |
 | .3M6MHD  Index  |                                      |
 | .6M12MHD  Index |                                      |
 | BENLPFED  Index |                                      |
