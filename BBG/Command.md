@@ -302,7 +302,7 @@
 | Command   | Description                   | Notes                               |
 |--------|-------------------------------|-------------------------------------|
 | CPFC | Commodity Price Forecasts   | Future Price, Forecasts from Broker |
-| Line | Global Commodity Flows      |                                     |
+| LINE | Global Commodity Flows      |                                     |
 | NRGZ | Energy Industry Reports     |                                     |
 | BI   | EXPRE JODIP                 |                                     |
 | RIG  | Rig Count                   |                                     |
