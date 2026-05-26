@@ -40,7 +40,7 @@
 | MOV | Equity Index Movers      |
 | MOST | Most Active Securities      |
 | OTC          | Market Monitor                       |
-
+| CFND |  Correlation Finder      |
 
 ### Portfolio / Risk
 | Command    | Description                          |
@@ -299,15 +299,19 @@
 | FXFM                  | FX Rate Forecast Model      |
 
 ### Commodity
-| Command   | Description                   | Notes                               |
-|--------|-------------------------------|-------------------------------------|
-| CPFC | Commodity Price Forecasts   | Future Price, Forecasts from Broker |
-| LINE | Global Commodity Flows      |                                     |
-| NRGZ | Energy Industry Reports     |                                     |
-| BI   | EXPRE JODIP                 |                                     |
-| RIG  | Rig Count                   |                                     |
-| WFOR | Weather Forecasts           |                                     |
-| COMM | Commodity Product Catalog   |                                     |
+| Command | Description | Notes |
+| --- | --- | --- |
+| CPFC | Commodity Price Forecasts | Future Price, Forecasts from Broker |
+| LINE | Global Commodity Flows |  |
+| NRGZ | Energy Industry Reports |  |
+| BI | EXPRE JODIP |  |
+| RIG | Rig Count |  |
+| WFOR | Weather Forecasts |  |
+| COMM | Commodity Product Catalog |  |
+| OILS | Oil Shock |  |
+| CPLY | Commodity Playbook |  |
+| CMBQ | Commodity futures overview |  |
+| OPEC | OPEC Production and Price |  |
 
 ### Active Commodity ETF
 | Ticker                  | Description              |
