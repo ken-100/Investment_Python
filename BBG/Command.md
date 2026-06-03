@@ -97,6 +97,7 @@
 | JIJI         | JIJI Press                           |
 | AID          | Automated Intelligence on Demand     |
 | BNEW         | What's New                           |
+| FFM          | Functions for the Market             |
 
 ### New News-Related Features
 | Command | Description                               |
