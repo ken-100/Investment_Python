@@ -29,7 +29,9 @@
 | DMMV         | Developed Markets Summary            |
 | EMMV         | Emerging Markets Summary             |
 | BHUB         | Bloomberg HUB                        |
-| SECF         |  Security Finder                        |
+| SECF         | Security Finder                      |
+| FFM          | Functions for the Market             |
+                    
 
 ### Monitoring
 | Command | Description               |
@@ -90,7 +92,7 @@
 | FIRS         | First Word                           |
 | MEDI         | Media (BBG TV, Radio)                |
 | MEDI LIVE    | Media Live                           |
-| MREP         | Morning Report                       |
+| BPOD         | Bloomberg Podcasts                   |
 | NSUB         | News Subscriptions                   |
 | NT           | News Trends Chart                    |
 | NSTM         | Key News Themes                      |
@@ -215,9 +217,11 @@
 | ANR          | Analyst Recommendations              |
 | MODL         | Company Financials                   |
 | GF           | Graph Fundamentals                   |
-| EQRV         | Equity Relative Valuation           |
-| DRSK        | Default Risk              |
-| ALLQ      |    All Quotes             |
+| EQRV         | Equity Relative Valuation            |
+| DRSK         | Default Risk                         |
+| ALLQ         |    All Quotes                        |
+| TREN         |    News Trends                       |
+                      
 
 *AMAT OC Equity: Blue Ocean ATS
 *DS196 - Primary Exchange Code (EQY_PRIM_EXCH_SHRT)
@@ -374,6 +378,7 @@
 | GIY      | IntradayYieldChart                             | Only for bonds                            |
 | RRG      | RelativeRotationGraph                          |                                           |
 | CORR     | CorrelationMatrix                              |                                           |
+| BETA     | Historical Beta                                |                                           |
 | CIX      | Custom Index                                   | *"HS → Save as Index" can create CIX ticker |
 | SEAG     | Seasonality Chart                              |                                           |
 | GIP PRE  | After-hours trading                            |                                           |
