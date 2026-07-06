@@ -460,7 +460,10 @@
 | DV014  | Dividend 12 Month Yld - Gross                | `EQY_DVD_YLD_12M`              |
 
 
-
+## Setting
+| Field          | Description            |
+|---------------------|------------------------|
+| GRIB  |  Send Screen Image as IB           |
 
 ### Twitter
 `SOCI` → Input user name
