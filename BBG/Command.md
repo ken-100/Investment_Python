@@ -422,7 +422,7 @@
 | Command | Description                                                  |
 |----------------|--------------------------------------------------------------|
 | CLIP       | Copy the selected area                                       |
-| GRIB       | Take a screenshot of the entire screen and drag & drop to IB |
+| GRIB       | Send Screen Image as IB    |
 | GRAB       | Capture the selected area and automatically attach to a message |
 | SNIP       | Select area, take screenshot, and save to file               |
 | Shift + G  | Command History                                              |
@@ -440,7 +440,6 @@
 | BUB             | Bloomberg Hub                        |
 | HELP            | Bloomberg Help Page                  |
 | HELP DAPI       | API Help                             |
-| GRIB            | Send Screen Image as IB              |
 | TRAI            | Training Request                     |
 | SMNR            | Seminars and Events                  |
 
@@ -460,10 +459,6 @@
 | DV014  | Dividend 12 Month Yld - Gross                | `EQY_DVD_YLD_12M`              |
 
 
-## Setting
-| Field          | Description            |
-|---------------------|------------------------|
-| GRIB  |  Send Screen Image as IB           |
 
 ### Twitter
 `SOCI` → Input user name
