@@ -390,13 +390,14 @@
 
 ### Vendor
 | Command             | Description                |
-|------------------|----------------------------|
-| IN               | Bloomberg Index Browser    |
-| FTSE             |                            |
-| MSCI             |                            |
-| SPPRISME Index   | Prism Index                |
-| NEIXCTA Index    | SG CTA Index               |
-| NEIXCTAT Index   | SG Trend Index             |
+|------------------|-----------------------------|
+| IN               | Bloomberg Index Browser     |
+| IN               | Bloomberg Index Browser: ALL|
+| FTSE             |                             |
+| MSCI             |                             |
+| SPPRISME Index   | Prism Index                 |
+| NEIXCTA Index    | SG CTA Index                |
+| NEIXCTAT Index   | SG Trend Index              |
 
 ### BackTest, Factor Analysis
 | Command     | Description                  |
@@ -489,6 +490,4 @@
 | **Ctrl + =**   | Zoom In                                       |
 | **Alt**        | Keyboard Navigation (type commands/functions) |
 | **Alt + Tab**  | Switch to Another Window/Application          |
-
-This is the complete compact table from the screenshots.
 
