@@ -392,7 +392,7 @@
 | Command             | Description                |
 |------------------|-----------------------------|
 | IN               | Bloomberg Index Browser     |
-| IN               | Bloomberg Index Browser: ALL|
+| IN ALL           | Bloomberg Index Browser: ALL|
 | FTSE             |                             |
 | MSCI             |                             |
 | SPPRISME Index   | Prism Index                 |
