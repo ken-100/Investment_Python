@@ -475,3 +475,20 @@
 !pip install pdblp
 !pip install xbbg
 ```
+
+### Shortcut 
+| Shortcut       | Action                                        |
+| -------------- | --------------------------------------------- |
+| **Ctrl + T**   | Open New Tab                                  |
+| **Ctrl + W**   | Close Current Tab                             |
+| **Ctrl + N**   | Open New Window                               |
+| **Ctrl + 1-9** | Switch to Tab 1-9                             |
+| **Ctrl + \[**  | Previous Bloomberg Window                     |
+| **Ctrl + ]**   | Next Bloomberg Window                         |
+| **Ctrl + -**   | Zoom Out                                      |
+| **Ctrl + =**   | Zoom In                                       |
+| **Alt**        | Keyboard Navigation (type commands/functions) |
+| **Alt + Tab**  | Switch to Another Window/Application          |
+
+This is the complete compact table from the screenshots.
+
