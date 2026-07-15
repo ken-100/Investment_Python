@@ -371,7 +371,7 @@
 | G        | My Graph                                       |                                           |
 | GP       | LineChart                                      |                                           |
 | GPC      | CandleChart                                    |                                           |
-| GPC ACCUM| CandleChart                                    |                                           |
+| GPC ACCUM| CandleChart & Accumulate/Cumulative            |                                           |
 | GPO      | BarChart                                       |                                           |
 | GIP      | IntradayPriceChart                             |                                           |
 | GY       | YieldChart                                     | Only for bonds                            |
