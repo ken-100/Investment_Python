@@ -331,6 +331,7 @@
 |-----------|------------------------------|-----------------------------------|
 | BQNT      | BQuant                       |                                   |
 | BQNT HELP | Guides and Documentaton      |                                   |
+| BDEV      | Bloomberg Developer          |                                   |
 | BQAP      | BQuant Apps                  |                                   |
 | BQIQ      | Overview of BQuant Desktop   |                                   |
 
