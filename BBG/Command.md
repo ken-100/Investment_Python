@@ -42,13 +42,13 @@
 | MOV | Equity Index Movers      |
 | MOST | Most Active Securities      |
 | OTC          | Market Monitor                       |
-| CFND |  Correlation Finder      |
 
 ### Portfolio / Risk
 | Command    | Description                          |
 |-----------------|--------------------------------------|
 | PORT            | Portfolio & Risk Analytics                |
 | MARS           | Multi Asset Risk System         |
+| LQA            | Liquidity Assessment            |
 
 
 ### Financial Policy / Central Bank
@@ -59,6 +59,7 @@
 | WIRP            | World Interest Rate Probability      |
 | DOTS            | FOMC Dot Plot                        |
 | DOTS SPEC       | Dot + Fed Spectrometer               |
+| FOMS            | FOMC Statement Comparison            |
 | CBRT            | Central Bank Rate Analysis           |
 | FED             | Federal Reserve                      |
 | FOMC            | FOMC Activities                      |
@@ -172,6 +173,8 @@
 | ECOD         | Economic Release Details             |
 | ECWB         | Economic Workbench                   |
 | ECAN         | World Economic Analyzer              |
+| ECTR         | Trade Flow                            |
+| WFII         | Foreign Portfolio Investment          |
 | FCON         | Financial Conditions                 |
 | ESCU         | Economic Surprises                   |
 | TAYL         | Taylor Rule Model                    |
@@ -190,6 +193,7 @@
 ### Futures
 | Command | Description                          |
 |--------------|--------------------------------------|
+| CT           | Futures Contract Table               |
 | OMON         | Option Monitor                       |
 | COT          | CFTC Ticker                          |
 | PCS          | Commodity Defaults                   |
@@ -199,6 +203,7 @@
 ### Equities (including ETF)
 | Command | Description                          |
 |--------------|--------------------------------------|
+| EQS          | Equity Screening                     |
 | AQR          | Top Trade                            |
 | QR           | Quote Recap                          |
 | QM           | Quote Montage                        |
@@ -280,16 +285,21 @@
 2) click "Chatrooms"  
 3) click "Financials & Property (APAC)"  
 
-### Bonds, Swap
-| Command | Description            |
-|------|------------------------|
-| NIM   | New Issue Monitor      |
-| CRV   | Custom Curve Builder   |
-| CRVF  | Curve Filter           |
-| FWCM  | Forward Curve Matrix   |
-| FWCV  | Forward Curve Analysis |
-| GOVY  | Rates Trader |
-| SRCH  | Fixed Income Search |
+### Bonds / Rates
+| Command | Description |
+|---------|-------------|
+| GRM     | Global Rates Monitor |
+| NIM     | New Issue Monitor |
+| NIA     | Issuer Curve Analysis |
+| DLV     | Cheapest-to-Deliver Analysis |
+| FIW     | Fixed Income Worksheet |
+| YAS     | Yield and Spread Analysis |
+| CRV     | Custom Curve Builder |
+| CRVF    | Curve Filter |
+| FWCM    | Forward Curve Matrix |
+| FWCV    | Forward Curve Analysis |
+| GOVY    | Rates Trader |
+| SRCH    | Fixed Income Search |
 
 ### FX, Currency
 | Command               | Description                |
@@ -299,6 +309,8 @@
 | MSFXJPY Index         | WM/Refinitiv               |
 | USDJPYTL Curncy       | Total Return Long          |
 | USDJPYCR Curncy       | Carry Return               |
+| FXC                   | Currency Rates Matrix       |
+| WCRS                  | World Currency Ranker       |
 | FRD                   | FX Forward                 |
 | FXFA                  | FX-Interest Rate Arbitrage |
 | FXFM                  | FX Rate Forecast Model      |
@@ -342,22 +354,28 @@
 | BQL       | BQL Editor                   | =BQL.QUERY(" Query ")             |
 | BQLX      | Help on BQL                  |                                   |
 
+### Data
+| Command | Description |
+|---------|-------------|
+| DSET    | Dataset Library |
+
 ### Etc.
 | Command   | Description                 |
 |--------|-----------------------------|
 | FLDS | Data Field Finder          |
-| Note | Note                       |
+| NOTE | Notes                      |
 | WSL  | Worksheet Sample           |
 | WSL ELECMAP | US Election Map     |
 
 
 
 
-### Profile
-| Command  | Description             |
-|-------|-------------------------|
-| IAM  | User / Terminal ID Number |
-| MYOR | My Profile               |
+### Profile / People
+| Command | Description |
+|---------|-------------|
+| IAM     | User / Terminal ID Number |
+| MYOR    | My Profile |
+| PEOP    | People Search |
 
 ### Launchpad
 | Command | Description                                   |
@@ -366,9 +384,11 @@
 | LLP | Display current page as a LaunchPad        |
 
 
-### Charts, graphs, calculations
+### Charts / Technical Analysis
 | Command     | Description                                    | Notes                                     |
 |----------|------------------------------------------------|-------------------------------------------|
+| CHRT     | Chart Library                                  |                                           |
+| TECH     | Technical Study Browser                        |                                           |
 | G        | My Graph                                       |                                           |
 | GP       | LineChart                                      |                                           |
 | GPC      | CandleChart                                    |                                           |
@@ -378,7 +398,6 @@
 | GY       | YieldChart                                     | Only for bonds                            |
 | GIY      | IntradayYieldChart                             | Only for bonds                            |
 | RRG      | RelativeRotationGraph                          |                                           |
-| CORR     | CorrelationMatrix                              |                                           |
 | BETA     | Historical Beta                                |                                           |
 | CIX      | Custom Index                                   | *"HS → Save as Index" can create CIX ticker |
 | SEAG     | Seasonality Chart                              |                                           |
@@ -388,6 +407,14 @@
 | GR       | Ratio Analysis                                 |                                           |
 | HS       | Spread Analysis                                |                                           |
 | GOC      | Ichimoku                                       |                                           |
+
+### Correlation / Volatility
+| Command | Description |
+|---------|-------------|
+| CORR    | Correlation Matrix |
+| GCOR    | Correlation |
+| CFND    | Correlation Finder |
+| VCA     | Volatility & Correlation Analysis |
 
 ### Vendor
 | Command             | Description                |
@@ -459,6 +486,4 @@
 | DV013  | Dividend Indicated Yld - Gross               | `EQY_DVD_YLD_IND`              |
 | SP111  | YAS Bond Yield                               | `YAS_BOND_YLD`                 |
 | DV014  | Dividend 12 Month Yld - Gross                | `EQY_DVD_YLD_12M`              |
-
-
 
