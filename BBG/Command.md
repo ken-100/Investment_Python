@@ -25,6 +25,7 @@
 | ETF          | ETF                                  |
 | WCR          | World Currency Rates                 |
 | FXIP         | FX Information Portal                |
+| ILBE         |  World Inflation Breakeven Rates     |
 | BTMM         | Treasury & Money Markets             |
 | DMMV         | Developed Markets Summary            |
 | EMMV         | Emerging Markets Summary             |
