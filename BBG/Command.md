@@ -383,7 +383,7 @@
 |------|-----------------------------------------------|
 | BLP | Open LaunchPad                              |
 | LLP | Display current page as a LaunchPad        |
-
+| CNVA |  Launchpad Canvas      |
 
 ### Charts / Technical Analysis
 | Command     | Description                                    | Notes                                     |
