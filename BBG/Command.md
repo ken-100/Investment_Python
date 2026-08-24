@@ -33,6 +33,7 @@
 | BHUB         | Bloomberg HUB                        |
 | SECF         | Security Finder                      |
 | FFM          | Functions for the Market             |
+| USER         | Functions for Your Workflow          |
                     
 
 ### Monitoring
@@ -468,7 +469,6 @@
 | NI BLPBQL       |                                      |
 | NI BLPBQL IN JAPANESE |                                |
 | BPS             | Bloomberg Resource Center            |
-| BUB             | Bloomberg Hub                        |
 | HELP            | Bloomberg Help Page                  |
 | HELP DAPI       | API Help                             |
 | TRAI            | Training Request                     |
