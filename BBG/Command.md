@@ -5,6 +5,7 @@
 |-----------------|--------------------------------------|
 | WEI          | World Equity Indices                 |
 | WEIF         | World Index Futures                  |
+| WEIS         | orld Equity Index Rankings           |
 | EMEQ         | Emerging Market Equity Indices       |
 | WB           | World Bond Market                    |
 | WBI          | World Inflation Bond                 |
