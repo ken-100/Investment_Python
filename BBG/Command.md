@@ -26,7 +26,7 @@
 | ETF          | ETF                                  |
 | WCR          | World Currency Rates                 |
 | FXIP         | FX Information Portal                |
-| ILBE         |  World Inflation Breakeven Rates     |
+| ILBE         | World Inflation Breakeven Rates      |
 | BTMM         | Treasury & Money Markets             |
 | DMMV         | Developed Markets Summary            |
 | EMMV         | Emerging Markets Summary             |
@@ -104,6 +104,12 @@
 | AID          | Automated Intelligence on Demand     |
 | BNEW         | What's New                           |
 | FFM          | Functions for the Market             |
+| QUIC         | Bloomberg QuickTakes                 |
+| FRNT         | Front Page                           |
+| BKMK         | My Bookmarks                         |
+| NL           | News on Ticker List                  |
+| NYT          | New York Times News                  |
+| WPT          | Washington Post News                 |
 
 ### New News-Related Features
 | Command | Description                               |
