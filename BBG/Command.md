@@ -233,9 +233,11 @@
 | GF           | Graph Fundamentals                   |
 | EQRV         | Equity Relative Valuation            |
 | DRSK         | Default Risk                         |
-| ALLQ         |    All Quotes                        |
-| TREN         |    News Trends                       |
-                      
+| ALLQ         | All Quotes                           |
+| TREN         | News Trends                          |
+| GIPO         | Overnight (Pre/Post Mkt) Chart       |
+| GIP POST     | post-market session only (4PM–8PM)   |
+| GIP PRE      | pre-market session only (4PM–9:30PM) |
 
 *AMAT OC Equity: Blue Ocean ATS
 *DS196 - Primary Exchange Code (EQY_PRIM_EXCH_SHRT)
