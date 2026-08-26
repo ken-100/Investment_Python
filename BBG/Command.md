@@ -464,6 +464,7 @@
 | GRAB       | Capture the selected area and automatically attach to a message |
 | SNIP       | Select area, take screenshot, and save to file               |
 | Shift + G  | Command History                                              |
+|  PSET      | Printing Settings                                            |
 
 ### Template, Documents
 | Command                | Description                          |
