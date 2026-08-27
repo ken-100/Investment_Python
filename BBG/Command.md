@@ -313,18 +313,19 @@
 | SRCH    | Fixed Income Search |
 
 ### FX, Currency
-| Command               | Description                |
-|-----------------------|----------------------------|
-| CSBSUSD TMUQ Curncy   | Mitsubishi TTM             |
-| CSBSUSD STBJ Curncy   | SumiTrust TTM              |
-| MSFXJPY Index         | WM/Refinitiv               |
-| USDJPYTL Curncy       | Total Return Long          |
-| USDJPYCR Curncy       | Carry Return               |
+| Command               | Description                 |
+|-----------------------|-----------------------------|
+| CSBSUSD TMUQ Curncy   | Mitsubishi TTM              |
+| CSBSUSD STBJ Curncy   | SumiTrust TTM               |
+| MSFXJPY Index         | WM/Refinitiv                |
+| USDJPYTL Curncy       | Total Return Long           |
+| USDJPYCR Curncy       | Carry Return                |
 | FXC                   | Currency Rates Matrix       |
 | WCRS                  | World Currency Ranker       |
-| FRD                   | FX Forward                 |
-| FXFA                  | FX-Interest Rate Arbitrage |
+| FRD                   | FX Forward                  |
+| FXFA                  | FX-Interest Rate Arbitrage  |
 | FXFM                  | FX Rate Forecast Model      |
+|  FX24                 | FX Session Chart            |
 
 ### Commodity
 | Command | Description | Notes |
