@@ -1,40 +1,40 @@
 ## Bloomberg Functions Cheat Sheet
 
 ### Overview
-| Command    | Description                          |
-|-----------------|--------------------------------------|
-| WEI          | World Equity Indices                 |
-| WEIF         | World Index Futures                  |
-| WEIS         | orld Equity Index Rankings           |
-| EMEQ         | Emerging Market Equity Indices       |
-| WB           | World Bond Market                    |
-| WBI          | World Inflation Bond                 |
-| WBF          | World Bond Futures                   |
-| WIR          | World Interest Rate Futures          |
-| FICM         | Fixed Income Credit Monitor          |
-| WCDS         | World CDS Monitor                    |
-| CDX          | CDS Index Monitor                    |
-| SOVR         | Sovereign CDS Monitor                |
-| BYFC         | Bond Yield Forecast                  |
-| USTY         | US Treasury Portal Page              |
-| GGR          | Generic Government Rates (*Obsolete*)|
-| SOVM         | Sovereign Debt Monitor               |
-| IRSB         | Interest Rate Swap                   |
-| USSW         | Swap Market (US)                     |
-| GLCO         | Global Commodity Prices              |
-| CSDR         | Sovereign Ratings                    |
-| ETF          | ETF                                  |
-| WCR          | World Currency Rates                 |
-| FXIP         | FX Information Portal                |
-| ILBE         | World Inflation Breakeven Rates      |
-| BTMM         | Treasury & Money Markets             |
-| DMMV         | Developed Markets Summary            |
-| EMMV         | Emerging Markets Summary             |
-| BHUB         | Bloomberg HUB                        |
-| SECF         | Security Finder                      |
-| FFM          | Functions for the Market             |
-| USER         | Functions for Your Workflow          |
-                    
+| Command | Description | Remarks |
+| --- | --- | --- |
+| WEI | World Equity Indices |  |
+| WEIF | World Index Futures |  |
+| WEIS | orld Equity Index Rankings |  |
+| EMEQ | Emerging Market Equity Indices |  |
+| WB | World Bond Market |  |
+| WBI | World Inflation Bond |  |
+| WBF | World Bond Futures |  |
+| WIR | World Interest Rate Futures |  |
+| FICM | Fixed Income Credit Monitor |  |
+| WCDS | World CDS Monitor |  |
+| CDX | CDS Index Monitor |  |
+| SOVR | Sovereign CDS Monitor |  |
+| BYFC | Bond Yield Forecast |  |
+| USTY | US Treasury Portal Page |  |
+| GGR | Generic Government Rates (*Obsolete*) |  |
+| SOVM | Sovereign Debt Monitor |  |
+| IRSB | Interest Rate Swap |  |
+| USSW | Swap Market (US) |  |
+| GLCO | Global Commodity Prices |  |
+| CSDR | Sovereign Ratings |  |
+| ETF | ETF |  |
+| WCR | World Currency Rates |  |
+| FXIP | FX Information Portal |  |
+| ILBE | World Inflation Breakeven Rates |  |
+| BTMM | Treasury & Money Markets |  |
+| DMMV | Developed Markets Summary |  |
+| EMMV | Emerging Markets Summary |  |
+| BHUB | Bloomberg HUB |  |
+| SECF | Security Finder |  |
+| FFM | Functions for the Market |  |
+| USER | Functions for Your Workflow |  |
+| ALLX           | All Index Sector Display | USGG10YR Index ALLX |
 
 ### Monitoring
 | Command | Description               |
