@@ -341,7 +341,10 @@
 | CPLY | Commodity Playbook |  |
 | CMBQ | Commodity futures overview |  |
 | OPEC | OPEC Production and Price |  |
+| FDM  | Commodity Fundamentals |  |
+                     
 
+  
 ### Active Commodity ETF
 | Ticker                  | Description              |
 |-----------------------|--------------------------|
