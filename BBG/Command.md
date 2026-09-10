@@ -231,6 +231,7 @@
 | ANR          | Analyst Recommendations              |
 | MODL         | Company Financials                   |
 | GF           | Graph Fundamentals                   |
+| PEBD         | Equity Relative Valuation: Price Bands   |
 | EQRV         | Equity Relative Valuation            |
 | DRSK         | Default Risk                         |
 | ALLQ         | All Quotes                           |
