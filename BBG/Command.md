@@ -253,6 +253,7 @@
 | BI ETFS      |                                      | |
 | FFLO         | ETF Flows                            | |
 | DRIV         | Drivers                            |Sector analysis|
+|  MFDF        | Funds Defaults                     ||
 
 ### Stock Index Analysis (after choosing ticker, such as SPX)
 | Command | Description                          |
