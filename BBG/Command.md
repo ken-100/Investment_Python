@@ -35,6 +35,7 @@
 | FFM | Functions for the Market |  |
 | USER | Functions for Your Workflow |  |
 | ALLX           | All Index Sector Display | USGG10YR Index ALLX |
+| CTM           | Exchange Contracts |  |
 
 ### Monitoring
 | Command | Description               |
